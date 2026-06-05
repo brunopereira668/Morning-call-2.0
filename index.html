@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morning Call — 04/06/2026</title>
+<title>Morning Call — 05/06/2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -57,13 +57,10 @@
       radial-gradient(900px 500px at -10% 10%, color-mix(in srgb, var(--accent) 6%, transparent), transparent 60%);
   }
   .wrap { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; padding: 0 20px 80px; }
-
   .num { font-family: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
          font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
-
   #progress { position: fixed; top: 0; left: 0; height: 3px; width: 0%;
     background: linear-gradient(90deg, var(--accent), var(--accent-2)); z-index: 50; transition: width .1s linear; }
-
   header.top { position: sticky; top: 0; z-index: 40;
     background: color-mix(in srgb, var(--paper) 88%, transparent);
     backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
@@ -78,9 +75,7 @@
     width: 40px; height: 40px; border-radius: 999px; cursor: pointer; font-size: 18px;
     display:grid; place-items:center; transition: transform .2s ease, background .2s; }
   .theme-btn:active { transform: scale(.92); }
-
-  .masthead { text-align: center; padding: 34px 0 14px; border-bottom: 3px double var(--ink);
-    margin-bottom: 8px; }
+  .masthead { text-align: center; padding: 34px 0 14px; border-bottom: 3px double var(--ink); margin-bottom: 8px; }
   .kicker { font-family:"IBM Plex Mono",monospace; font-size: 11px; letter-spacing: .32em;
     text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
   .masthead h1 { font-family:"Fraunces",Georgia,serif; font-weight: 900; font-size: clamp(40px, 12vw, 78px);
@@ -88,9 +83,8 @@
   .dateline { display:flex; flex-wrap:wrap; gap: 6px 16px; justify-content:center; align-items:center;
     margin-top: 14px; font-size: 13px; color: var(--ink-soft); }
   .dateline .num { font-size: 13px; }
-  .badge-demo { font-family:"IBM Plex Mono",monospace; font-size: 10px; letter-spacing:.1em; text-transform:uppercase;
+  .badge-alert { font-family:"IBM Plex Mono",monospace; font-size: 10px; letter-spacing:.1em; text-transform:uppercase;
     color: var(--down); border:1px solid var(--down); border-radius: 999px; padding: 3px 10px; }
-
   nav.sections { position: sticky; top: 60px; z-index: 30; margin: 16px -20px 0;
     background: color-mix(in srgb, var(--paper) 90%, transparent);
     backdrop-filter: blur(8px); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
@@ -101,7 +95,6 @@
     text-transform: uppercase; text-decoration: none; color: var(--muted); padding: 5px 10px; border-radius: 7px;
     transition: color .2s, background .2s; }
   nav.sections a.active { color: var(--paper); background: var(--ink); }
-
   section { padding-top: 34px; scroll-margin-top: 120px; }
   .sec-head { display:flex; align-items:baseline; gap: 12px; margin-bottom: 14px; }
   .sec-num { font-family:"IBM Plex Mono",monospace; font-size: 12px; color: var(--accent);
@@ -112,18 +105,12 @@
   .lede .drop { float:left; font-family:"Fraunces",serif; font-weight:900; font-size: 64px; line-height:.7;
     padding: 8px 10px 0 0; color: var(--accent); }
   .small { font-size: 13px; color: var(--muted); }
-
-  .callout { background: var(--paper-2); border:1px solid var(--accent); border-left: 4px solid var(--accent);
-    border-radius: 10px; padding: 12px 16px; margin: 4px 0 16px; font-size: 16px; box-shadow: var(--shadow); }
-  .callout b { font-family:"Fraunces",serif; }
-
   .tldr { display:grid; grid-template-columns: 1fr; gap: 10px; }
   .tldr .item { display:flex; gap: 12px; align-items:flex-start; background: var(--paper-2);
     border: 1px solid var(--rule); border-radius: 12px; padding: 12px 14px; box-shadow: var(--shadow); }
   .tldr .ic { font-size: 22px; flex:none; line-height:1.2; }
   .tldr .tx { font-size: 16px; line-height: 1.45; }
   .tldr .tx b { font-family:"Fraunces",serif; }
-
   .tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch;
     border: 1px solid var(--rule); border-radius: 12px; background: var(--paper-2); box-shadow: var(--shadow); }
   table { width: 100%; border-collapse: collapse; min-width: 320px; }
@@ -132,20 +119,13 @@
   th, td { padding: 11px 14px; text-align: right; border-bottom: 1px solid var(--rule); font-size: 15px; }
   th:first-child, td:first-child { text-align: left; }
   thead th { font-family:"IBM Plex Mono",monospace; font-size: 11px; letter-spacing:.05em; text-transform:uppercase;
-    color: var(--muted); font-weight: 600; cursor: pointer; user-select:none; position: relative; }
-  thead th.sortable:hover { color: var(--ink); }
-  thead th .arr { opacity:.4; font-size: 9px; margin-left: 3px; }
+    color: var(--muted); font-weight: 600; cursor: pointer; user-select:none; }
   tbody tr:last-child td { border-bottom: none; }
   tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--ink) 3%, transparent); }
   td .tk { font-weight: 600; }
   .up   { color: var(--up); }
   .down { color: var(--down); }
   .nd   { color: var(--muted); font-style: italic; }
-  .bar { display:inline-block; height: 6px; border-radius: 3px; vertical-align: middle; margin-left: 8px; }
-  .bar.up   { background: var(--up); }
-  .bar.down { background: var(--down); }
-  tr.today td { background: color-mix(in srgb, var(--accent) 12%, transparent) !important; }
-
   .panel { display:grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .cell { background: var(--paper-2); border:1px solid var(--rule); border-radius: 12px; padding: 12px 14px;
     box-shadow: var(--shadow); }
@@ -153,7 +133,7 @@
     color: var(--muted); }
   .cell .val { font-size: 22px; font-weight: 600; margin-top: 4px; }
   .cell .chg { font-size: 13px; margin-top: 2px; }
-
+  .cell .note { font-size: 11px; color: var(--muted); margin-top: 2px; }
   .news .n { border:1px solid var(--rule); border-radius: 12px; margin-bottom: 10px; overflow:hidden;
     background: var(--paper-2); box-shadow: var(--shadow); }
   .news summary { list-style:none; cursor:pointer; padding: 14px 16px; display:flex; gap: 12px; align-items:baseline; }
@@ -167,9 +147,7 @@
   .news .tag { font-family:"IBM Plex Mono",monospace; font-size: 10px; letter-spacing:.06em; text-transform:uppercase;
     color: var(--accent); flex: none; width: 116px; padding-top: 3px; }
   .news .nsum { font-size: 16px; line-height: 1.5; margin: 0 0 4px; color: var(--ink); padding-bottom: 10px; }
-
   p { margin: 0 0 14px; }
-
   .sources { font-size: 14px; }
   .sources h3 { font-family:"IBM Plex Mono",monospace; font-size: 11px; letter-spacing:.08em; text-transform:uppercase;
     color: var(--accent); margin: 16px 0 6px; }
@@ -177,23 +155,22 @@
   .sources li { margin: 4px 0; }
   .sources a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px;
     text-decoration-color: var(--accent); overflow-wrap: anywhere; word-break: break-word; }
-
   .glossary dl { margin: 0; }
   .glossary dt { font-family:"Fraunces",serif; font-weight: 700; font-size: 17px; margin-top: 14px; color: var(--ink); }
   .glossary dd { margin: 3px 0 0; font-size: 15.5px; line-height: 1.55; color: var(--ink-soft); }
   .glossary dt::before { content: "§ "; color: var(--accent); font-weight: 400; }
-
   footer { margin-top: 50px; padding-top: 18px; border-top: 3px double var(--ink); text-align:center;
     font-size: 12px; color: var(--muted); }
   #toTop { position: fixed; right: 16px; bottom: 16px; z-index: 45; width: 46px; height: 46px; border-radius: 50%;
     border:1px solid var(--rule); background: var(--ink); color: var(--paper); cursor:pointer; font-size: 18px;
     opacity: 0; pointer-events:none; transition: opacity .3s; box-shadow: var(--shadow); }
   #toTop.show { opacity: 1; pointer-events:auto; }
-
   .reveal { opacity: 0; transform: translateY(14px); }
   .reveal.in { opacity: 1; transform: none; transition: opacity .6s ease, transform .6s ease; }
+  .alert-box { background: color-mix(in srgb, var(--down) 10%, var(--paper-2)); border: 1px solid color-mix(in srgb, var(--down) 40%, var(--rule));
+    border-radius: 10px; padding: 12px 16px; font-size: 14px; color: var(--ink-soft); margin-bottom: 16px; }
+  .alert-box strong { color: var(--down); }
   @media (prefers-reduced-motion: reduce) { .reveal { opacity:1; transform:none; } html { scroll-behavior:auto; } }
-
   @media (min-width: 620px) { .panel { grid-template-columns: repeat(3, 1fr); } }
 </style>
 </head>
@@ -214,10 +191,10 @@
     <div class="kicker">Antes da abertura · Brasil · EUA · Global</div>
     <h1>Morning&nbsp;Call</h1>
     <div class="dateline">
-      <span>quinta-feira, 04 de junho de 2026</span>
+      <span>sexta-feira, 05 de junho de 2026</span>
       <span>·</span>
-      <span class="num">Fechamento de 03/06/2026</span>
-      <span class="badge-demo">B3 fechada hoje · Corpus Christi</span>
+      <span class="num">Ref. EUA/Global: fech. 04/06 · Brasil: fech. 03/06</span>
+      <span class="badge-alert">⚡ Payroll divulgado esta manhã</span>
     </div>
   </div>
 
@@ -240,539 +217,544 @@
     </ul>
   </nav>
 
-  <!-- 1. RESUMO -->
+  <!-- AVISO ESPECIAL -->
+  <div class="alert-box" style="margin-top:20px;">
+    <strong>Edição especial — retorno do feriado + Payroll ao vivo.</strong> O Brasil não operou em 04/06 (Corpus Christi). Esta edição usa o fechamento de 03/06 como referência doméstica e o fechamento de 04/06 para EUA/global. O Payroll de maio (EUA) foi divulgado às 09h30 ET (10h30 Brasília) desta sexta: 172 mil vagas, mais que o dobro do esperado — a reação de mercado é incorporada neste relatório.
+  </div>
+
+  <!-- 1. RESUMO DO ESTRATEGISTA -->
   <section id="resumo" class="reveal">
     <div class="sec-head"><span class="sec-num">01</span><h2>Resumo do estrategista</h2></div>
-    <div class="callout">⚠️ <b>Hoje não há pregão no Brasil.</b> A B3 e o Tesouro Direto ficam fechados nesta quinta (04/06) por causa do feriado de <b>Corpus Christi</b>; bancos também não abrem. Os mercados de EUA, Europa e Ásia funcionam normalmente. Esta edição consolida o fechamento de 03/06 e o que está no radar global até a volta do mercado local na sexta (05/06).</div>
-    <p class="lede"><span class="drop">O</span> dia de ontem foi de forte aversão a risco. O Ibovespa caiu <b>-2,22%</b>, aos 170.330,63 pontos — a maior perda em quase um mês —, com apenas oito ações no campo positivo. Dois fios condutores dominaram: a nova ameaça tarifária dos EUA, que propôs <b>12,5%</b> sobre o Brasil e cerca de 60 países (somando-se aos 25% anunciados na véspera), e a escalada do conflito entre Estados Unidos e Irã, que empurrou o petróleo Brent para perto de <b>US$ 98</b> e reacendeu o temor de inflação e juros altos por mais tempo. O dólar subiu <b>+1,14%</b>, a R$ 5,067. Em Nova York, os índices recuaram das máximas históricas (S&amp;P 500 -0,74%, Nasdaq -0,89%, Dow -1,21%), pressionados por uma rotação para fora de tecnologia e bancos e pela alta dos juros dos Treasuries. O sentimento entra a sexta-feira em compasso de espera pelo <b>Payroll</b> dos EUA, o grande evento da semana.</p>
+    <p class="lede"><span class="drop">U</span>ma semana que começou sob o peso das tarifas e da guerra do Oriente Médio encerra com um segundo choque: o <b>Payroll de maio</b> veio em 172 mil vagas, mais que o dobro do consenso (80–85 mil), reacendendo o temor de que o Fed precise retomar o ciclo de alta de juros. A reação foi em cascata — Dow caindo 0,61%, S&amp;P 500 cedendo 1,45%, Nasdaq recuando 2,42%, Treasuries saltando, dólar avançando a R$ 5,09 e Bitcoin despencando 5,5%. A bolsa brasileira volta hoje do feriado de Corpus Christi diretamente para esse ambiente hostil: o Ibovespa abriu em queda, tentando sustentar os 170 mil pontos, enquanto os juros nominais no Tesouro Direto atingiram as máximas do ano (Prefixado 2029 a 14,52%). O petróleo, que havia recuado 2,6% na quinta com perspectivas de cessar-fogo Israel–Hezbollah, voltou a pressionar após Israel sinalizar continuidade dos ataques no Líbano. O evento central agora é a reunião do Fed de 16–17 de junho, a primeira presidida por Kevin Warsh — o tom dado ali definirá o ambiente para os próximos meses.</p>
   </section>
 
   <!-- 2. DESTAQUES -->
   <section id="destaques" class="reveal">
-    <div class="sec-head"><span class="sec-num">02</span><h2>Destaques do dia</h2></div>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Destaques do dia (TL;DR)</h2></div>
     <div class="tldr">
-      <div class="item"><span class="ic">📉</span><span class="tx"><b>Ibovespa</b> caiu -2,22%, aos 170.330 pontos, na maior queda em quase um mês — só oito ações subiram, num pregão dominado pela aversão a risco e pela saída de capital estrangeiro.</span></div>
-      <div class="item"><span class="ic">🛃</span><span class="tx">O <b>governo Trump</b> propôs nova tarifa de 12,5% sobre o Brasil e cerca de 60 países (por "trabalho forçado"), que se somaria aos 25% anunciados um dia antes — o principal risco doméstico no radar.</span></div>
-      <div class="item"><span class="ic">🛢️</span><span class="tx">A <b>escalada Irã–EUA</b> (mísseis contra Kuwait e Bahrein e novos ataques americanos) levou o <b>Brent</b> a perto de US$ 98 (+1,98%) e elevou o temor de choque inflacionário global.</span></div>
-      <div class="item"><span class="ic">💵</span><span class="tx">O <b>dólar</b> avançou +1,14%, a R$ 5,067, e a curva de juros futuros <b>abriu</b> no trecho longo, incorporando prêmio de risco fiscal e tarifário.</span></div>
-      <div class="item"><span class="ic">🇺🇸</span><span class="tx"><b>Wall Street</b> recuou das máximas: o ADP veio forte (+122 mil vagas) e reforçou a tese de juros altos por mais tempo; após o fechamento, <b>Broadcom</b> caiu mais de 6% com receita abaixo do esperado.</span></div>
-      <div class="item"><span class="ic">🥇</span><span class="tx">Marco histórico: o <b>ouro</b> superou os <b>Treasuries</b> como o maior ativo de reserva dos bancos centrais do mundo (27% contra 22%), segundo relatório do BCE.</span></div>
-      <div class="item"><span class="ic">🏖️</span><span class="tx"><b>Sem pregão no Brasil hoje</b> (Corpus Christi). O grande evento da semana é o <b>Payroll</b> de sexta (05/06), o relatório de emprego que mais pesa nas decisões do Fed.</span></div>
+      <div class="item"><span class="ic">💥</span><span class="tx"><b>Payroll de maio: 172 mil vagas</b> — mais que o dobro do consenso (80–85 mil), com revisões para cima em março (+29 mil) e abril (+64 mil). O dado reacende o temor de alta de juros pelo Fed ainda em 2026, derrubando bolsas e impulsionando Treasuries e dólar.</span></div>
+      <div class="item"><span class="ic">🏛️</span><span class="tx">O <b>Dow Jones bateu recorde de fechamento</b> na quinta (04/06), a 51.561,93 pontos (+1,73%), puxado por saúde e financeiras. S&amp;P 500 (+0,41%) avançou; Nasdaq (-0,09%) ficou ligeiramente negativo com pressão sobre chips após Broadcom.</span></div>
+      <div class="item"><span class="ic">📉</span><span class="tx"><b>Wall Street reverte na sexta</b> após o Payroll: S&amp;P 500 -1,45%, Nasdaq -2,42%. A probabilidade de alta de juros pelo Fed em dezembro saltou de 48% para 65% no FedWatch do CME. Treasuries de 2 anos sobem 10 bps para 4,15%.</span></div>
+      <div class="item"><span class="ic">🇧🇷</span><span class="tx"><b>Ibovespa volta do feriado na defensiva</b>: abertura em queda, operando ao redor dos 170 mil pontos. Dólar sobe para R$ 5,09. Os juros no Tesouro Direto atingiram máximas do ano — Prefixado 2029 a 14,52% e IPCA+ 2032 a 8,17%.</span></div>
+      <div class="item"><span class="ic">₿</span><span class="tx"><b>Bitcoin despenca 5,5%</b> para cerca de US$ 60.200, testando o menor nível desde outubro de 2024, em movimento de flight-to-safety desencadeado pelo Payroll. Mercado de cripto segue pressionado na quinta semana consecutiva de perdas.</span></div>
+      <div class="item"><span class="ic">🛢️</span><span class="tx"><b>Petróleo cedeu 2,6% na quinta</b> (Brent a US$ 95,23) com otimismo em torno de negociações Israel–Hezbollah; mas Israel sinalizou continuidade dos ataques no Líbano, dificultando o acordo com o Irã para reabertura do Estreito de Ormuz.</span></div>
+      <div class="item"><span class="ic">🚀</span><span class="tx"><b>SpaceX confirma IPO a US$ 135/ação</b>, recusando pedido dos bancos por renegociação de preço. A operação seria um dos maiores IPOs da história — o mercado aguarda a precificação final.</span></div>
     </div>
   </section>
 
   <!-- 3. AGENDA -->
   <section id="agenda" class="reveal">
     <div class="sec-head"><span class="sec-num">03</span><h2>Agenda econômica</h2></div>
-    <p>A agenda é sempre <b>prospectiva</b>: lista os eventos que ainda vão ser divulgados, a partir de hoje. Hoje (04/06) o Brasil não tem pregão por causa do feriado de Corpus Christi, e a agenda doméstica fica esvaziada. O destaque da semana é o <b>Payroll de sexta (05/06)</b> — o relatório de emprego dos EUA que costuma definir o tom dos juros americanos nas semanas seguintes e que ganha ainda mais peso na primeira gestão do novo presidente do Fed, Kevin Warsh.</p>
+    <p>O <b>Payroll de maio</b> era o evento central da semana e foi divulgado às 09h30 ET desta sexta-feira. Com o resultado já em mãos, a agenda prospectiva do dia fica esvaziada nos EUA. No Brasil, o destaque da semana que vem é o <b>Copom de 18 de junho</b> (decisão de Selic) — o Payroll forte eleva a incerteza sobre o cenário externo e pode complicar a sinalização do BCB.</p>
+
     <div class="tbl-wrap" style="margin-bottom:12px">
       <table>
-        <caption>Agenda da semana · 01–05/06 (principais eventos)</caption>
-        <thead><tr><th>Dia</th><th>País</th><th>Evento</th></tr></thead>
+        <caption>Agenda da semana · 01–05/06/2026 (principais eventos)</caption>
+        <thead><tr><th>Dia</th><th>País</th><th>Evento</th><th>Resultado / Status</th></tr></thead>
         <tbody>
-          <tr><td class="tk">Seg 01/06</td><td>🇧🇷 🇺🇸</td><td style="text-align:left">Brasil: Boletim Focus · EUA: ISM Industrial (PMI de manufatura)</td></tr>
-          <tr><td class="tk">Ter 02/06</td><td>🇺🇸</td><td style="text-align:left">JOLTS — vagas de emprego em aberto</td></tr>
-          <tr><td class="tk">Qua 03/06</td><td>🇺🇸</td><td style="text-align:left">ADP (emprego privado, +122 mil) · ISM de Serviços · Beige Book do Fed</td></tr>
-          <tr class="today"><td class="tk">Qui 04/06 · hoje</td><td>🇧🇷 🇺🇸</td><td style="text-align:left">Brasil: <b>feriado de Corpus Christi (B3 fechada)</b> · EUA: pedidos de auxílio-desemprego</td></tr>
-          <tr><td class="tk">Sex 05/06</td><td>🇺🇸</td><td style="text-align:left"><b>Payroll + taxa de desemprego</b> — evento da semana</td></tr>
+          <tr><td class="tk">Seg 01/06</td><td>🇧🇷 🇺🇸</td><td style="text-align:left">Focus (BCB) · ISM Industrial EUA</td><td style="text-align:left">Divulgados</td></tr>
+          <tr><td class="tk">Ter 02/06</td><td>🇺🇸</td><td style="text-align:left">JOLTS (vagas em aberto)</td><td style="text-align:left">Divulgado</td></tr>
+          <tr><td class="tk">Qua 03/06</td><td>🇺🇸</td><td style="text-align:left">ADP +122 mil vagas · ISM Serviços · Beige Book</td><td style="text-align:left">ADP acima do esperado</td></tr>
+          <tr><td class="tk">Qui 04/06</td><td>🇧🇷</td><td style="text-align:left"><b>Corpus Christi — B3 e Tesouro Direto fechados</b></td><td style="text-align:left">Feriado nacional</td></tr>
+          <tr style="background: color-mix(in srgb, var(--accent) 8%, transparent)"><td class="tk">Sex 05/06 · hoje</td><td>🇺🇸</td><td style="text-align:left"><b>Payroll + desemprego (evento da semana)</b></td><td style="text-align:left"><b class="down">172 mil vs 80–85 mil esperado</b></td></tr>
         </tbody>
       </table>
     </div>
+
     <div class="tbl-wrap">
       <table>
-        <caption>Agenda de hoje · 04/06</caption>
-        <thead><tr><th>Horário (Brasília)</th><th>País</th><th>Evento</th><th>Consenso</th></tr></thead>
+        <caption>Agenda de hoje · 05/06 — demais eventos</caption>
+        <thead><tr><th>Horário (ET)</th><th>País</th><th>Evento</th><th>Consenso</th><th>Resultado</th></tr></thead>
         <tbody>
-          <tr><td class="tk">—</td><td>🇧🇷</td><td style="text-align:left">Feriado de Corpus Christi — sem pregão na B3 e sem Tesouro Direto</td><td class="nd">N/A</td></tr>
-          <tr><td class="num">09:30</td><td>🇺🇸</td><td style="text-align:left">Pedidos semanais de auxílio-desemprego</td><td class="nd">N/D</td></tr>
+          <tr><td class="num">09h30</td><td>🇺🇸</td><td style="text-align:left"><b>Payroll — vagas não-agrícolas maio</b></td><td class="num">~85 mil</td><td class="num down"><b>172 mil</b></td></tr>
+          <tr><td class="num">09h30</td><td>🇺🇸</td><td style="text-align:left">Taxa de desemprego maio</td><td class="num">4,3%</td><td class="num">4,3% (estável)</td></tr>
+          <tr><td class="num">09h30</td><td>🇺🇸</td><td style="text-align:left">Ganhos médios por hora (a/a)</td><td class="num">~3,5%</td><td class="num up">3,4%</td></tr>
+          <tr><td class="num">Manhã</td><td>🇧🇷</td><td style="text-align:left">Produção de veículos (Anfavea)</td><td class="nd">—</td><td class="nd">A divulgar</td></tr>
+          <tr><td class="num">Manhã</td><td>🇪🇺</td><td style="text-align:left">PIB Zona do Euro (1T26 — revisão final)</td><td class="nd">—</td><td class="nd">A divulgar</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="small">Horários sujeitos a ajuste; valores de consenso conforme o calendário econômico ao vivo. Onde o consenso não foi confirmado em fonte, fica marcado como N/D.</p>
+    <p class="small" style="margin-top:8px">Próximos eventos relevantes: Copom 18/06 (decisão Selic) · Fed 16–17/06 (primeira reunião com Warsh) · CPI EUA 10/06 · Focus 08/06.</p>
   </section>
 
-  <!-- 4. PAINEL -->
+  <!-- 4. PAINEL CONSOLIDADO -->
   <section id="painel" class="reveal">
     <div class="sec-head"><span class="sec-num">04</span><h2>Painel consolidado</h2></div>
-    <p class="small">Fechamento de 03/06/2026. Cripto em referência intraday/overnight (mercado 24h).</p>
+    <p class="small" style="margin-bottom:12px">EUA/Global: fechamento 04/06 · Brasil: fechamento 03/06 (feriado em 04/06) · Payroll e reações intraday de 05/06 indicados nas seções específicas.</p>
     <div class="panel">
-      <div class="cell"><div class="lbl">Ibovespa</div><div class="val num">170.331</div><div class="chg down num">-2,22%</div></div>
-      <div class="cell"><div class="lbl">USD / BRL</div><div class="val num">5,067</div><div class="chg up num">+1,14%</div></div>
-      <div class="cell"><div class="lbl">EUR / BRL</div><div class="val num">5,877</div><div class="chg up num">+0,82%</div></div>
-      <div class="cell"><div class="lbl">DI1F27</div><div class="val num">14,16%</div><div class="chg num" style="color:var(--muted)">estável</div></div>
-      <div class="cell"><div class="lbl">S&amp;P 500</div><div class="val num">7.553,68</div><div class="chg down num">-0,74%</div></div>
-      <div class="cell"><div class="lbl">Nasdaq</div><div class="val num">26.854,0</div><div class="chg down num">-0,89%</div></div>
-      <div class="cell"><div class="lbl">US 10Y</div><div class="val num">4,49%</div><div class="chg down num">alta no dia</div></div>
-      <div class="cell"><div class="lbl">Brent</div><div class="val num">97,90</div><div class="chg up num">+1,98%</div></div>
-      <div class="cell"><div class="lbl">Ouro</div><div class="val num">4.484,60</div><div class="chg down num">-0,78%</div></div>
-      <div class="cell"><div class="lbl">Bitcoin</div><div class="val num">~66.700</div><div class="chg down num">queda</div></div>
+      <div class="cell">
+        <div class="lbl">Ibovespa</div>
+        <div class="val num down">170.330</div>
+        <div class="chg down num">−2,22% (fech. 03/06)</div>
+        <div class="note">Hoje: ~170.075 (−0,15% parcial)</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">USD / BRL</div>
+        <div class="val num down">5,088</div>
+        <div class="chg down num">+0,42% (intraday 05/06)</div>
+        <div class="note">Ref. 03/06: R$ 5,0668</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">EUR / BRL</div>
+        <div class="val num nd">N/D</div>
+        <div class="chg nd">Ref. 03/06: 5,877</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">DI1F35</div>
+        <div class="val num nd">N/D</div>
+        <div class="chg down num">DIs +30 bps hoje</div>
+        <div class="note">Fonte InfoMoney indisponível</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">S&amp;P 500</div>
+        <div class="val num up">7.584,31</div>
+        <div class="chg up num">+0,41% (fech. 04/06)</div>
+        <div class="note">Hoje: −1,45% (pós-Payroll)</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">Nasdaq</div>
+        <div class="val num down">26.830,96</div>
+        <div class="chg down num">−0,09% (fech. 04/06)</div>
+        <div class="note">Hoje: −2,42% (pós-Payroll)</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">US 10Y</div>
+        <div class="val num">4,48%</div>
+        <div class="chg up num">fech. 04/06</div>
+        <div class="note">2Y pós-Payroll: 4,15% (+10bps)</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">Brent</div>
+        <div class="val num down">95,23</div>
+        <div class="chg down num">−2,64% (fech. 04/06)</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">Ouro</div>
+        <div class="val num">~4.450</div>
+        <div class="chg nd">aprox. (04/06)</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">Bitcoin</div>
+        <div class="val num down">~60.200</div>
+        <div class="chg down num">−5,5% (05/06 intraday)</div>
+      </div>
     </div>
   </section>
 
-  <!-- 5. GLOBAL -->
+  <!-- 5. PANORAMA GLOBAL -->
   <section id="global" class="reveal">
     <div class="sec-head"><span class="sec-num">05</span><h2>Panorama global</h2></div>
-    <p>A sessão asiática foi sem direção única, e os dois extremos contam histórias opostas. O <b>Nikkei (+2,50%)</b> renovou recorde histórico de fechamento, aos 68.402 pontos: a bolsa japonesa é dominada por exportadoras (montadoras, eletrônicos, máquinas), que se beneficiam de um iene mais fraco e do apetite por tecnologia. Já o <b>Hang Seng (-1,56%)</b>, de Hong Kong, recuou — o índice é concentrado em gigantes chinesas de tecnologia e segue sensível ao temor de juros globais altos e às tensões geopolíticas, que ontem pesaram mais que qualquer otimismo local.</p>
-    <p>Na Europa, predominou a queda: o índice pan-europeu <b>Stoxx 600</b> caiu 0,66%, aos 621,19 pontos, e o <b>FTSE 100</b> de Londres cedeu 0,32%. O motor foi o mesmo do resto do mundo — o impasse no Oriente Médio e a alta do petróleo elevaram o temor de inflação. Para hoje, os <b>futuros dos EUA</b> operam em leve baixa, com os investidores ainda atentos à guerra Irã–EUA e à possibilidade de o conflito afetar o fornecimento de energia. A leitura geopolítica é o fio condutor: enquanto a tensão não cede, o "prêmio de risco" embutido em petróleo e ativos defensivos permanece elevado.</p>
-    <div class="tbl-wrap">
+
+    <p><b>Ásia (05/06 — sessão de hoje):</b> Os mercados asiáticos fecharam na defensiva, contagiados pelo duplo peso da fraqueza técnica herdada do chip selloff americano e pelo cenário geopolítico em aberto. O <b>Nikkei recuou 1,31%</b>, para 66.588 pontos — a bolsa japonesa, composta majoritariamente por exportadoras, sofreu com a valorização do dólar e a piora de humor global. O <b>Hang Seng caiu 1,11%</b>, pressionado pelas gigantes de tecnologia listadas em Hong Kong, que acompanharam a liquidação de chips em Nova York. O <b>Shanghai Composite cedeu 0,77%</b>, para 4.026 pontos, em sua quarta semana consecutiva de queda, refletindo dúvidas sobre o ritmo de estímulos na China.</p>
+
+    <div class="tbl-wrap" style="margin-bottom:16px">
       <table>
-        <caption>Índices internacionais · fechamento 03/06</caption>
-        <thead><tr><th class="sortable">Índice</th><th class="sortable">Valor</th><th class="sortable" data-default-sort>Var. %</th></tr></thead>
+        <caption>Ásia · fechamento 05/06/2026</caption>
+        <thead><tr><th>Índice</th><th>Pontuação</th><th>Variação</th></tr></thead>
         <tbody>
-          <tr><td class="tk">Nikkei 225</td><td class="num">68.402,13</td><td class="num" data-v="2.50">+2,50%</td></tr>
-          <tr><td class="tk">FTSE 100</td><td class="num">10.340,28</td><td class="num" data-v="-0.32">-0,32%</td></tr>
-          <tr><td class="tk">Stoxx 600</td><td class="num">621,19</td><td class="num" data-v="-0.66">-0,66%</td></tr>
-          <tr><td class="tk">Hang Seng</td><td class="num">25.633,21</td><td class="num" data-v="-1.56">-1,56%</td></tr>
-          <tr><td class="tk">Shanghai</td><td class="num nd">N/D</td><td class="num nd" data-v="-999">N/D</td></tr>
-          <tr><td class="tk">DAX</td><td class="num nd">N/D</td><td class="num nd" data-v="-999">N/D</td></tr>
-          <tr><td class="tk">CAC 40</td><td class="num nd">N/D</td><td class="num nd" data-v="-999">N/D</td></tr>
+          <tr><td class="tk">Nikkei 225 🇯🇵</td><td class="num">66.588</td><td class="num down">−1,31%</td></tr>
+          <tr><td class="tk">Hang Seng 🇭🇰</td><td class="num nd">N/D</td><td class="num down">−1,11%</td></tr>
+          <tr><td class="tk">Shanghai 🇨🇳</td><td class="num">4.026</td><td class="num down">−0,77%</td></tr>
+          <tr><td class="tk">KOSPI 🇰🇷</td><td class="num nd" colspan="2">N/D (não confirmado)</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="small">Índices marcados <span class="nd">N/D</span> não foram confirmados em fonte confiável no horário de fechamento desta edição.</p>
+
+    <p><b>Europa (05/06 — fechamento da sessão):</b> O quadro europeu foi misto, mas com viés de baixa no segmento de tecnologia. O <b>DAX recuou 0,69%</b>, para 24.773, arrastado pela Infineon (−8,7%) e ASML (−2,2%), no contágio direto do selloff de semicondutores disparado pelos resultados da Broadcom. O <b>CAC 40 cedeu 0,32%</b>, para 8.218. O <b>FTSE 100</b> ficou praticamente estável (+0,07%), amortecido pelo peso de bancos e commodities. A perspectiva de que o Fed possa apertar política monetária adicionou pressão sobre os bonds europeus, elevando os yields de Bunds e Gilts.</p>
+
+    <div class="tbl-wrap" style="margin-bottom:16px">
+      <table>
+        <caption>Europa · fechamento 05/06/2026</caption>
+        <thead><tr><th>Índice</th><th>Pontuação</th><th>Variação</th></tr></thead>
+        <tbody>
+          <tr><td class="tk">DAX 🇩🇪</td><td class="num">24.773,72</td><td class="num down">−0,69%</td></tr>
+          <tr><td class="tk">CAC 40 🇫🇷</td><td class="num">8.218,24</td><td class="num down">−0,32%</td></tr>
+          <tr><td class="tk">FTSE 100 🇬🇧</td><td class="num">10.368,05</td><td class="num up">+0,07%</td></tr>
+          <tr><td class="tk">Euro Stoxx 50 🇪🇺</td><td class="num nd" colspan="2">N/D</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><b>Geopolítica:</b> O maior driver do dia no front geopolítico é a <b>guerra Irã–EUA</b> e o conflito Israel–Líbano. Na quinta, notícias de possível cessar-fogo entre Israel e Hezbollah fizeram o petróleo recuar e as bolsas europeias e americanas avançar. Mas Israel sinalizou que continuará os ataques, e o Hezbollah confirmou resistência. Isso tranca o principal pré-requisito do Irã para reabrir o Estreito de Ormuz — a paz em todas as frentes — e mantém o risco de petróleo acima de US$ 90 por tempo indefinido. Trump, por sua vez, afirmou que "ainda há muito a descobrir" sobre o acordo com o Irã, sem dar detalhes. Numa semana de múltiplos choques (tarifas, Oriente Médio, Payroll), o mercado entra no fim de semana com mais perguntas do que respostas.</p>
   </section>
 
-  <!-- 6. EUA -->
+  <!-- 6. ESTADOS UNIDOS -->
   <section id="eua" class="reveal">
     <div class="sec-head"><span class="sec-num">06</span><h2>Estados Unidos</h2></div>
-    <p>Wall Street recuou das máximas históricas que havia renovado na véspera. O <b>S&amp;P 500</b> caiu 0,74%, aos 7.553,68 pontos; o <b>Nasdaq</b> cedeu 0,89% e o <b>Dow Jones</b> perdeu 1,21%, com o <b>Russell 2000</b> (empresas menores) na lanterna, a -1,25%. Por baixo, houve uma <b>rotação setorial</b>: o dinheiro saiu de tecnologia, comunicação e bancos — Microsoft (-3,08%), Nvidia (-3,16%) e Goldman Sachs (-2,56%) caíram — em direção a nomes defensivos e ligados a consumo, como Walmart (+2,85%) e Caterpillar (+2,62%). O gatilho foi a combinação de petróleo em alta (pela escalada com o Irã) e juros mais altos, que penalizam justamente as ações de crescimento mais caras.</p>
-    <p>No mercado de juros, os <b>Treasuries</b> subiram: o título de 10 anos fechou a 4,49% e o de 2 anos a 4,08%. A alta das taxas reflete dois medos somados — inflação puxada pelo petróleo e um mercado de trabalho ainda forte, depois que o <b>ADP</b> mostrou criação de 122 mil vagas privadas em maio, acima do esperado. Esse pano de fundo reforça a leitura de "juros altos por mais tempo", agora sob a batuta do novo presidente do Fed, <b>Kevin Warsh</b>, que assumiu sinalizando continuidade com revisão de práticas. Após o fechamento, os resultados pesaram: <b>Broadcom</b> caiu mais de 6% com receita ligeiramente abaixo do esperado, e <b>CrowdStrike</b> recuou ~7% mesmo após elevar projeções e anunciar desdobramento de ações — sinal de exigência alta do mercado com o setor de tecnologia.</p>
-    <div class="tbl-wrap">
+
+    <p><b>Fechamento de 04/06 (antes do Payroll):</b> Wall Street protagonizou uma jornada de rotação setorial. O <b>Dow Jones bateu recorde histórico de fechamento</b> aos 51.561,93 pontos (+1,73%), beneficiado por saúde, industriais e financeiras. O <b>S&amp;P 500</b> avançou 0,41%, para 7.584,31. O <b>Nasdaq</b> ficou quase estável (−0,09%, 26.830,96), pressionado pela queda de Broadcom (−6,4% no after-hours) após receita abaixo das expectativas, que contaminou toda a cadeia de semicondutores. O <b>Russell 2000</b> (pequenas empresas) subiu 1,45%, para 2.935,33 — sinal de que o apetite por risco estava presente, mas concentrado fora de big tech. Os <b>Treasuries de 10 anos</b> fecharam em 4,48% e os de 2 anos em 4,05%.</p>
+
+    <div class="tbl-wrap" style="margin-bottom:16px">
       <table>
-        <caption>Índices, ações em destaque &amp; Treasuries · 03/06</caption>
-        <thead><tr><th class="sortable">Ativo</th><th class="sortable">Valor</th><th class="sortable" data-default-sort>Var. %</th></tr></thead>
+        <caption>EUA · índices · fechamento 04/06/2026</caption>
+        <thead><tr><th>Índice</th><th>Pontuação</th><th>Variação</th></tr></thead>
         <tbody>
-          <tr><td class="tk">Walmart</td><td class="num">—</td><td class="num" data-v="2.85">+2,85%</td></tr>
-          <tr><td class="tk">Caterpillar</td><td class="num">—</td><td class="num" data-v="2.62">+2,62%</td></tr>
-          <tr><td class="tk">S&amp;P 500</td><td class="num">7.553,68</td><td class="num" data-v="-0.74">-0,74%</td></tr>
-          <tr><td class="tk">Nasdaq</td><td class="num">26.853,98</td><td class="num" data-v="-0.89">-0,89%</td></tr>
-          <tr><td class="tk">Dow Jones</td><td class="num">50.687,07</td><td class="num" data-v="-1.21">-1,21%</td></tr>
-          <tr><td class="tk">Russell 2000</td><td class="num nd">N/D</td><td class="num" data-v="-1.25">-1,25%</td></tr>
-          <tr><td class="tk">Goldman Sachs</td><td class="num">—</td><td class="num" data-v="-2.56">-2,56%</td></tr>
-          <tr><td class="tk">Microsoft</td><td class="num">—</td><td class="num" data-v="-3.08">-3,08%</td></tr>
-          <tr><td class="tk">Nvidia</td><td class="num">—</td><td class="num" data-v="-3.16">-3,16%</td></tr>
-          <tr><td class="tk">US 10Y</td><td class="num">4,49%</td><td class="num nd" data-v="-999">↑ alta</td></tr>
-          <tr><td class="tk">US 2Y</td><td class="num">4,08%</td><td class="num nd" data-v="-999">↑ alta</td></tr>
+          <tr><td class="tk">Dow Jones</td><td class="num">51.561,93</td><td class="num up">+1,73% 🏆 recorde</td></tr>
+          <tr><td class="tk">S&amp;P 500</td><td class="num">7.584,31</td><td class="num up">+0,41%</td></tr>
+          <tr><td class="tk">Nasdaq</td><td class="num">26.830,96</td><td class="num down">−0,09%</td></tr>
+          <tr><td class="tk">Russell 2000</td><td class="num">2.935,33</td><td class="num up">+1,45%</td></tr>
+          <tr><td class="tk">US 10Y Treasury</td><td class="num">4,48%</td><td class="num">—</td></tr>
+          <tr><td class="tk">US 2Y Treasury</td><td class="num">4,05%</td><td class="num">—</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="small">"—" indica que o nível de preço da ação não foi capturado nesta edição; a variação do dia, sim. Treasuries: variação reportada como direção (sem o delta exato confirmado em fonte).</p>
+
+    <p><b>Payroll e reação de 05/06:</b> O relatório de emprego de maio criou 172 mil vagas não-agrícolas — mais que o dobro do teto das estimativas (125 mil pela projeção mais otimista; consenso de 80–85 mil). Com revisões expressivas de meses anteriores (+29 mil em março, +64 mil em abril), o mercado de trabalho americano demonstra uma resiliência que o consenso não precificava. O desemprego ficou em 4,3% pelo terceiro mês consecutivo e os salários desaceleraram levemente para +3,4% ao ano — um componente mais benigno, que evita uma reação ainda mais violenta. Ainda assim, a combinação de emprego forte, inflação próxima de 3,8% e petróleo acima de US$ 90 fecha o espaço para cortes de juros no curto prazo. No FedWatch do CME, a probabilidade de alta em dezembro saltou de 48% para 65%, e a chance de aperto ainda em 2026 atingiu 98% nos mercados de juros futuros. O <b>Dow Jones recuou 0,61%</b>, o <b>S&amp;P 500 perdeu 1,45%</b> e o <b>Nasdaq caiu 2,42%</b> após o dado. Os Treasuries de 2 anos subiram 10 pontos-base para 4,15%. Trump reagiu nas redes sociais, afirmando que "crescimento não significa inflação" e que as ações deveriam subir, não cair.</p>
+
+    <p><b>Fed e Warsh:</b> A reunião de 16–17 de junho será a primeira presidida por Kevin Warsh, indicado por Trump. Analistas avaliam que o encontro "deve dar o tom da condução da política monetária americana pelos próximos meses". Com o Payroll quente, Warsh herda um Fed em território difícil: economia forte, inflação resiliente, petróleo elevado — e pressão política para não apertar.</p>
   </section>
 
   <!-- 7. BRASIL -->
   <section id="brasil" class="reveal">
     <div class="sec-head"><span class="sec-num">07</span><h2>Brasil</h2></div>
-    <p>O <b>Ibovespa</b> caiu <b>-2,22%</b>, aos 170.330,63 pontos, perdendo cerca de 3,8 mil pontos e marcando a maior queda em quase um mês; o volume somou R$ 28,28 bilhões e <b>apenas oito ações</b> fecharam em alta. O estopim foi a soma de dois choques: a nova ameaça tarifária dos EUA — proposta de 12,5% sobre o Brasil e cerca de 60 países, somada aos 25% da véspera — e a aversão a risco global vinda da guerra Irã–EUA, que acelerou a saída de capital estrangeiro da bolsa. Os pesos-pesados puxaram o índice para baixo: <b>Vale (VALE3) caiu 3,78%</b> (R$ 81,79), pressionada pelo fluxo estrangeiro e pela queda do minério de ferro; os bancos recuaram em bloco (o Índice Financeiro caiu 2,78%), com <b>Itaú (ITUB4) -2,12%</b> (R$ 38,72), no menor preço do ano. Vale, Petrobras e bancos somam cerca de metade da carteira do Ibovespa.</p>
-    <p>As poucas altas tiveram histórias próprias: <b>Copasa (CSMG3)</b> disparou 13,34% (R$ 60,00) em meio a rumores de que a Equatorial (EQTL3) teria apresentado nova proposta na privatização da companhia, e <b>Minerva (BEEF3)</b> subiu 2,29% após elevação de recomendação pelo JP Morgan. Do lado das quedas, nomes domésticos sensíveis à alta dos juros lideraram as perdas — <b>Hapvida (HAPV3)</b> e <b>Azzas (AZZA3)</b> recuaram mais de 8% —, justamente porque a <b>abertura da curva de juros</b> encarece o financiamento e reduz o valor presente dessas empresas. No câmbio, o <b>dólar</b> subiu 1,14%, a R$ 5,0668, e o <b>euro</b> avançou 0,82%, a R$ 5,877, refletindo o mesmo movimento de fuga para ativos seguros. O risco doméstico segue concentrado no tarifaço e em seu efeito sobre exportadoras e sobre o Real.</p>
-    <div class="panel" style="margin-bottom:14px">
-      <div class="cell"><div class="lbl">Ibovespa</div><div class="val num">170.330,63</div><div class="chg down num">-2,22%</div></div>
-      <div class="cell"><div class="lbl">Dólar comercial</div><div class="val num">R$ 5,0668</div><div class="chg up num">+1,14%</div></div>
-      <div class="cell"><div class="lbl">Euro comercial</div><div class="val num">R$ 5,877</div><div class="chg up num">+0,82%</div></div>
+
+    <div class="alert-box">
+      <strong>Referência:</strong> O Ibovespa e o câmbio abaixo são do fechamento de 03/06/2026 — último pregão antes do feriado de Corpus Christi (04/06). A B3 reabre hoje (05/06) diretamente para o ambiente pós-Payroll.
     </div>
-    <div class="tbl-wrap" style="margin-bottom:12px">
+
+    <p><b>Fechamento de referência (03/06):</b> O Ibovespa fechou em queda acentuada de <b>2,22%</b>, aos 170.330,63 pontos, com apenas 8 ações em alta — a maior perda em cerca de um mês. Dois choques simultâneos explicam o movimento: a nova rodada de tarifas de Trump (12,5% sobre Brasil e ~60 países, somados aos 25% já vigentes) e a escalada Irã–EUA com Brent próximo a US$ 98. O volume foi de R$ 28,28 bilhões. O dólar avançou 1,14%, para R$ 5,0668, e o euro subiu 0,82%, para R$ 5,877.</p>
+
+    <div class="tbl-wrap" style="margin-bottom:16px">
       <table>
-        <caption>Destaques de alta (só 8 ações subiram)</caption>
-        <thead><tr><th>Ação</th><th>Valor (R$)</th><th>Var. %</th></tr></thead>
+        <caption>Ibovespa · destaques 03/06/2026</caption>
+        <thead><tr><th>Ativo</th><th>Variação</th><th>Nível / Obs.</th></tr></thead>
         <tbody>
-          <tr><td class="tk">CSMG3 (Copasa)</td><td class="num">60,00</td><td class="num up">+13,34%</td></tr>
-          <tr><td class="tk">BEEF3 (Minerva)</td><td class="num">3,58</td><td class="num up">+2,29%</td></tr>
+          <tr><td class="tk">🟢 Copasa (CSMG3)</td><td class="num up">+13,34%</td><td style="text-align:left">R$ 60,00 — rumor de proposta da Equatorial (privatização)</td></tr>
+          <tr><td class="tk">🟢 Minerva (BEEF3)</td><td class="num up">+2,29%</td><td style="text-align:left">Upgrade do JP Morgan</td></tr>
+          <tr><td class="tk">🔴 Hapvida (HAPV3)</td><td class="num down">&gt; −8%</td><td style="text-align:left">Curva de juros abrindo pressiona planos de saúde alavancados</td></tr>
+          <tr><td class="tk">🔴 Azzas 2154 (AZZA3)</td><td class="num down">&gt; −8%</td><td style="text-align:left">Mesma lógica — setor sensível a juros</td></tr>
+          <tr><td class="tk">🔴 Vale (VALE3)</td><td class="num down">−3,78%</td><td style="text-align:left">R$ 81,79 — queda do minério e risco global</td></tr>
+          <tr><td class="tk">🔴 Itaú (ITUB4)</td><td class="num down">−2,12%</td><td style="text-align:left">R$ 38,72 — menor do ano; IFNC −2,78%</td></tr>
+          <tr><td class="tk">🔴 Petrobras (PETR3/4)</td><td class="num down">−1,12% / −0,77%</td><td style="text-align:left">R$ 46,95 / R$ 41,25</td></tr>
         </tbody>
       </table>
     </div>
-    <div class="tbl-wrap">
-      <table>
-        <caption>Destaques de baixa</caption>
-        <thead><tr><th>Ação</th><th>Valor (R$)</th><th>Var. %</th></tr></thead>
-        <tbody>
-          <tr><td class="tk">HAPV3 (Hapvida)</td><td class="num nd">N/D</td><td class="num down">&gt; -8%</td></tr>
-          <tr><td class="tk">AZZA3 (Azzas)</td><td class="num nd">N/D</td><td class="num down">&gt; -8%</td></tr>
-          <tr><td class="tk">VALE3 (Vale)</td><td class="num">81,79</td><td class="num down">-3,78%</td></tr>
-          <tr><td class="tk">ITUB4 (Itaú)</td><td class="num">38,72</td><td class="num down">-2,12%</td></tr>
-          <tr><td class="tk">PETR3 (Petrobras)</td><td class="num">46,95</td><td class="num down">-1,12%</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="small">Valores exatos de HAPV3 e AZZA3 não confirmados em fonte; as fontes reportam quedas "superiores a 8%". Petrobras ON caiu apesar da alta do petróleo, por se descolar do fluxo vendedor da bolsa.</p>
+
+    <p><b>Abertura de hoje (05/06):</b> A B3 retorna do feriado direto para o turbilhão do Payroll. Por volta de 12h, o Ibovespa recuava 0,15%, aos 170.075 pontos (mínima intraday de 169.321; máxima de 170.457). O dólar, que havia aberto estável, inverteu o sinal após o Payroll e operava em alta de 0,42%, para R$ 5,088. Analistas apontam que, sem uma notícia relevante do Oriente Médio, o índice tende a operar de lado nos 170 mil pontos, tentando recuperar parte das perdas recentes.</p>
+
+    <p><b>Cenário doméstico:</b> O foco do mercado local volta a ser o Copom de 18 de junho. O Payroll forte eleva a incerteza sobre a trajetória do Fed, o que tende a manter o dólar mais alto e a curva de juros brasileira pressionada — reduzindo marginalmente o espaço do BCB para sinalizar cortes antecipados. A Selic segue em 14,50%. Pelo Focus, o consenso do mercado projeta IPCA 2026 em ~5,0% e Selic fim de ano em 13,25%, mas a reprícificação da curva desta semana sugere que esse piso pode ser revisto.</p>
   </section>
 
   <!-- 8. RENDA FIXA -->
   <section id="rendafixa" class="reveal">
-    <div class="sec-head"><span class="sec-num">08</span><h2>Renda fixa</h2></div>
-    <p>A <b>curva de juros</b> — o conjunto das taxas dos contratos de DI para diferentes prazos — teve um dia de <b>abertura</b> (alta de taxas) no trecho intermediário e longo, enquanto a ponta curta ficou quase estável. O DI para janeiro de 2027 (DI1F27) fechou praticamente de lado, a <b>14,16%</b>, refletindo que, com a Selic em 14,50% e o mercado vendo pouco espaço para mais cortes, a parte curta tem pouca margem para se mexer. Já os vértices mais longos subiram, incorporando prêmio de risco. O principal motivo foi doméstico e político: a ameaça de tarifas extras dos EUA sobre produtos brasileiros elevou a percepção de risco-país, e o trecho longo da curva é justamente o mais sensível ao risco fiscal e externo.</p>
-    <p>No Tesouro Direto (que hoje, no feriado, não tem negociação), o destaque é o nível das taxas reais: o <b>Tesouro IPCA+ 2032 passou de 8%</b>, pagando IPCA + 8,04%, ou seja, mais de 8% ao ano <i>acima</i> da inflação para quem carregar até o vencimento. É um patamar historicamente alto, com dois lados: para o investidor, é uma chance rara de travar um retorno real elevado por anos; para o país, juros reais altos encarecem a dívida pública e refletem a desconfiança do mercado com as contas — a mesma tensão fiscal que pressiona o trecho longo da curva. Como referência de expectativas, o Boletim Focus projeta IPCA de cerca de 5,0% e Selic de 13,25% no fim de 2026.</p>
-    <div class="tbl-wrap" style="margin-bottom:12px">
+    <div class="sec-head"><span class="sec-num">08</span><h2>Renda Fixa</h2></div>
+
+    <p><b>DI Futuro:</b> Os juros futuros brasileiros dispararam mais de 30 pontos-base nesta sexta, segundo o Money Times, após o mercado zerar posições diante da perspectiva de Selic terminal mais alta — reação direta ao Payroll americano. Os contratos de DI abrem a perspectiva de que o Fed possa ser forçado a apertar, o que eleva o prêmio exigido nos emergentes e puxa a curva doméstica. Os valores exatos de DI1F27, DI1F30 e DI1F35 estão como <span class="nd">N/D</span> nesta edição — a ferramenta InfoMoney não retornou os dados de fechamento durante a coleta; Bruno pode confirmar os vencimentos diretamente em <a href="https://www.infomoney.com.br/ferramentas/juros-futuros-di/" target="_blank">infomoney.com.br/ferramentas/juros-futuros-di/</a>.</p>
+
+    <div class="tbl-wrap" style="margin-bottom:16px">
       <table>
-        <caption>DI Futuro · fechamento 03/06 (fonte: InfoMoney)</caption>
-        <thead><tr><th>Vencimento</th><th>Taxa</th><th>Movimento</th></tr></thead>
+        <caption>DI Futuro · 05/06/2026 (intraday)</caption>
+        <thead><tr><th>Vencimento</th><th>Taxa</th><th>Variação</th></tr></thead>
         <tbody>
-          <tr><td class="tk">DI1F27</td><td class="num">14,16%</td><td class="num" style="color:var(--muted)">estável</td></tr>
-          <tr><td class="tk">DI1F30</td><td class="num nd">N/D</td><td class="num down">abertura (↑)</td></tr>
-          <tr><td class="tk">DI1F35</td><td class="num nd">N/D</td><td class="num down">abertura (↑)</td></tr>
+          <tr><td class="tk">DI1F27 (jan/27)</td><td class="num nd">N/D</td><td class="nd">+30bps (estimado grupo)</td></tr>
+          <tr><td class="tk">DI1F30 (jan/30)</td><td class="num nd">N/D</td><td class="nd">+30bps (estimado grupo)</td></tr>
+          <tr><td class="tk">DI1F35 (jan/35)</td><td class="num nd">N/D</td><td class="nd">+30bps (estimado grupo)</td></tr>
         </tbody>
       </table>
     </div>
-    <div class="tbl-wrap">
+
+    <p><b>Tesouro Direto (10h55 de 05/06 — fonte: InfoMoney/artigo):</b> Os juros nominais atingiram as maiores taxas do ano. O <b>Tesouro Prefixado 2029</b> saltou de 14,37% na quarta para <b>14,52%</b> nesta sexta (+15 pontos-base), novo pico desde o início das negociações do papel em fevereiro. O <b>Prefixado 2032</b> foi de 14,45% para <b>14,58%</b>. Nos títulos de inflação, o <b>IPCA+ 2032</b> se mantém acima de 8% de juro real, em <b>8,17%</b>, enquanto o <b>IPCA+ 2040</b> subiu para <b>7,50%</b> e o <b>IPCA+ 2050</b> está em <b>7,19%</b>. Taxas reais acima de 7% no trecho longo representam patamares que historicamente atraem capital estrangeiro para o Tesouro, mas também sinalizam que o mercado exige prêmio elevado para carregar risco fiscal brasileiro em ambiente de juros globais altos.</p>
+
+    <div class="tbl-wrap" style="margin-bottom:16px">
       <table>
-        <caption>Tesouro Direto · taxas de fechamento 03/06</caption>
-        <thead><tr><th>Título</th><th>Rendimento</th></tr></thead>
+        <caption>Tesouro Direto · taxas às 10h55 de 05/06/2026 (InfoMoney)</caption>
+        <thead><tr><th>Título</th><th>Taxa</th><th>Vencimento</th></tr></thead>
         <tbody>
-          <tr><td class="tk">Tesouro Prefixado 2029</td><td class="num">14,24%</td></tr>
-          <tr><td class="tk">Tesouro Prefixado 2032</td><td class="num nd">N/D</td></tr>
-          <tr><td class="tk">Tesouro IPCA+ 2032</td><td class="num">IPCA + 8,04%</td></tr>
-          <tr><td class="tk">Tesouro IPCA+ 2040</td><td class="num">IPCA + 7,44%</td></tr>
-          <tr><td class="tk">Tesouro IPCA+ 2050</td><td class="num nd">N/D</td></tr>
+          <tr><td class="tk">Tesouro Prefixado 2029</td><td class="num down"><b>14,52%</b> ↑ máx. ano</td><td>01/01/2029</td></tr>
+          <tr><td class="tk">Tesouro Prefixado 2032</td><td class="num down"><b>14,58%</b> ↑ máx. ano</td><td>01/01/2032</td></tr>
+          <tr><td class="tk">Tesouro IPCA+ 2032</td><td class="num down"><b>IPCA + 8,17%</b></td><td>15/08/2032</td></tr>
+          <tr><td class="tk">Tesouro IPCA+ 2040</td><td class="num down"><b>IPCA + 7,50%</b></td><td>15/08/2040</td></tr>
+          <tr><td class="tk">Tesouro IPCA+ 2050</td><td class="num"><b>IPCA + 7,19%</b></td><td>15/08/2050</td></tr>
+          <tr><td class="tk">Tesouro Selic 2031</td><td class="num">SELIC + 0,07%</td><td>01/03/2031</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="small">As taxas exatas de fechamento de DI1F30, DI1F35, Prefixado 2032 e IPCA+ 2050 não puderam ser confirmadas em fonte no horário desta edição e ficam como N/D, conforme a regra de rigor. Selic atual: 14,50% (Copom de 29/04/2026); próxima reunião em 18/06.</p>
+
+    <p><b>O que significa:</b> A abertura da curva de juros no trecho curto e médio reflete o principal risco do momento: a possibilidade de que o Fed retome altas. Para o investidor brasileiro em renda fixa, o Tesouro Prefixado acima de 14,5% e o IPCA+ 2032 acima de 8% representam oportunidades raras em termos históricos — mas carregar esses papéis exige estômago para a volatilidade, dado que uma deterioração fiscal adicional ou um Fed ainda mais hawkish pode abrir os yields ainda mais. O ponto de entrada depende do horizonte de tempo e da tolerância ao risco de marcação a mercado.</p>
+
+    <p><b>EUA — Treasuries:</b> O Tesouro americano de 2 anos subiu 10 pontos-base para 4,15% pós-Payroll, o mais alto desde o ciclo anterior de alta. O de 10 anos estava em 4,48% no fechamento de 04/06. A curva americana segue invertida no trecho 2Y–10Y (−0,33 pp), sinal clássico de expectativa de desaceleração — mas o Payroll forte pressiona esse spread. O BCE e o BoE também podem revisar sua trajetória de cortes à luz do Fed.</p>
   </section>
 
   <!-- 9. COMMODITIES & CRIPTO -->
   <section id="commodities" class="reveal">
-    <div class="sec-head"><span class="sec-num">09</span><h2>Commodities &amp; cripto</h2></div>
-    <p>O <b>petróleo</b> foi o protagonista. A escalada militar entre EUA e Irã — com mísseis iranianos contra Kuwait e Bahrein e novos ataques americanos — somada ao alerta da Agência Internacional de Energia sobre estoques globais baixos, levou o <b>Brent</b> a subir 1,98%, para perto de US$ 97,90, e o <b>WTI</b> a avançar ~2,5%, a US$ 96,11. Na contramão, o <b>minério de ferro</b> recuou (o contrato mais líquido em Dalian caiu ~0,6%, a 780 yuans/tonelada), pressionando a Vale. O <b>ouro</b> e a <b>prata</b> caíram (-0,78% e -1,32%), num movimento típico: como funcionam de "porto seguro", perdem brilho quando os juros dos Treasuries sobem e tornam mais caro carregar ativos que não pagam rendimento.</p>
-    <p>No mundo cripto, prevaleceu a <b>aversão a risco</b> ("risk-off"): o <b>Bitcoin</b> rondou a casa dos US$ 66–67 mil, no menor nível desde o fim de março, e o <b>Ethereum</b> caiu mais forte, abrindo perto de US$ 1.857 (-7,3%), no menor patamar desde fevereiro. Quando os investidores ficam cautelosos — aqui, pela incerteza com juros e geopolítica —, reduzem primeiro a exposição aos ativos mais voláteis, e o cripto está no topo da lista. Somou-se a isso uma notícia simbólica: a Strategy (ex-MicroStrategy) realizou a <b>primeira venda de Bitcoin</b> de sua história, o que aprofundou o movimento de queda.</p>
-    <div class="tbl-wrap">
+    <div class="sec-head"><span class="sec-num">09</span><h2>Commodities &amp; Cripto</h2></div>
+
+    <p><b>Petróleo:</b> O Brent recuou 2,64% na quinta-feira (04/06), para <b>US$ 95,23/barril</b> — a maior queda semanal desde meados de maio —, motivado por notícias de negociações entre Israel e Hezbollah que abriam perspectiva de cessar-fogo no Líbano. Um acordo de paz nessa frente seria um pré-requisito do Irã para reabrir o Estreito de Ormuz e avançar no diálogo nuclear com os EUA. Porém, Israel sinalizou na sequência que continuará os ataques, e o Hezbollah confirmou que segue resistindo, devolvendo boa parte do pessimismo. O Rabobank avaliou que "a paz em todas as frentes era uma condição do Irã, mas nenhum dos lados beligerantes está interessado". O WTI ficou como <span class="nd">N/D</span> nesta edição (valor de fechamento de 04/06 não confirmado em fonte primária).</p>
+
+    <p><b>Ouro e Prata:</b> O ouro negociava ao redor de US$ 4.450 na quarta-feira (04/06), cedendo levemente ante a alta dos Treasuries — a lógica clássica de que juros mais altos elevam o custo de oportunidade de carregar o metal. A prata avançou 1,56%, para US$ 73,83, em movimento ligeiramente divergente. O metal amarelo mantém o suporte de longo prazo reforçado pelo relatório do BCE divulgado na semana anterior, que apontou o ouro ultrapassando Treasuries como maior reserva dos bancos centrais globais (27% vs. 22%).</p>
+
+    <p><b>Minério de Ferro:</b> Fechamento de 03/06 em US$ 103,71 (−1,35%), pressionado pelo risco global e pelas tarifas. Dado de 04/06: <span class="nd">N/D</span>.</p>
+
+    <div class="tbl-wrap" style="margin-bottom:16px">
       <table>
-        <caption>Commodities &amp; cripto · 03/06 (cripto em referência intraday)</caption>
-        <thead><tr><th class="sortable">Ativo</th><th class="sortable">Valor</th><th class="sortable" data-default-sort>Var. %</th></tr></thead>
+        <caption>Commodities · referências de 04/06 (exceto onde indicado)</caption>
+        <thead><tr><th>Ativo</th><th>Cotação</th><th>Variação</th></tr></thead>
         <tbody>
-          <tr><td class="tk">Brent</td><td class="num">97,90</td><td class="num" data-v="1.98">+1,98%</td></tr>
-          <tr><td class="tk">WTI</td><td class="num">96,11</td><td class="num" data-v="2.51">+2,51%</td></tr>
-          <tr><td class="tk">Minério de ferro (USD)</td><td class="num">103,71</td><td class="num" data-v="-1.35">-1,35%</td></tr>
-          <tr><td class="tk">Ouro</td><td class="num">4.484,60</td><td class="num" data-v="-0.78">-0,78%</td></tr>
-          <tr><td class="tk">Prata</td><td class="num">74,56</td><td class="num" data-v="-1.32">-1,32%</td></tr>
-          <tr><td class="tk">Bitcoin</td><td class="num">~66.700</td><td class="num nd" data-v="-999">queda (↓)</td></tr>
-          <tr><td class="tk">Ethereum</td><td class="num">~1.857</td><td class="num" data-v="-7.30">-7,30%</td></tr>
-          <tr><td class="tk">VIX</td><td class="num nd">N/D</td><td class="num nd" data-v="-999">N/D</td></tr>
+          <tr><td class="tk">Brent (USD/bbl)</td><td class="num">95,23</td><td class="num down">−2,64%</td></tr>
+          <tr><td class="tk">WTI (USD/bbl)</td><td class="num nd">N/D</td><td class="nd">—</td></tr>
+          <tr><td class="tk">Minério (USD/t)</td><td class="num">103,71 <span class="nd">(03/06)</span></td><td class="num down">−1,35%</td></tr>
+          <tr><td class="tk">Ouro (USD/oz)</td><td class="num">~4.450</td><td class="num down">~−0,5%</td></tr>
+          <tr><td class="tk">Prata (USD/oz)</td><td class="num">73,83</td><td class="num up">+1,56%</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="small">Cripto: o mercado opera 24h; os valores são referência intraday de 03/06 (abertura/manhã em Nova York), não um "fechamento". Ethereum: variação de abertura ante o dia anterior. VIX não confirmado em fonte nesta edição.</p>
+
+    <p><b>Bitcoin e Cripto:</b> O Bitcoin chegou a recuar 5,5% nesta sexta (05/06), negociando ao redor de <b>US$ 60.200</b> — o menor nível desde outubro de 2024, segundo o Yahoo Finance. O movimento reflete flight-to-safety clássico após o Payroll: investidores saem de ativos de risco em direção a Treasuries. O Ethereum estava em torno de US$ 1.740 na manhã de 04/06. Na semana passada, a Strategy (ex-MicroStrategy) realizou sua primeira venda histórica de BTC (US$ 2,5 milhões). O ambiente para criptoativos segue desfavorável enquanto o Fed não der sinalização mais clara sobre a trajetória dos juros.</p>
   </section>
 
-  <!-- 10. NOTÍCIAS -->
+  <!-- 10. TOP NOTÍCIAS -->
   <section id="noticias" class="reveal">
     <div class="sec-head"><span class="sec-num">10</span><h2>Top notícias do dia</h2></div>
     <div class="news">
 
-      <details class="n" open>
-        <summary><span class="nidx">01</span><span class="ntitle">Trump propõe nova tarifa de 12,5% sobre o Brasil e ~60 países</span><span class="plus">+</span></summary>
+      <details class="n">
+        <summary><span class="nidx">01</span><span class="ntitle">Payroll de maio: 172 mil vagas, mais que o dobro do esperado</span><span class="plus">+</span></summary>
         <div class="body">
-          <p class="nsum">O governo Trump anunciou a intenção de impor uma nova tarifa de 12,5% sobre importações do Brasil e de cerca de 60 outros países, justificada por uma investigação sobre "trabalho forçado". A cobrança se somaria aos 25% propostos um dia antes, após investigação sobre "práticas incoerentes". A medida reacendeu o temor de uma guerra comercial mais ampla.</p>
-          <div class="row"><span class="tag">Por que importa</span><span>Tarifas encareceriam o produto brasileiro nos EUA e reduziriam a competitividade das exportadoras.</span></div>
-          <div class="row"><span class="tag">Impacto</span><span>Acelerou a saída de estrangeiros da bolsa, derrubou o Ibovespa e abriu a curva de juros longa.</span></div>
-          <div class="row"><span class="tag">O que monitorar</span><span>Se a tarifa será de fato aplicada, quais setores entram na lista e a reação do câmbio.</span></div>
+          <p class="nsum">Os EUA criaram 172 mil vagas não-agrícolas em maio, contra consenso de 80–85 mil. O relatório incluiu revisões expressivas de meses anteriores: +64 mil em abril e +29 mil em março. O desemprego ficou estável em 4,3%; salários desaceleraram para +3,4% ao ano.</p>
+          <div class="row"><span class="tag">Por que importa</span><span>O Payroll é o principal indicador do mercado de trabalho americano. Quando vem acima do esperado, reduz a probabilidade de corte de juros e eleva o risco de alta pelo Fed — o que encarece o custo do capital globalmente.</span></div>
+          <div class="row"><span class="tag">Impacto</span><span>Dólar sobe, Treasuries sobem, bolsas caem, BTC cai. Para o Brasil: dólar mais alto, curva de juros se abre, Ibovespa cede. Probabilidade de alta do Fed em dezembro salta de 48% para 65%.</span></div>
+          <div class="row"><span class="tag">Monitorar</span><span>CPI de junho (divulgação em 10/06), reunião do Fed (16–17/06), PIB do 2T26, comentários de membros do Fed sobre cenário pós-Payroll.</span></div>
         </div>
       </details>
 
       <details class="n">
-        <summary><span class="nidx">02</span><span class="ntitle">Escalada Irã–EUA empurra petróleo para perto de US$ 98</span><span class="plus">+</span></summary>
+        <summary><span class="nidx">02</span><span class="ntitle">Dow Jones bate recorde histórico; rotação para longe de tech</span><span class="plus">+</span></summary>
         <div class="body">
-          <p class="nsum">O conflito entre EUA e Irã, já no terceiro mês, voltou a escalar: o Irã lançou mísseis contra Kuwait e Bahrein e os EUA conduziram novos ataques, enquanto as negociações de cessar-fogo emperraram. O Brent subiu 1,98%, para perto de US$ 97,90, com a IEA alertando para estoques globais baixos antes do pico de demanda do verão.</p>
-          <div class="row"><span class="tag">Por que importa</span><span>O Oriente Médio concentra parte relevante da oferta global de petróleo; tensão ali mexe nos preços e na inflação.</span></div>
-          <div class="row"><span class="tag">Impacto</span><span>Petróleo em alta reforça o temor de inflação, pressiona os juros e penaliza ações de crescimento.</span></div>
-          <div class="row"><span class="tag">O que monitorar</span><span>A durabilidade do conflito, o risco ao Estreito de Ormuz e novas falas de Trump sobre um acordo.</span></div>
+          <p class="nsum">O Dow Jones fechou em 51.561,93 pontos (+1,73%) na quinta-feira (04/06), seu maior fechamento histórico, liderado por saúde, financeiras e industriais. O S&amp;P 500 subiu 0,41% enquanto o Nasdaq ficou praticamente estável (−0,09%) pressionado pelo chip selloff.</p>
+          <div class="row"><span class="tag">Por que importa</span><span>O recorde do Dow numa sessão em que o Nasdaq cai revela uma rotação clássica de growth para value — investidores trocam as big techs caras por empresas mais defensivas.</span></div>
+          <div class="row"><span class="tag">Impacto</span><span>Sinal de mercado heterogêneo: não é euforia generalizada, mas seleção setorial. Russell 2000 também subiu (+1,45%), confirmando apetite por small caps não-tech.</span></div>
+          <div class="row"><span class="tag">Monitorar</span><span>Broadcom (AVGO): divulga resultados detalhados esta semana. Nvidia, AMD — reação ao chip selloff nas próximas sessões.</span></div>
         </div>
       </details>
 
       <details class="n">
-        <summary><span class="nidx">03</span><span class="ntitle">Ibovespa cai 2,22% e tem a maior perda em quase um mês</span><span class="plus">+</span></summary>
+        <summary><span class="nidx">03</span><span class="ntitle">Tesouro Direto atinge máximas do ano pós-Payroll</span><span class="plus">+</span></summary>
         <div class="body">
-          <p class="nsum">O principal índice da B3 fechou em queda de 2,22%, aos 170.330,63 pontos, perdendo cerca de 3,8 mil pontos no dia. Apenas oito ações subiram. Vale, Petrobras e bancos — que somam metade da carteira — puxaram o índice para baixo, num pregão de aversão a risco e saída de capital estrangeiro.</p>
-          <div class="row"><span class="tag">Por que importa</span><span>É o termômetro da bolsa brasileira; quedas concentradas nos pesos-pesados derrubam o índice todo.</span></div>
-          <div class="row"><span class="tag">Impacto</span><span>Bolsa no menor patamar do mês, com câmbio pressionado e curva de juros mais inclinada.</span></div>
-          <div class="row"><span class="tag">O que monitorar</span><span>O fluxo estrangeiro na volta do pregão (sexta) e a evolução do noticiário tarifário.</span></div>
+          <p class="nsum">O Prefixado 2029 foi de 14,37% para 14,52% (+15 bps) — novo pico de 2026. O Prefixado 2032 chegou a 14,58%. No IPCA+, o título de 2032 ficou em IPCA+8,17% e o de 2040 em IPCA+7,50%. Os DIs futuros também dispararam mais de 30 pontos-base.</p>
+          <div class="row"><span class="tag">Por que importa</span><span>As máximas sinalizam que o mercado está reprecificando a Selic terminal para um nível mais alto do que o Focus indica, dado o risco de Fed mais hawkish impactar a trajetória cambial e inflacionária brasileira.</span></div>
+          <div class="row"><span class="tag">Impacto</span><span>IPCA+ 2032 acima de 8% de juro real é historicamente atrativo para quem tem horizonte longo. Para renda variável, juros mais altos pressionam valuations — especialmente small caps e ações alavancadas.</span></div>
+          <div class="row"><span class="tag">Monitorar</span><span>Copom 18/06: BCB deve manter Selic em 14,50%, mas a sinalização sobre a trajetória ganha peso extra. Focus de 08/06 para ver se o mercado já revisou projeções de Selic.</span></div>
         </div>
       </details>
 
       <details class="n">
-        <summary><span class="nidx">04</span><span class="ntitle">Ouro supera Treasuries como maior reserva dos bancos centrais</span><span class="plus">+</span></summary>
+        <summary><span class="nidx">04</span><span class="ntitle">Israel continua ataques ao Líbano; cessar-fogo com Irã em xeque</span><span class="plus">+</span></summary>
         <div class="body">
-          <p class="nsum">Segundo relatório do Banco Central Europeu, o ouro passou a representar 27% dos ativos de reserva dos bancos centrais do mundo, contra 22% dos títulos do Tesouro americano (Treasuries). É a primeira vez desde meados dos anos 1990 que o ouro tem participação maior — um marco da diversificação para longe do dólar.</p>
-          <div class="row"><span class="tag">Por que importa</span><span>Mostra uma mudança estrutural: bancos centrais buscam proteção fora dos Treasuries.</span></div>
-          <div class="row"><span class="tag">Impacto</span><span>Tende a dar suporte de longo prazo ao ouro, mesmo em dias de correção como o de ontem.</span></div>
-          <div class="row"><span class="tag">O que monitorar</span><span>O ritmo de compras oficiais de ouro e a demanda por Treasuries nos próximos leilões.</span></div>
+          <p class="nsum">Apesar de negociações mediadas sobre um cessar-fogo Israel–Hezbollah que animaram os mercados na quinta, Israel sinalizou que continuará os ataques no Líbano. O Hezbollah afirmou que seguirá resistindo. Essa continuidade bloqueia o pré-requisito do Irã para reabrir o Estreito de Ormuz.</p>
+          <div class="row"><span class="tag">Por que importa</span><span>O Estreito de Ormuz é a principal rota de exportação de petróleo do Golfo. Enquanto permanecer sob ameaça, o prêmio de risco no óleo se mantém elevado — e o petróleo acima de US$ 90 alimenta a inflação global.</span></div>
+          <div class="row"><span class="tag">Impacto</span><span>Petróleo volta a pressionar após recuo de 2,6% na quinta. Brent pode retornar para a faixa de US$ 97–98 se o conflito escalar. Pressão sobre inflação global, dólar e yields.</span></div>
+          <div class="row"><span class="tag">Monitorar</span><span>Declarações de Netanyahu e de líderes do Irã. Posição de Trump sobre o acordo nuclear — ele afirmou que "ainda há muito a descobrir".</span></div>
         </div>
       </details>
 
       <details class="n">
-        <summary><span class="nidx">05</span><span class="ntitle">Wall Street recua das máximas; rotação para fora da tecnologia</span><span class="plus">+</span></summary>
+        <summary><span class="nidx">05</span><span class="ntitle">Bitcoin cai 5,5% para mínimas desde outubro de 2024</span><span class="plus">+</span></summary>
         <div class="body">
-          <p class="nsum">Depois de fechar em recorde na véspera, os índices americanos caíram: S&amp;P 500 -0,74%, Nasdaq -0,89% e Dow -1,21%. Houve rotação de portfólio — saída de tecnologia, comunicação e bancos (Microsoft, Nvidia e Goldman Sachs caíram) em favor de defensivos como Walmart e Caterpillar —, em meio à alta do petróleo e dos juros.</p>
-          <div class="row"><span class="tag">Por que importa</span><span>As megacaps de tecnologia têm peso enorme nos índices; quando giram, movem o mercado inteiro.</span></div>
-          <div class="row"><span class="tag">Impacto</span><span>Volatilidade elevada mesmo sem uma única má notícia — é rearranjo de posições antes do Payroll.</span></div>
-          <div class="row"><span class="tag">O que monitorar</span><span>Para quais setores o dinheiro migra e se a rotação continua após o dado de emprego.</span></div>
+          <p class="nsum">O Bitcoin recuou para cerca de US$ 60.200 nesta sexta-feira (05/06), o menor nível desde outubro de 2024, em reação ao Payroll forte que elevou o dólar e reduziu o apetite global por ativos de risco. O Ethereum operava abaixo de US$ 1.750.</p>
+          <div class="row"><span class="tag">Por que importa</span><span>A US$ 60 mil, o Bitcoin testa um nível que o mercado considera suporte crítico de curto prazo. Uma ruptura sustentada pode abrir espaço para queda até US$ 55 mil.</span></div>
+          <div class="row"><span class="tag">Impacto</span><span>Fundos cripto e estratégias alavancadas com BTC sofrem perdas. A Nubank (ROXO34) — que tem exposição a cripto — anunciou recompra de US$ 1 bi em ações, possivelmente para sustentar o preço.</span></div>
+          <div class="row"><span class="tag">Monitorar</span><span>Comportamento do BTC ao redor de US$ 60 mil. Fluxo de ETFs de BTC nos EUA. Qualquer notícia regulatória ou de grandes holders (wallets de longa data).</span></div>
         </div>
       </details>
 
       <details class="n">
-        <summary><span class="nidx">06</span><span class="ntitle">ADP mostra 122 mil vagas e reforça "juros altos por mais tempo"</span><span class="plus">+</span></summary>
+        <summary><span class="nidx">06</span><span class="ntitle">SpaceX confirma preço de IPO em US$ 135/ação</span><span class="plus">+</span></summary>
         <div class="body">
-          <p class="nsum">O relatório ADP de emprego privado dos EUA apontou criação de 122 mil vagas em maio, acima das 117 mil esperadas, após revisão para cima do mês anterior. O dado, divulgado dois dias antes do Payroll oficial, reforçou a leitura de um mercado de trabalho resiliente e de menos espaço para cortes de juros no curto prazo.</p>
-          <div class="row"><span class="tag">Por que importa</span><span>Emprego forte permite ao Fed manter juros altos; emprego fraco abriria espaço para cortes.</span></div>
-          <div class="row"><span class="tag">Impacto</span><span>Ajudou a elevar os juros dos Treasuries e a pressionar as ações de crescimento.</span></div>
-          <div class="row"><span class="tag">O que monitorar</span><span>O Payroll oficial de sexta, que costuma divergir do ADP e tem mais peso na decisão do Fed.</span></div>
+          <p class="nsum">A SpaceX informou aos bancos coordenadores que não aceitará renegociação do preço de seu IPO, mantendo-o em US$ 135 por ação. A operação seria um dos maiores IPOs da história americana.</p>
+          <div class="row"><span class="tag">Por que importa</span><span>Um IPO de grande porte tende a sugar liquidez do mercado secundário (investidores vendem ações existentes para financiar a compra das novas). Em ambiente de juros altos, o timing é desafiador.</span></div>
+          <div class="row"><span class="tag">Impacto</span><span>Se concluído, o IPO da SpaceX redefine o valuation de referência para o setor aeroespacial privado. No Brasil, atenção a empresas do segmento de satélites e comunicações.</span></div>
+          <div class="row"><span class="tag">Monitorar</span><span>Data final de precificação e abertura de book. Demanda institucional. Posição de Elon Musk sobre timing dada a volatilidade atual.</span></div>
         </div>
       </details>
 
       <details class="n">
-        <summary><span class="nidx">07</span><span class="ntitle">Broadcom cai mais de 6% após receita abaixo do esperado</span><span class="plus">+</span></summary>
+        <summary><span class="nidx">07</span><span class="ntitle">Nubank anuncia recompra de US$ 1 bilhão em ações</span><span class="plus">+</span></summary>
         <div class="body">
-          <p class="nsum">Depois do fechamento, a Broadcom reportou receita de US$ 22,19 bilhões, ligeiramente abaixo da estimativa, apesar de forte crescimento na receita de semicondutores de IA (US$ 10,8 bi) e de projeção otimista para o trimestre. A ação caiu mais de 6% no after-hours, um possível estressor para o setor de chips, que vinha em forte alta.</p>
-          <div class="row"><span class="tag">Por que importa</span><span>A Broadcom é referência em chips de IA; seu balanço dá o tom para todo o setor.</span></div>
-          <div class="row"><span class="tag">Impacto</span><span>Pode pesar sobre semicondutores e sobre o Nasdaq na abertura de hoje.</span></div>
-          <div class="row"><span class="tag">O que monitorar</span><span>A reação das demais fabricantes de chips e a confirmação da projeção de IA de +200% a/a.</span></div>
+          <p class="nsum">O Nubank (ROXO34) anunciou um programa de recompra de ações no valor de US$ 1 bilhão, em meio a queda nas ações da fintech em Nova York nas últimas semanas. No pregão anterior (03/06), ROXO34 havia recuado 8,16%.</p>
+          <div class="row"><span class="tag">Por que importa</span><span>Recompra de US$ 1 bi sinaliza que a gestão considera o preço atual subavaliado e tem caixa para agir. É uma mensagem de confiança ao mercado.</span></div>
+          <div class="row"><span class="tag">Impacto</span><span>Pode sustentar a ação no curto prazo. Mas o ambiente de juros altos — que comprime margens de fintechs e eleva o custo de captação — segue como headwind estrutural.</span></div>
+          <div class="row"><span class="tag">Monitorar</span><span>Execução do programa de recompra. Resultados do 2T26 (previstos para agosto). Tendência de inadimplência no portfólio de crédito.</span></div>
         </div>
       </details>
 
       <details class="n">
-        <summary><span class="nidx">08</span><span class="ntitle">Bitcoin no menor nível desde março; Strategy faz 1ª venda da história</span><span class="plus">+</span></summary>
+        <summary><span class="nidx">08</span><span class="ntitle">Raízen (RAIZ4) vende operações na Argentina por R$ 7,2 bilhões</span><span class="plus">+</span></summary>
         <div class="body">
-          <p class="nsum">O Bitcoin rondou os US$ 66–67 mil, no menor patamar desde o fim de março, e o Ethereum caiu mais forte, no menor nível desde fevereiro. O movimento de aversão a risco foi aprofundado pela notícia de que a Strategy (ex-MicroStrategy) realizou a primeira venda de Bitcoin de sua história, de US$ 2,5 milhões.</p>
-          <div class="row"><span class="tag">Por que importa</span><span>O Bitcoin é termômetro do apetite a risco; sua queda sinaliza cautela mais ampla.</span></div>
-          <div class="row"><span class="tag">Impacto</span><span>Aumenta a volatilidade dos ativos de risco e testa a paciência do investidor de varejo.</span></div>
-          <div class="row"><span class="tag">O que monitorar</span><span>Se a Strategy (maior detentora corporativa) muda de postura e o efeito do Payroll sobre os juros.</span></div>
+          <p class="nsum">A Raízen anunciou a venda de suas operações na Argentina por R$ 7,2 bilhões, em meio à reestruturação do grupo. O desinvestimento faz parte de uma estratégia de redução de alavancagem e foco nas operações brasileiras de etanol e açúcar.</p>
+          <div class="row"><span class="tag">Por que importa</span><span>A venda gera caixa relevante para a Raízen, que opera com alavancagem elevada. R$ 7,2 bi representa alívio financeiro significativo no contexto de juros altos no Brasil.</span></div>
+          <div class="row"><span class="tag">Impacto</span><span>Positivo para RAIZ4 no curto prazo — redução de risco e melhora de balanço. Setor sucroenergético no radar.</span></div>
+          <div class="row"><span class="tag">Monitorar</span><span>Aprovação regulatória (CADE na Argentina). Uso dos recursos. Guidance revisado pela empresa após o desinvestimento.</span></div>
         </div>
       </details>
 
       <details class="n">
-        <summary><span class="nidx">09</span><span class="ntitle">Copasa dispara 13% com rumor de proposta da Equatorial</span><span class="plus">+</span></summary>
+        <summary><span class="nidx">09</span><span class="ntitle">Trump: acordo com Irã; Ormuz vai reabrir "imediatamente"</span><span class="plus">+</span></summary>
         <div class="body">
-          <p class="nsum">Na contramão da bolsa, a Copasa (CSMG3) subiu 13,34%, a R$ 60,00, sendo a maior alta do Ibovespa, em meio a rumores de que a Equatorial (EQTL3) teria apresentado nova proposta por participação na privatização da companhia de saneamento mineira.</p>
-          <div class="row"><span class="tag">Por que importa</span><span>Movimentos de M&amp;A em saneamento sinalizam apetite por ativos de infraestrutura mesmo em dia ruim.</span></div>
-          <div class="row"><span class="tag">Impacto</span><span>Reprecificação das ações da Copasa e atenção renovada ao tema privatização no setor.</span></div>
-          <div class="row"><span class="tag">O que monitorar</span><span>Confirmação oficial da proposta e os próximos passos do processo de privatização.</span></div>
+          <p class="nsum">Trump afirmou que um acordo com o Irã existe, e que o Estreito de Ormuz reabrirá "imediatamente" — mas ressalvou que ainda há "muito a descobrir sobre o que é o acordo". O Rabobank aponta que a paz no Líbano (Israel–Hezbollah) é condição do Irã que não foi atendida.</p>
+          <div class="row"><span class="tag">Por que importa</span><span>Se confirmado, a reabertura de Ormuz reduziria o prêmio de risco no petróleo de forma expressiva — o barril poderia cair US$ 10–15, aliviando inflação global e dando espaço para bancos centrais cortarem juros.</span></div>
+          <div class="row"><span class="tag">Impacto</span><span>Qualquer sinalização concreta gera rally em ativos de risco e queda do petróleo. A incerteza atual ("ainda há muito a descobrir") mantém o mercado em compasso de espera.</span></div>
+          <div class="row"><span class="tag">Monitorar</span><span>Declarações de chanceleres. Posição do Irã sobre condições. Movimentação de navios-tanque no Golfo Pérsico.</span></div>
         </div>
       </details>
 
     </div>
   </section>
 
-  <!-- 11. CONCLUSÃO -->
+  <!-- 11. CONCLUSÃO DO ESTRATEGISTA -->
   <section id="conclusao" class="reveal">
-    <div class="sec-head"><span class="sec-num">11</span><h2>Conclusão</h2></div>
-    <p>O fechamento de ontem foi de aversão a risco em bloco, e o pano de fundo é uma combinação rara de dois choques simultâneos: um <b>externo</b>, com a guerra Irã–EUA empurrando o petróleo e a inflação esperada para cima, e um <b>doméstico-comercial</b>, com a ameaça de tarifas americanas elevando o risco-país, derrubando a bolsa, pressionando o câmbio e abrindo a curva longa de juros. Hoje, o feriado de Corpus Christi tira o Brasil do tabuleiro e dá uma pausa forçada — mas o noticiário global segue ativo, com os futuros americanos em leve baixa e a Broadcom como possível ruído para o setor de chips na abertura.</p>
-    <p>O <b>principal risco</b> no radar é a materialização do tarifaço somada a um petróleo persistentemente alto, que reforçaria o cenário de juros altos por mais tempo nos EUA e no Brasil. A <b>principal oportunidade</b> segue na renda fixa: com o Tesouro IPCA+ 2032 acima de IPCA + 8%, as taxas reais estão em patamares generosos — ainda que sejam, ao mesmo tempo, o retrato da tensão fiscal e externa do país. O evento decisivo é o <b>Payroll de sexta</b>: até lá, o mercado tende a operar comprado em cautela e a reagir de forma amplificada a qualquer dado. Em resumo: pausa no Brasil hoje, decisão lá fora amanhã.</p>
+    <div class="sec-head"><span class="sec-num">11</span><h2>Conclusão do estrategista</h2></div>
+    <p class="lede">A semana fecha com o mercado enfrentando, simultaneamente, três choques de primeira grandeza: tarifas americanas ampliadas, guerra Irã–EUA com petróleo acima de US$ 90, e agora um Payroll que dobra as expectativas e reacende o espectro de alta de juros pelo Fed. O paradoxo central é que a economia americana está forte — empregos robustos, consumo resiliente —, mas essa força se torna um problema quando a inflação já está em 3,8% e o petróleo permanece elevado. O principal risco daqui em diante é a <b>reunião do Fed de 16–17 de junho</b>, com o novo presidente Kevin Warsh: qualquer sinalização hawkish pode provocar nova rodada de abertura das curvas de juros globais, pressionando especialmente o Ibovespa e o câmbio. O principal ponto de atenção positivo, por outro lado, é a evolução das negociações Irã–EUA — uma reabertura real do Estreito de Ormuz teria impacto imediato e expressivo sobre o petróleo, a inflação e o apetite por risco, revertendo boa parte das perdas da semana.</p>
   </section>
 
   <!-- 12. FONTES -->
-  <section id="fontes" class="reveal sources">
+  <section id="fontes" class="reveal">
     <div class="sec-head"><span class="sec-num">12</span><h2>Fontes e referências</h2></div>
-    <p class="small">Links efetivamente consultados na montagem desta edição, agrupados por categoria. Acesso em 04/06/2026 (manhã, horário de Brasília); os dados referem-se ao fechamento de 03/06/2026, salvo indicação.</p>
-
-    <h3>Mercado / Cotações</h3>
-    <ul>
-      <li><a href="https://www.moneytimes.com.br/ibovespa-3-6-26-lils/" target="_blank" rel="noopener">Money Times — fechamento do Ibovespa, dólar, ações e índices (03/06)</a></li>
-      <li><a href="https://www.dgabc.com.br/Noticia/4322456/fechamento-do-mercado-financeiro" target="_blank" rel="noopener">Diário do Grande ABC — fechamento do mercado financeiro (03/06)</a></li>
-      <li><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-03-2026" target="_blank" rel="noopener">TheStreet — Stock Market Today (03/06): índices, movers, Treasuries, after-hours</a></li>
-      <li><a href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-june-3-2026-btc-opens-below-67000-eth-opens-below-2000-114333961.html" target="_blank" rel="noopener">Yahoo Finance — preços de Bitcoin e Ethereum (03/06)</a></li>
-    </ul>
-
-    <h3>Renda Fixa</h3>
-    <ul>
-      <li><a href="https://www.infomoney.com.br/ferramentas/juros-futuros-di/" target="_blank" rel="noopener">InfoMoney — Juros Futuros (DI1F27 e demais vencimentos)</a></li>
-      <li><a href="https://www.tesourodireto.com.br/titulos/precos-e-taxas.htm" target="_blank" rel="noopener">Tesouro Direto — preços e taxas dos títulos públicos</a></li>
-      <li><a href="https://euqueroinvestir.com/renda-fixa/tesouro-direto-hoje-ipca-2032-passa-de-8" target="_blank" rel="noopener">Eu Quero Investir — Tesouro IPCA+ 2032 acima de 8% e Prefixado 2029 a 14,24%</a></li>
-      <li><a href="https://www.meelion.com/indicadores-financeiros/selic/" target="_blank" rel="noopener">Meelion — Selic atual (14,50%, vigente desde 01/06)</a></li>
-    </ul>
-
-    <h3>Agenda Econômica</h3>
-    <ul>
-      <li><a href="https://lftm.com.br/blog/economia/payroll-nos-eua-e-atividade-no-brasil-lideram-a-agenda-da-semana/" target="_blank" rel="noopener">Lifetime — Payroll nos EUA lidera a agenda da semana</a></li>
-      <li><a href="https://www.investing.com/economic-calendar/" target="_blank" rel="noopener">Investing.com — calendário econômico</a></li>
-    </ul>
-
-    <h3>Renda Fixa / Macro oficiais</h3>
-    <ul>
-      <li><a href="https://www.bcb.gov.br/" target="_blank" rel="noopener">Banco Central — Boletim Focus (IPCA, Selic, PIB, câmbio)</a></li>
-      <li><a href="https://www.federalreserve.gov/releases/h15/" target="_blank" rel="noopener">Federal Reserve — H.15 Selected Interest Rates (Treasuries 03/06)</a></li>
-    </ul>
-
-    <h3>Notícias Brasil</h3>
-    <ul>
-      <li><a href="https://exame.com/invest/mercados/ibovespa-acompanha-aversao-global-e-volta-a-cair-dolar-sobe/" target="_blank" rel="noopener">Exame — Ibovespa acompanha aversão global; dólar sobe</a></li>
-      <li><a href="https://www.moneytimes.com.br/trump-propoe-nova-tarifa-de-125-contra-brasil-e-cerca-de-60-paises-por-trabalho-forcado-fets/" target="_blank" rel="noopener">Money Times — Trump propõe tarifa de 12,5% sobre o Brasil e ~60 países</a></li>
-      <li><a href="https://investnews.com.br/financas/corpus-christi-funcionamento-b3-tesouro-bancos/" target="_blank" rel="noopener">InvestNews — funcionamento de B3, Tesouro Direto e bancos no Corpus Christi</a></li>
-    </ul>
-
-    <h3>Notícias Global / EUA</h3>
-    <ul>
-      <li><a href="https://www.reuters.com/business/us-private-payrolls-increase-may-adp-says-2026-06-03/" target="_blank" rel="noopener">Reuters — ADP: emprego privado dos EUA acima do esperado em maio</a></li>
-      <li><a href="https://www.reuters.com/business/energy/oil-prices-rise-new-middle-east-hostilities-flare-talks-stall-2026-06-03/" target="_blank" rel="noopener">Reuters — petróleo sobe com novas hostilidades no Oriente Médio</a></li>
-      <li><a href="https://www.thestreet.com/crypto/markets/new-report-reveals-gold-has-overtaken-us-treasuries" target="_blank" rel="noopener">TheStreet — ouro supera Treasuries como maior reserva dos bancos centrais</a></li>
-      <li><a href="https://tradingeconomics.com/commodity/iron-ore" target="_blank" rel="noopener">Trading Economics — minério de ferro</a></li>
-    </ul>
+    <div class="sources">
+      <h3>Mercado / Cotações</h3>
+      <ul>
+        <li><a href="https://money.usnews.com/investing/news/articles/2026-06-04/nasdaq-futures-lead-declines-after-broadcom-drop" target="_blank">U.S. News Money — Dow record close, S&amp;P 500 advances, June 4, 2026</a></li>
+        <li><a href="https://br.investing.com/indices/bovespa" target="_blank">Investing.com — Ibovespa cotação e histórico</a></li>
+        <li><a href="https://tradingeconomics.com/united-states/stock-market" target="_blank">Trading Economics — US Stock Market</a></li>
+        <li><a href="https://www.dgabc.com.br/Noticia/4327329/ibovespa-opera-em-queda-apos-payroll-reforcar-cautela-com-juros-nos-eua" target="_blank">DGABC — Ibovespa opera em queda após Payroll (05/06/2026)</a></li>
+        <li><a href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-thursday-june-4-2026-bitcoin-prices-plunge-below-pre-war-levels-114549073.html" target="_blank">Yahoo Finance — Bitcoin &amp; Ethereum prices June 4, 2026</a></li>
+      </ul>
+      <h3>Renda Fixa</h3>
+      <ul>
+        <li><a href="https://www.infomoney.com.br/onde-investir/tesouro-direto-juros-nominais-atingem-maximas-do-ano-apos-dado-de-trabalho-nos-eua/" target="_blank">InfoMoney — Tesouro Direto: juros nominais atingem máximas do ano (05/06/2026)</a></li>
+        <li><a href="https://www.infomoney.com.br/ferramentas/juros-futuros-di/" target="_blank">InfoMoney — Juros Futuros DI (ferramenta — dados não acessíveis automaticamente)</a></li>
+        <li><a href="https://www.tesourodireto.com.br/produtos/dados-sobre-titulos/rendimento-dos-titulos" target="_blank">Tesouro Direto — Rendimento dos Títulos</a></li>
+        <li><a href="https://www.moneytimes.com.br/taxas-de-dis-dispara-mais-de-30-pontos-base-apos-mercado-zerar-posicoes-com-perspectiva-de-selic-terminal-mais-alta/" target="_blank">Money Times — Taxas de DIs disparam mais de 30 bps (05/06/2026)</a></li>
+      </ul>
+      <h3>Agenda Econômica</h3>
+      <ul>
+        <li><a href="https://www.bls.gov/news.release/empsit.nr0.htm" target="_blank">BLS — Employment Situation Summary, May 2026</a></li>
+        <li><a href="https://finance.yahoo.com/economy/article/jobs-report-smashes-expectations-with-payroll-growth-of-172000-145525440.html" target="_blank">Yahoo Finance — Jobs report: payroll growth of 172,000</a></li>
+        <li><a href="https://tradingeconomics.com/united-states/non-farm-payrolls" target="_blank">Trading Economics — US Non Farm Payrolls</a></li>
+      </ul>
+      <h3>Notícias Brasil</h3>
+      <ul>
+        <li><a href="https://www.infomoney.com.br/mercados/reacao-payroll-bolsas-juros-dolar-junho-2026/" target="_blank">InfoMoney — Por que dado positivo nos EUA derrubou bolsas (05/06/2026)</a></li>
+        <li><a href="https://www.moneytimes.com.br/tempo-real-ibovespa-hoje-mercado-ao-vivo-05-06-2026-jals-lils-apsa/" target="_blank">Money Times — Tempo Real: Ibovespa encerra semana (05/06/2026)</a></li>
+        <li><a href="https://www.moneytimes.com.br/ibovespa-abre-em-queda-e-payroll-impulsiona-o-dolar-5-coisas-para-saber-antes-de-investir-hoje-5-ceci/" target="_blank">Money Times — Ibovespa abre em queda, payroll impulsiona o dólar (05/06/2026)</a></li>
+      </ul>
+      <h3>Notícias Global / EUA</h3>
+      <ul>
+        <li><a href="https://www.cnbc.com/2026/06/05/jobs-report-may-2026.html" target="_blank">CNBC — May jobs report (05/06/2026)</a></li>
+        <li><a href="https://www.dgabc.com.br/Noticia/4327332/bolsas-da-europa-fecham-sem-direcao-unica-com-chips-sob-pressao-e-perspectivas-para-juro-do-fed" target="_blank">DGABC — Bolsas da Europa fecham sem direção única (05/06/2026)</a></li>
+        <li><a href="https://www.moneytimes.com.br/dow-atinge-recorde-de-fechamento-e-sp-500-avanca-venda-de-papeis-de-chips-pesa-sobre-nasdaq-pads/" target="_blank">Money Times — Dow recorde, chips pesam sobre Nasdaq (04/06/2026)</a></li>
+        <li><a href="https://www.moneytimes.com.br/trump-voces-ainda-vao-descobrir-sobre-o-que-e-acordo-com-ira-ormuz-reabrira-imediatamente-pads/" target="_blank">Money Times — Trump sobre acordo com Irã e Ormuz (05/06/2026)</a></li>
+        <li><a href="https://www.moneytimes.com.br/spacex-diz-aos-bancos-que-nao-mudara-preco-de-seu-ipo-de-us135-por-acao-pads/" target="_blank">Money Times — SpaceX confirma IPO a US$ 135/ação</a></li>
+        <li><a href="https://www.moneytimes.com.br/nubank-roxo34-anuncia-recompra-de-acoes-no-valor-de-us-1-bilhao-igdl/" target="_blank">Money Times — Nubank anuncia recompra de US$ 1 bilhão</a></li>
+        <li><a href="https://www.tradingkey.com/pt/analysis/economic/indicators/261949521-us-may-nfp-172000-jobs-federal-reserve-wait-and-see-tradingkey" target="_blank">TradingKey — Payrolls de maio 172k, Fed wait-and-see</a></li>
+        <li><a href="https://www.cnbc.com/2026/06/05/asia-markets-today-nikkei-225-kospi-hang-seng-index-csi-300-nifty50.html" target="_blank">CNBC — Asia markets June 5, 2026</a></li>
+      </ul>
+    </div>
   </section>
 
   <!-- 13. GLOSSÁRIO -->
-  <section id="glossario" class="reveal glossary">
+  <section id="glossario" class="reveal">
     <div class="sec-head"><span class="sec-num">13</span><h2>Glossário</h2></div>
-    <p class="small">Os termos técnicos que apareceram nesta edição, em linguagem simples.</p>
-    <dl>
-      <dt>Payroll</dt>
-      <dd>Relatório mensal de emprego dos EUA (nome completo: <i>nonfarm payrolls</i>). Mostra quantas vagas formais foram criadas no mês. É o dado de trabalho mais acompanhado do mundo.</dd>
+    <div class="glossary">
+      <dl>
+        <dt>Payroll</dt>
+        <dd>Relatório mensal do Departamento do Trabalho dos EUA (publicado toda primeira sexta-feira do mês) que mede a criação líquida de empregos não-agrícolas. É o dado macroeconômico mais acompanhado do mundo porque antecipa o comportamento do consumo e da inflação americana — e, portanto, a decisão de juros do Fed.</dd>
 
-      <dt>ADP</dt>
-      <dd>Relatório de emprego privado dos EUA, divulgado pela processadora de folhas de pagamento ADP alguns dias antes do Payroll oficial. Serve de "prévia", mas costuma divergir do número do governo.</dd>
+        <dt>Fed / Federal Reserve</dt>
+        <dd>Banco central dos Estados Unidos. Controla a taxa de juros americana (Fed funds rate), que serve de piso global para o custo do dinheiro. Quando o Fed sobe juros, ativos de risco ao redor do mundo ficam pressionados porque o capital migra para a renda fixa americana.</dd>
 
-      <dt>Fed</dt>
-      <dd>O banco central dos Estados Unidos (Federal Reserve). Define a taxa básica de juros americana e tem mandato duplo: manter o emprego alto e a inflação sob controle. Presidido por Kevin Warsh desde 2026.</dd>
+        <dt>Hawkish</dt>
+        <dd>Postura de um banco central favorável ao aperto monetário — manutenção ou elevação de juros para combater a inflação. O oposto é "dovish" (inclinação a cortar juros para estimular a economia).</dd>
 
-      <dt>Selic / Copom</dt>
-      <dd>A Selic é a taxa básica de juros do Brasil (hoje em 14,50%), definida pelo Copom, o comitê de política monetária do Banco Central. É a referência para todos os demais juros da economia.</dd>
+        <dt>Treasury / Treasuries</dt>
+        <dd>Títulos públicos do governo americano. Os juros dos Treasuries de 10 anos são usados como referência global de "taxa livre de risco". Quando sobem, o custo do capital sobe no mundo inteiro.</dd>
 
-      <dt>IPCA</dt>
-      <dd>O índice oficial de inflação do Brasil. Mede a variação dos preços ao consumidor; é a "régua" que o Banco Central persegue com a Selic.</dd>
+        <dt>Selic</dt>
+        <dd>Taxa básica de juros do Brasil, definida pelo Copom. Hoje em 14,50%. Funciona como piso para toda a renda fixa brasileira e influencia o custo do crédito, a taxa de câmbio e o valuation das ações.</dd>
 
-      <dt>Boletim Focus</dt>
-      <dd>Relatório semanal do Banco Central que reúne as expectativas do mercado para inflação, PIB, Selic e câmbio. Serve de termômetro do que os economistas projetam.</dd>
+        <dt>Copom</dt>
+        <dd>Comitê de Política Monetária do Banco Central do Brasil. Reúne-se a cada 45 dias para decidir sobre a Selic. Próxima reunião: 18/06/2026.</dd>
 
-      <dt>DI futuro</dt>
-      <dd>Contratos negociados na bolsa que refletem a expectativa do mercado para os juros em datas específicas (ex.: DI1F27 = janeiro de 2027). É o melhor termômetro do que o mercado espera para a Selic.</dd>
+        <dt>IPCA</dt>
+        <dd>Índice de Preços ao Consumidor Amplo — a medida oficial de inflação do Brasil, calculada pelo IBGE. A meta do BCB para 2026 é de 3%, com tolerância de 1,5 ponto percentual para cima.</dd>
 
-      <dt>Curva de juros (abrir / fechar)</dt>
-      <dd>O conjunto das taxas de DI para vários prazos. Quando uma taxa <b>sobe</b>, diz-se que "abriu" (mais cautela/risco); quando <b>cai</b>, "fechou" (mais otimismo). Ontem a curva abriu no trecho longo.</dd>
+        <dt>DI Futuro</dt>
+        <dd>Contrato negociado na B3 que permite ao mercado apostar na taxa de juros futura brasileira. Os vencimentos (DI1F27, DI1F30, DI1F35) indicam o que o mercado espera que a Selic esteja naquelas datas. Quando os DIs sobem, o mercado está precificando juros mais altos à frente.</dd>
 
-      <dt>Tesouro IPCA+</dt>
-      <dd>Título público que paga a inflação (IPCA) <i>mais</i> uma taxa fixa (ex.: IPCA + 8,04%). Garante um retorno <b>real</b>, ou seja, acima da inflação, se carregado até o vencimento.</dd>
+        <dt>Tesouro IPCA+</dt>
+        <dd>Título público que paga a inflação (IPCA) mais uma taxa real fixa. Ex.: IPCA+8,17% significa que o investidor recebe a inflação do período mais 8,17% ao ano. Taxas acima de 7% são historicamente elevadas.</dd>
 
-      <dt>Tarifaço</dt>
-      <dd>Termo usado no Brasil para um pacote amplo de tarifas de importação. Aqui, a proposta dos EUA de taxar produtos brasileiros, encarecendo-os no mercado americano e prejudicando exportadoras.</dd>
+        <dt>Tesouro Prefixado</dt>
+        <dd>Título público com taxa de retorno fixada no momento da compra, independente da inflação futura. Indicado para quem acredita que a inflação vai cair abaixo da taxa contratada.</dd>
 
-      <dt>Aversão a risco (risk-off)</dt>
-      <dd>O humor de cautela do mercado. Em "risk-off", investidores vendem ativos arriscados (ações, cripto) e correm para os mais seguros (dólar, ouro, títulos). O oposto é o "risk-on".</dd>
+        <dt>Flight-to-safety</dt>
+        <dd>Fuga para a segurança: movimento em que investidores saem de ativos de risco (ações, cripto, moedas emergentes) em direção a ativos considerados seguros (Treasuries, ouro, dólar). Ocorre em momentos de incerteza elevada.</dd>
 
-      <dt>Prêmio de risco</dt>
-      <dd>O retorno extra que o investidor exige para aceitar um perigo maior (geopolítico, fiscal etc.). Quando o risco aumenta, o prêmio sobe — e isso encarece petróleo, câmbio e juros longos.</dd>
+        <dt>Chip Selloff</dt>
+        <dd>Venda generalizada de ações de fabricantes e projetistas de chips (semicondutores), como Nvidia, AMD, Broadcom, ASML. Normalmente ocorre após resultados fracos de uma empresa do setor, que contamina toda a cadeia.</dd>
 
-      <dt>Rotação setorial</dt>
-      <dd>Quando investidores vendem os setores/ações que mais subiram para comprar os que ficaram para trás. O índice pode até cair enquanto, por baixo, há muita movimentação entre setores.</dd>
+        <dt>Suporte (nível de suporte)</dt>
+        <dd>Faixa de preço em que historicamente surgem compradores, evitando quedas maiores. Para o Bitcoin, US$ 60 mil é apontado como suporte crítico nesta conjuntura.</dd>
 
-      <dt>Treasury</dt>
-      <dd>Título da dívida do governo americano. O de 10 anos é a principal referência de juro do mundo: quando sua taxa sobe, encarece o crédito global e pressiona ações de crescimento.</dd>
-
-      <dt>Brent / WTI</dt>
-      <dd>Os dois principais tipos de petróleo de referência: o Brent (Mar do Norte, referência global) e o WTI (americano). Seus preços sobem com tensões geopolíticas que ameaçam a oferta.</dd>
-    </dl>
+        <dt>Curva de juros (abertura / fechamento)</dt>
+        <dd>A curva de juros relaciona os vencimentos dos títulos com suas taxas. "Abrir" significa que as taxas sobem (os papéis ficam mais baratos). "Fechar" significa que as taxas caem. Uma curva que abre no trecho longo indica percepção de maior risco fiscal ou inflacionário à frente.</dd>
+      </dl>
+    </div>
   </section>
 
   <footer>
-    <p>Morning Call · edição de 04/06/2026 · dados do fechamento de 03/06/2026.<br>
-    Documento informativo; não constitui recomendação de investimento nem aconselhamento financeiro personalizado.</p>
+    <p>Morning Call — 05/06/2026 · Gerado por IA com base em fontes públicas verificadas.<br>
+    Dados de referência: EUA/Global fechamento 04/06 · Brasil fechamento 03/06 (feriado Corpus Christi em 04/06) · Payroll e reações intraday de 05/06.<br>
+    <b>N/D registrados:</b> DI1F27, DI1F30, DI1F35 (InfoMoney indisponível) · WTI fechamento 04/06 · EUR/BRL 05/06 · Euro Stoxx 50 · KOSPI · Minério 04/06 · Hang Seng pontuação exata.<br>
+    Este relatório é informativo e não constitui recomendação de investimento.</p>
   </footer>
 
 </div>
 
-<button id="toTop" aria-label="Voltar ao topo">↑</button>
+<button id="toTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Voltar ao topo">↑</button>
 
 <script>
-/* 1) TEMA CLARO/ESCURO */
-(function () {
+  // Tema claro/escuro
   const btn = document.getElementById('themeBtn');
-  const root = document.documentElement;
+  const html = document.documentElement;
   btn.addEventListener('click', () => {
-    const dark = root.getAttribute('data-theme') === 'dark';
-    root.setAttribute('data-theme', dark ? 'light' : 'dark');
+    const dark = html.getAttribute('data-theme') === 'dark';
+    html.setAttribute('data-theme', dark ? 'light' : 'dark');
     btn.textContent = dark ? '🌙' : '☀️';
   });
-})();
 
-/* 2) BARRA DE PROGRESSO DE LEITURA */
-(function () {
+  // Progresso de leitura
   const bar = document.getElementById('progress');
-  const onScroll = () => {
-    const h = document.documentElement;
-    const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-    bar.style.width = (scrolled * 100) + '%';
-    document.getElementById('toTop').classList.toggle('show', h.scrollTop > 600);
-  };
-  document.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-})();
+  window.addEventListener('scroll', () => {
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (window.scrollY / total * 100) + '%';
+  });
 
-/* 3) BOTÃO "VOLTAR AO TOPO" */
-document.getElementById('toTop').addEventListener('click', () =>
-  window.scrollTo({ top: 0, behavior: 'smooth' }));
+  // Botão "voltar ao topo"
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', () => {
+    toTop.classList.toggle('show', window.scrollY > 400);
+  });
 
-/* 4) NAVEGAÇÃO COM SEÇÃO ATIVA */
-(function () {
-  const links = [...document.querySelectorAll('nav.sections a')];
-  const map = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
-  const obs = new IntersectionObserver((entries) => {
+  // Seção ativa na nav
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('nav.sections a');
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
-        links.forEach(l => l.classList.remove('active'));
-        const a = map.get(e.target.id);
-        if (a) {
-          a.classList.add('active');
-          a.scrollIntoView({ inline: 'center', block: 'nearest' });
-        }
+        navLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`nav.sections a[href="#${e.target.id}"]`);
+        if (active) { active.classList.add('active'); active.scrollIntoView({block:'nearest',inline:'center'}); }
       }
     });
-  }, { rootMargin: '-45% 0px -50% 0px' });
-  document.querySelectorAll('section[id]').forEach(s => obs.observe(s));
-})();
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  sections.forEach(s => observer.observe(s));
 
-/* 5) COLORAÇÃO AUTOMÁTICA DE VARIAÇÕES + MINI-BARRAS */
-(function () {
-  const cells = [...document.querySelectorAll('td[data-v]')];
-  const vals = cells.map(c => Math.abs(parseFloat(c.dataset.v))).filter(v => v < 900);
-  const max = Math.max(1, ...vals);
-  cells.forEach(c => {
-    const v = parseFloat(c.dataset.v);
-    if (v <= -900) return;
-    c.classList.add(v >= 0 ? 'up' : 'down');
-    const bar = document.createElement('span');
-    bar.className = 'bar ' + (v >= 0 ? 'up' : 'down');
-    bar.style.width = (4 + (Math.abs(v) / max) * 34) + 'px';
-    c.appendChild(bar);
-  });
-})();
-
-/* 6) TABELAS ORDENÁVEIS */
-(function () {
-  function parseCell(td) {
-    if (td.dataset.v !== undefined) return parseFloat(td.dataset.v);
-    const n = parseFloat(td.textContent.replace(/\./g, '').replace(',', '.').replace('%', ''));
-    return isNaN(n) ? td.textContent.trim().toLowerCase() : n;
-  }
-  document.querySelectorAll('table').forEach(table => {
-    if (!table.tHead) return;
-    const ths = [...table.tHead.rows[0].cells];
-    ths.forEach((th, idx) => {
-      if (!th.classList.contains('sortable')) return;
-      th.insertAdjacentHTML('beforeend', ' <span class="arr">▼</span>');
-      let asc = false;
-      th.addEventListener('click', () => {
-        asc = !asc;
-        const rows = [...table.tBodies[0].rows];
-        rows.sort((a, b) => {
-          const x = parseCell(a.cells[idx]), y = parseCell(b.cells[idx]);
-          if (typeof x === 'number' && typeof y === 'number') return asc ? x - y : y - x;
-          return asc ? String(x).localeCompare(y) : String(y).localeCompare(x);
-        });
-        rows.forEach(r => table.tBodies[0].appendChild(r));
-        ths.forEach(h => h.querySelector('.arr') && (h.querySelector('.arr').textContent = '▼'));
-        th.querySelector('.arr').textContent = asc ? '▲' : '▼';
-      });
-    });
-  });
-})();
-
-/* 7) ANIMAÇÃO DE ENTRADA */
-(function () {
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach((e, i) => {
-      if (e.isIntersecting) {
-        e.target.style.transitionDelay = (i * 40) + 'ms';
-        e.target.classList.add('in');
-        obs.unobserve(e.target);
-      }
-    });
-  }, { rootMargin: '0px 0px -8% 0px' });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-})();
+  // Animação de entrada
+  const reveals = document.querySelectorAll('.reveal');
+  const ro = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.08 });
+  reveals.forEach(r => ro.observe(r));
 </script>
 </body>
 </html>
