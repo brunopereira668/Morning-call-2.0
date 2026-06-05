@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morning Call — Arquivo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Newsreader:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:#FBF6EC; --paper-2:#F3EADB; --ink:#1C1A17; --ink-soft:#4A4339;
+    --muted:#847A6A; --rule:#E4D8C4; --accent:#9A5B2E; --accent-2:#C8893F;
+    --shadow:0 1px 0 rgba(0,0,0,.04),0 12px 30px -18px rgba(40,30,15,.35);
+  }
+  [data-theme="dark"] {
+    --paper:#15120E; --paper-2:#1E1A14; --ink:#EFE7D8; --ink-soft:#C9BEAA;
+    --muted:#948974; --rule:#2E281F; --accent:#E0A05A; --accent-2:#C8893F;
+    --shadow:0 1px 0 rgba(0,0,0,.3),0 16px 40px -20px rgba(0,0,0,.7);
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Newsreader",Georgia,serif; font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; transition:background .3s,color .3s; }
+  .wrap { max-width:720px; margin:0 auto; padding:0 20px 80px; }
+  header { position:sticky; top:0; z-index:40;
+    background:color-mix(in srgb,var(--paper) 88%,transparent);
+    backdrop-filter:blur(10px); border-bottom:1px solid var(--rule); }
+  .top-inner { max-width:720px; margin:0 auto; padding:10px 20px;
+    display:flex; align-items:center; justify-content:space-between; }
+  .brand { font-family:"Fraunces",serif; font-weight:900; font-size:17px;
+    text-transform:uppercase; letter-spacing:-.01em; }
+  .brand small { display:block; font-family:"Newsreader",serif; font-weight:400;
+    text-transform:none; font-size:11px; color:var(--muted); letter-spacing:.04em; }
+  .theme-btn { border:1px solid var(--rule); background:var(--paper-2); color:var(--ink);
+    width:38px; height:38px; border-radius:999px; cursor:pointer; font-size:17px;
+    display:grid; place-items:center; }
+  .masthead { text-align:center; padding:36px 0 18px; border-bottom:3px double var(--ink); margin-bottom:6px; }
+  .kicker { font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.3em;
+    text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+  .masthead h1 { font-family:"Fraunces",serif; font-weight:900;
+    font-size:clamp(36px,10vw,64px); line-height:.95; margin:0; letter-spacing:-.02em; }
+  .sub { font-size:13px; color:var(--muted); margin-top:10px; }
+  .hoje-link { display:inline-block; margin-top:16px; padding:10px 22px;
+    background:var(--ink); color:var(--paper); border-radius:8px;
+    font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:.05em;
+    text-decoration:none; text-transform:uppercase; transition:opacity .2s; }
+  .hoje-link:hover { opacity:.8; }
+  .mes-bloco { margin-top:36px; }
+  .mes-titulo { font-family:"Fraunces",serif; font-weight:900;
+    font-size:clamp(22px,5vw,30px); color:var(--accent); margin:0 0 14px;
+    border-bottom:1px solid var(--rule); padding-bottom:8px; }
+  .cards { display:flex; flex-direction:column; gap:8px; }
+  .card { display:flex; align-items:center; gap:14px; padding:13px 16px;
+    background:var(--paper-2); border:1px solid var(--rule); border-radius:12px;
+    text-decoration:none; color:var(--ink); box-shadow:var(--shadow);
+    transition:transform .15s, box-shadow .15s; }
+  .card:hover { transform:translateY(-2px); box-shadow:0 4px 20px -8px rgba(40,30,15,.25); }
+  .dia { font-family:"IBM Plex Mono",monospace; font-size:28px; font-weight:600;
+    color:var(--accent); flex:none; width:42px; line-height:1; }
+  .info { display:flex; flex-direction:column; flex:1; }
+  .ds { font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--muted); }
+  .label { font-size:15px; font-weight:600; margin-top:2px; }
+  .arrow { color:var(--muted); font-size:18px; flex:none; }
+  footer { margin-top:50px; padding-top:16px; border-top:3px double var(--ink);
+    text-align:center; font-size:12px; color:var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <div class="top-inner">
+    <div class="brand">Morning Call<small>Arquivo · todas as edições</small></div>
+    <button class="theme-btn" id="themeBtn">🌙</button>
+  </div>
+</header>
+<div class="wrap">
+  <div class="masthead">
+    <div class="kicker">Arquivo · Brasil · EUA · Global</div>
+    <h1>Morning<br>Call</h1>
+    <p class="sub">Todas as edições publicadas</p>
+    <a href="index.html" class="hoje-link">→ Edição de hoje</a>
+  </div>
+
+    <div class="mes-bloco">
+      <h2 class="mes-titulo">Junho 2026</h2>
+      <div class="cards">
+        <a href="morning_call_2026-06-05.html" class="card">
+          <span class="dia">05</span>
+          <span class="info">
+            <span class="ds">Sexta</span>
+            <span class="label">Morning Call · 05/06/2026</span>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  <footer>
+    <p>Atualizado em 05/06/2026 às 00h00 · Morning Call — Mesa de Research</p>
+  </footer>
+</div>
+<script>
+  const btn = document.getElementById('themeBtn');
+  btn.addEventListener('click', () => {
+    const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', dark ? 'light' : 'dark');
+    btn.textContent = dark ? '🌙' : '☀️';
+  });
+</script>
+</body>
+</html>
