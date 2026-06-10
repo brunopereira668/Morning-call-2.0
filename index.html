@@ -1,14 +1,14 @@
 <!--
-  MORNING CALL — 08/06/2026 (segunda-feira)
-  Ref. fechamento: 05/06/2026 (sexta)
-  Notícias: sexta 05/06 + sábado 06/06 + domingo 07/06
+  MORNING CALL — 09/06/2026
+  Referência de mercado: fechamento de 08/06/2026 (segunda-feira)
+  Período de notícias: 08/06 e manhã de 09/06
 -->
 <!DOCTYPE html>
 <html lang="pt-BR" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morning Call — 08/06/2026</title>
+<title>Morning Call — 09/06/2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -87,6 +87,7 @@
     line-height: .92; margin: 0; letter-spacing: -.02em; }
   .dateline { display:flex; flex-wrap:wrap; gap: 6px 16px; justify-content:center; align-items:center;
     margin-top: 14px; font-size: 13px; color: var(--ink-soft); }
+  .dateline .num { font-size: 13px; }
   nav.sections { position: sticky; top: 60px; z-index: 30; margin: 16px -20px 0;
     background: color-mix(in srgb, var(--paper) 90%, transparent);
     backdrop-filter: blur(8px); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
@@ -121,7 +122,9 @@
   th, td { padding: 11px 14px; text-align: right; border-bottom: 1px solid var(--rule); font-size: 15px; }
   th:first-child, td:first-child { text-align: left; }
   thead th { font-family:"IBM Plex Mono",monospace; font-size: 11px; letter-spacing:.05em; text-transform:uppercase;
-    color: var(--muted); font-weight: 600; cursor: pointer; user-select:none; }
+    color: var(--muted); font-weight: 600; cursor: pointer; user-select:none; position: relative; }
+  thead th.sortable:hover { color: var(--ink); }
+  thead th .arr { opacity:.4; font-size: 9px; margin-left: 3px; }
   tbody tr:last-child td { border-bottom: none; }
   tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--ink) 3%, transparent); }
   td .tk { font-weight: 600; }
@@ -153,6 +156,9 @@
   .news .nsum { font-size: 16px; line-height: 1.5; margin: 0 0 4px; color: var(--ink);
     padding-bottom: 10px; }
   p { margin: 0 0 14px; }
+  .quote { font-family:"Fraunces",serif; font-style: italic; font-size: 22px; line-height: 1.4;
+    text-align:center; padding: 24px 10px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+    margin: 8px 0; color: var(--ink-soft); }
   .sources { font-size: 14px; }
   .sources h3 { font-family:"IBM Plex Mono",monospace; font-size: 11px; letter-spacing:.08em; text-transform:uppercase;
     color: var(--accent); margin: 16px 0 6px; }
@@ -192,9 +198,9 @@
     <div class="kicker">Antes da abertura · Brasil · EUA · Global</div>
     <h1>Morning&nbsp;Call</h1>
     <div class="dateline">
-      <span>Segunda-feira, 08 de junho de 2026</span>
+      <span>Terça-feira, 09 de junho de 2026</span>
       <span>·</span>
-      <span class="num">Fechamento de 05/06/2026 · Notícias: sex–dom</span>
+      <span class="num">Fechamento de 08/06/2026</span>
     </div>
   </div>
 
@@ -216,436 +222,754 @@
     </ul>
   </nav>
 
+  <!-- ═══════════════════════════════════════════════════════ SEÇÃO 01 ═══ -->
   <section id="resumo" class="reveal">
     <div class="sec-head"><span class="sec-num">01</span><h2>Resumo do estrategista</h2></div>
-    <p class="lede"><span class="drop">A</span> segunda-feira chega carregada. No fim de semana, Israel e Irã trocaram ataques de mísseis, drones iranianos atingiram o aeroporto do Kuwait (1 morto, 63 feridos) e o cessar-fogo de 60 dias negociado por Trump mostrou-se frágil. O Brent responde com alta de 4,3%, aproximando-se de US$ 96, acrescentando pressão inflacionária a um ambiente que já estava tenso depois do Payroll de sexta — 172 mil vagas criadas nos EUA em maio, mais que o dobro do consenso.</p>
-    <p>Na Ásia, o impacto foi severo. O KOSPI sul-coreano acionou o circuit breaker e fechou em queda de 8,29%, a 7.484 pontos, com Samsung -10,18% e SK Hynix -7,68%. O Nikkei recuou 3,85% e o Shanghai 1,70%. Na Europa, apesar da abertura negativa, os mercados se recuperaram, com o Euro Stoxx 50 encerrando em leve alta de 0,3% para 6.080 pontos.</p>
-    <p>No Brasil, a sessão de sexta registrou a oitava semana negativa consecutiva do Ibovespa — a maior sequência de perdas desde o Plano Real. O índice fechou a 169.019 pontos (-0,77%), pressionado por CSN (-10,18%), Vale (-3,78%) e Petrobras. O dólar subiu 1,78%, a R$ 5,1572. Os DI futuros saltaram mais de 40 pontos-base para máximas de mais de um ano. O Boletim Focus desta manhã elevou a Selic terminal para 13,50% (de 13,25%) e o IPCA 2026 para 5,11% — 13ª alta consecutiva, acima do teto da meta. Na abertura, o mercado deve seguir em modo de aversão ao risco, com petróleo em alta, curva de juros pressionada e o CPI americano (quarta-feira) como próximo catalisador.</p>
+    <p class="lede"><span class="drop">A</span> segunda-feira foi de sentimento misto: o Ibovespa atingiu a mínima desde janeiro, pressionado pela oitava semana negativa consecutiva, enquanto Wall Street esboçou recuperação modesta depois do tombo de sexta. O fio condutor permanece o mesmo — uma geopolítica instável no Oriente Médio e a sombra da alta de juros nos EUA — mas as sementes de um alívio técnico estavam ali, plantadas pelo recuo do petróleo e pela virada dos semicondutores.</p>
+    <p>O Irã anunciou o fim das operações militares contra Israel ainda na madrugada de segunda, após uma sequência de troca de mísseis no fim de semana que chegou a elevar o Brent para US$ 96,93 na abertura. Com a distensão, o crude fechou perto de US$ 94, e Wall Street aproveitou para recuperar terreno: Nasdaq +0,86% liderado pelo ETF de semicondutores SMH (+5%), após queda de mais de 4% na sexta pós-Payroll. O S&P 500 avançou 0,30%, mas o Dow cedeu 0,16%, refletindo o ainda elevado US 10Y em 4,564%.</p>
+    <p>No Brasil, o cenário doméstico continua deteriorando: o Focus elevou o IPCA 2026 para 5,11% (13ª alta consecutiva, bem acima do teto de 4,5%) e a Selic terminal para 13,50%. O Copom se reúne em 17/06 — o mercado precifica cerca de 68% de probabilidade de manutenção em 14,50%. Hoje não há eventos relevantes; a atenção volta-se para o CPI americano de amanhã (quarta, 10/06) e o IPCA brasileiro de sexta. O BCE decide juros na quinta: mercado precifica +25 bps, pressionado pela energia.</p>
+    <p class="small">Dados de fechamento: 08/06/2026. DI futuro: N/D (coleta automática Selenium indisponível no ambiente de execução; último dado confirmado: 05/06). Tesouro Direto: 08/06.</p>
   </section>
 
+  <!-- ═══════════════════════════════════════════════════════ SEÇÃO 02 ═══ -->
   <section id="destaques" class="reveal">
     <div class="sec-head"><span class="sec-num">02</span><h2>Destaques do dia</h2></div>
     <div class="tldr">
-      <div class="item"><span class="ic">💼</span><span class="tx"><b>Payroll reacende Fed.</b> Emprego nos EUA criou 172 mil vagas em maio (consenso: 80–85 mil). S&amp;P 500 caiu 2,64%, Nasdaq 4,18% — pior dia desde abril de 2025. Probabilidade de alta do Fed em dez sobe acima de 65%.</span></div>
-      <div class="item"><span class="ic">🇰🇷</span><span class="tx"><b>KOSPI aciona circuit breaker: -8,29%.</b> Bolsa sul-coreana travou as negociações. Samsung -10,18%, SK Hynix -7,68%. Contágio do colapso do SOX (setor de semicondutores americano, -10%+ na sexta).</span></div>
-      <div class="item"><span class="ic">🛢️</span><span class="tx"><b>Brent +4,3% com escalada Irã–Israel.</b> Troca de mísseis no fim de semana e drones iranianos no Kuwait. Petróleo sobe para ~US$ 96/bbl — vetor inflacionário adicional para o Brasil e o mundo.</span></div>
-      <div class="item"><span class="ic">📉</span><span class="tx"><b>Ibovespa: 8ª semana negativa — recorde desde o Plano Real.</b> Fechamento de 169.019 pts. CSN desabou 10,18%; Vale cedeu 3,78%. Dólar chegou a R$ 5,1572 (+1,78%).</span></div>
-      <div class="item"><span class="ic">📊</span><span class="tx"><b>Focus eleva Selic e IPCA — 13ª alta seguida.</b> Mercado sobe Selic terminal para 13,50% (de 13,25%) e IPCA 2026 para 5,11%. DI futuros já precificavam: DI1F35 a 14,725% (+2,54%).</span></div>
-      <div class="item"><span class="ic">✈️</span><span class="tx"><b>Embraer +3,82% com pedido de 15 jatos.</b> Azorra fez pedido firme de 15 E195-E2, fortalecendo o backlog de US$ 15,6 bi. Único destaque positivo relevante do Ibovespa na sexta.</span></div>
-      <div class="item"><span class="ic">🏭</span><span class="tx"><b>Raízen fecha maior recuperação extrajudicial do Brasil.</b> R$ 64,7 bi em dívidas; 75,45% dos credores aprovaram. Shell aporta R$ 3,5 bi. Venda da Argentina por R$ 7,2 bi.</span></div>
-      <div class="item"><span class="ic">📅</span><span class="tx"><b>Super semana: CPI (qua 10/06) e Super quarta 17/06.</b> CPI americano é o próximo catalisador. Na semana seguinte, FOMC e Copom decidem juros no mesmo dia — dupla decisão histórica.</span></div>
+      <div class="item"><span class="ic">📉</span><span class="tx"><b>Ibovespa na mínima desde janeiro:</b> índice fechou aos 168.668 pontos (−0,21%), acumulando a 8ª semana negativa consecutiva — recorde desde o Plano Real. VALE3 −0,89% pesou; WEGE3 +3,63% foi a maior alta.</span></div>
+      <div class="item"><span class="ic">🕊️</span><span class="tx"><b>Irã cessa operações contra Israel:</b> Ministério das Relações Exteriores iraniano anunciou o fim das operações militares, mas avisa que retomará caso Israel prossiga no Líbano. Brent aliviou de US$96,93 para ~US$94 no fechamento.</span></div>
+      <div class="item"><span class="ic">💻</span><span class="tx"><b>Intel dispara +10%:</b> Google (GOOGL) fez pedido firme de 3 milhões de TPUs para 2028 usando a fábrica da Intel. Nvidia e Tesla também avaliam o uso do processo Intel 14A. Primeiro grande pedido da Intel em semicondutores de IA.</span></div>
+      <div class="item"><span class="ic">📊</span><span class="tx"><b>Marvell entra no S&P 500 em 22/06:</b> a chipmaker de IA (MRVL) foi anunciada como nova componente do índice, substituindo saída anterior. Ação subiu +8,8% no pré-mercado e fechou com forte alta, impulsionando o setor.</span></div>
+      <div class="item"><span class="ic">🌡️</span><span class="tx"><b>CPI dos EUA amanhã (quarta):</b> principal evento da semana. Após o Payroll de 172 mil vagas em maio (2× a expectativa), o mercado reprecificou a probabilidade de alta do Fed acima de 65% em dezembro. O CPI definirá a próxima leitura.</span></div>
+      <div class="item"><span class="ic">🏦</span><span class="tx"><b>BCE decide juros na quinta:</b> +25 bps esperados para a taxa de depósito europeia, pressionado pela energia. Será o primeiro movimento do BCE desde a eclosão do conflito Irã–Israel. Impacto nos bonds europeus e no EUR/BRL.</span></div>
+      <div class="item"><span class="ic">🇧🇷</span><span class="tx"><b>Focus IPCA 2026 sobe para 5,11%:</b> 13ª semana de alta consecutiva, bem acima do teto da meta de 4,5%. Selic terminal Focus subiu para 13,50%. Pressionado por combustíveis e alimentos derivados de conflito no Oriente Médio.</span></div>
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════════════════ SEÇÃO 03 ═══ -->
   <section id="agenda" class="reveal">
     <div class="sec-head"><span class="sec-num">03</span><h2>Agenda econômica</h2></div>
-    <p>O evento mais relevante da semana é o <strong>CPI americano de maio</strong> (quarta, 10/06): com o Payroll ainda ecoando, qualquer surpresa altista aceleraria a reprificação do Fed e pressionaria a curva global. Na semana seguinte (17/06), o <strong>FOMC e o Copom</strong> decidem juros no mesmo dia — um evento raro que concentrará toda atenção dos mercados.</p>
-    <div class="tbl-wrap">
+    <p>A semana de 09 a 13 de junho é concentrada em dados de inflação — o maior tema do momento. Nos EUA, o <strong>CPI de maio (quarta-feira)</strong> é o evento de maior peso: um número acima do consenso pode reacender a probabilidade de alta do Fed, já posicionada acima de 65% pelo mercado para dezembro, na sequência do Payroll de 172 mil vagas. No Brasil, o destaque é o <strong>IPCA de maio (sexta-feira)</strong>, que deve mostrar o impacto da alta dos combustíveis — o Focus já projetava 5,11% para o ano antes da divulgação. A decisão do BCE na quinta pode mover o câmbio e os bonds europeus.</p>
+
+    <div class="tbl-wrap" style="margin-bottom:18px;">
       <table>
-        <caption>Agenda — semana de 08 a 12 de junho de 2026</caption>
-        <thead><tr><th>Dia</th><th>País</th><th>Evento</th><th>Importância</th></tr></thead>
+        <caption>Agenda da semana (09–13/06/2026)</caption>
+        <thead>
+          <tr>
+            <th class="sortable">Dia<span class="arr">⇅</span></th>
+            <th class="sortable">País<span class="arr">⇅</span></th>
+            <th class="sortable" style="text-align:left;">Evento<span class="arr">⇅</span></th>
+            <th>Consenso</th>
+            <th>Anterior</th>
+          </tr>
+        </thead>
         <tbody>
-          <tr><td><b>Seg 08</b></td><td>🇧🇷 BR</td><td>Boletim Focus (BC) — já divulgado ✓</td><td>Alta</td></tr>
-          <tr><td>Ter 09</td><td>🇺🇸 EUA</td><td>Estoques de atacado (abr)</td><td>Baixa</td></tr>
-          <tr><td><b>Qua 10 ⭐</b></td><td>🇺🇸 EUA</td><td><b>CPI maio — consenso: +0,3% m/m</b></td><td><b>Alta</b></td></tr>
-          <tr><td>Qua 10</td><td>🇺🇸 EUA</td><td>Atas do FOMC (reunião anterior)</td><td>Média</td></tr>
-          <tr><td>Qui 11</td><td>🇺🇸 EUA</td><td>PPI maio; Pedidos de seguro-desemprego</td><td>Média</td></tr>
-          <tr><td>Sex 12</td><td>🇺🇸 EUA</td><td>Confiança do consumidor (U. Michigan)</td><td>Média</td></tr>
+          <tr>
+            <td><b style="color:var(--accent);">09/06 (ter)</b></td>
+            <td>🇧🇷</td>
+            <td style="text-align:left;">Sem eventos relevantes</td>
+            <td class="nd">—</td>
+            <td class="nd">—</td>
+          </tr>
+          <tr>
+            <td><b>10/06 (qua) ⭐</b></td>
+            <td>🇺🇸</td>
+            <td style="text-align:left;"><strong>CPI (maio)</strong> — inflação ao consumidor</td>
+            <td>N/D</td>
+            <td class="num">+0,2% m/m</td>
+          </tr>
+          <tr>
+            <td>11/06 (qui)</td>
+            <td>🇺🇸</td>
+            <td style="text-align:left;">PPI (maio) — inflação ao produtor</td>
+            <td>N/D</td>
+            <td class="num">+0,1% m/m</td>
+          </tr>
+          <tr>
+            <td>11/06 (qui) ⭐</td>
+            <td>🇪🇺</td>
+            <td style="text-align:left;"><strong>BCE — decisão de juros</strong></td>
+            <td>+25 bps</td>
+            <td class="num">N/D</td>
+          </tr>
+          <tr>
+            <td>11/06 (qui)</td>
+            <td>🇧🇷</td>
+            <td style="text-align:left;">Volume de serviços (abril)</td>
+            <td>N/D</td>
+            <td class="num">N/D</td>
+          </tr>
+          <tr>
+            <td>12/06 (sex) ⭐</td>
+            <td>🇧🇷</td>
+            <td style="text-align:left;"><strong>IPCA (maio)</strong> — inflação oficial</td>
+            <td>N/D</td>
+            <td class="num">N/D</td>
+          </tr>
         </tbody>
       </table>
     </div>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption>Agenda de hoje — 09/06/2026 (terça-feira)</caption>
+        <thead>
+          <tr>
+            <th>Horário (BRT)</th>
+            <th style="text-align:left;">Evento</th>
+            <th>País</th>
+            <th>Impacto esperado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="nd">—</td>
+            <td style="text-align:left;">Sem divulgações programadas de alto impacto</td>
+            <td>—</td>
+            <td class="nd">Baixo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small" style="margin-top:8px;">⭐ = evento de alto impacto. Agenda prospectiva — dados ainda não divulgados no momento de publicação.</p>
   </section>
 
+  <!-- ═══════════════════════════════════════════════════════ SEÇÃO 04 ═══ -->
   <section id="painel" class="reveal">
     <div class="sec-head"><span class="sec-num">04</span><h2>Painel consolidado</h2></div>
-    <p class="small">Ref. fechamento 05/06/2026 (sexta) · Petróleo e Ásia ref. abertura 08/06 · Cripto ref. fim de semana</p>
+    <p class="small" style="margin-bottom:12px;">Fechamento de 08/06/2026 · DI1F35 N/D (Selenium indisponível — último dado confirmado: 14,725% em 05/06)</p>
     <div class="panel">
-      <div class="cell"><div class="lbl">Ibovespa</div><div class="val num">169.019</div><div class="chg down num">−0,77% (05/06)</div></div>
-      <div class="cell"><div class="lbl">USD / BRL</div><div class="val num">5,1572</div><div class="chg down num">+1,78% (05/06)</div></div>
-      <div class="cell"><div class="lbl">EUR / BRL</div><div class="val num">5,9440</div><div class="chg down num">+1,14% (05/06)</div></div>
-      <div class="cell"><div class="lbl">DI1F35</div><div class="val num">14,725%</div><div class="chg down num">+2,54% (05/06)</div></div>
-      <div class="cell"><div class="lbl">S&amp;P 500</div><div class="val num">7.383,74</div><div class="chg down num">−2,64% (05/06)</div></div>
-      <div class="cell"><div class="lbl">Nasdaq</div><div class="val num">25.709</div><div class="chg down num">−4,18% (05/06)</div></div>
-      <div class="cell"><div class="lbl">KOSPI</div><div class="val num">7.484</div><div class="chg down num">−8,29% ⚠️ (08/06)</div></div>
-      <div class="cell"><div class="lbl">Brent</div><div class="val num">~96,06</div><div class="chg down num">+4,32% (08/06 abertura)</div></div>
-      <div class="cell"><div class="lbl">Bitcoin</div><div class="val num">~63.000</div><div class="chg down num">−5,5% na semana</div></div>
+      <div class="cell">
+        <div class="lbl">Ibovespa</div>
+        <div class="val num">168.668</div>
+        <div class="chg down num">−0,21%</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">USD / BRL</div>
+        <div class="val num">R$ 5,1803</div>
+        <div class="chg down num">+0,45%</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">EUR / BRL</div>
+        <div class="val num">R$ 5,9750</div>
+        <div class="chg down num">+0,52%</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">DI1F35</div>
+        <div class="val nd">N/D</div>
+        <div class="chg nd">último: 14,725% (05/06)</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">S&amp;P 500</div>
+        <div class="val num">7.405,73</div>
+        <div class="chg up num">+0,30%</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">Nasdaq</div>
+        <div class="val num">25.929</div>
+        <div class="chg up num">+0,86%</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">US 10Y</div>
+        <div class="val num">4,564%</div>
+        <div class="chg down num">+2,8 bps</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">Brent (WTI)</div>
+        <div class="val num">~US$ 94</div>
+        <div class="chg down num">aliviou de ~US$ 97</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">Ouro</div>
+        <div class="val num">US$ 4.363</div>
+        <div class="chg down num">−0,04%</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">Bitcoin</div>
+        <div class="val num">~US$ 63.500</div>
+        <div class="chg up num">+4% vs domingo</div>
+      </div>
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════════════════ SEÇÃO 05 ═══ -->
   <section id="global" class="reveal">
     <div class="sec-head"><span class="sec-num">05</span><h2>Panorama global</h2></div>
-    <p>A Ásia iniciou a segunda-feira sob forte pressão, devolvendo o impacto do tombo de Wall Street na sexta — especialmente o Nasdaq (-4,18%). O setor de semicondutores foi o epicentro: na <strong>Coreia do Sul</strong>, o KOSPI despencou 8,29% para 7.484 pontos e acionou um circuit breaker de Nível 1. Samsung fechou em -10,18% (KRW 295.500) e SK Hynix cedeu 7,68%, em sintonia com a correção global do SOX que apagou mais de US$ 1 trilhão em valor de mercado na sexta. No <strong>Japão</strong>, o Nikkei 225 recuou 3,85%, pressionado pelo setor eletrônico e pela revisão do PIB do 1T26 para 1,8% anualizado (de 2,1%). Em <strong>Hong Kong</strong>, o Hang Seng cedeu 1,22%. O <strong>Shanghai Composite</strong> recuou 1,70%, sem catalisador doméstico específico.</p>
-    <p>Na <strong>Europa</strong>, os mercados abriram em queda mas fecharam em leve alta: Euro Stoxx 50 +0,3%, para 6.080 pontos, sustentado pela percepção de que o conflito Irã–Israel não escalonou ao limite máximo. O sentimento continental permanece de cautela moderada, com futuros americanos apontando queda na abertura de Wall Street nesta segunda.</p>
+
+    <p><strong>Ásia (8/06, fechamento local):</strong> O pregão asiático de segunda foi dominado pela tensão geopolítica. O <strong>Hang Seng</strong> fechou em 24.657 pontos (+1,22%), recuperando parte do tombo de −1,22% de sexta, impulsionado por notícias de estabilização do Irã–Israel. A <strong>Delta Air Lines</strong> retomou rotas Hong Kong–Los Angeles, sinal de que o tráfego trans-Pacífico começa a se normalizar. O <strong>KOSPI</strong> (Coreia do Sul) apresentou volatilidade severa após o circuit breaker de −8,29% de segunda — recuperação parcial ao longo do dia, mas a Samsung seguiu pressionada após a queda de 10% no pregão anterior. <strong>Shanghai</strong> e <strong>Nikkei 225</strong> (pontuações exatas): N/D.</p>
+
+    <p><strong>Europa (contexto):</strong> O grande evento da semana europeia é a decisão do <strong>BCE na quinta-feira (11/06)</strong>. O mercado precifica +25 pontos-base na taxa de depósito, em reação à inflação pressionada por energia — reflexo direto do conflito no Oriente Médio. A <strong>DAX, CAC 40 e FTSE 100</strong> tinham dados contraditórios nas fontes disponíveis no fechamento de segunda; valores marcados como N/D. O <strong>Euro Stoxx 50</strong> estava em +0,30% na abertura de segunda conforme contexto dos 5 dias, mas fechamento confirmado não disponível.</p>
+
+    <p><strong>Futuros EUA (abertura de hoje, 09/06):</strong> o alívio geopolítico e a recuperação dos chips sugerem abertura sem grandes gaps. O CPI de amanhã é o fator definidor.</p>
+
     <div class="tbl-wrap">
       <table>
-        <caption>Índices globais — sexta 05/06 e segunda 08/06</caption>
-        <thead><tr><th>Índice</th><th>Ref.</th><th>Nível</th><th>Var.%</th></tr></thead>
+        <caption>Índices Globais — Referência 08/06/2026</caption>
+        <thead>
+          <tr>
+            <th class="sortable" style="text-align:left;">Índice<span class="arr">⇅</span></th>
+            <th class="sortable">Região<span class="arr">⇅</span></th>
+            <th class="sortable">Pontos<span class="arr">⇅</span></th>
+            <th class="sortable">Var.%<span class="arr">⇅</span></th>
+          </tr>
+        </thead>
         <tbody>
-          <tr><td><span class="tk">KOSPI 🇰🇷</span></td><td>Fech. 08/06</td><td class="num">7.484</td><td class="num down" data-v="-8.29">−8,29% ⚠️ <span class="bar down" style="width:42px"></span></td></tr>
-          <tr><td><span class="tk">Nikkei 225 🇯🇵</span></td><td>Fech. 08/06</td><td class="num nd">N/D pts</td><td class="num down" data-v="-3.85">−3,85% <span class="bar down" style="width:22px"></span></td></tr>
-          <tr><td><span class="tk">Shanghai 🇨🇳</span></td><td>Fech. 08/06</td><td class="num">~3.892</td><td class="num down" data-v="-1.70">−1,70% <span class="bar down" style="width:12px"></span></td></tr>
-          <tr><td><span class="tk">Hang Seng 🇭🇰</span></td><td>Fech. 08/06</td><td class="num">~24.661</td><td class="num down" data-v="-1.22">−1,22% <span class="bar down" style="width:9px"></span></td></tr>
-          <tr><td><span class="tk">Euro Stoxx 50 🇪🇺</span></td><td>Fech. 08/06</td><td class="num">6.080</td><td class="num up" data-v="0.30">+0,30% <span class="bar up" style="width:5px"></span></td></tr>
-          <tr><td><span class="tk">DAX 🇩🇪</span></td><td>Fech. 05/06</td><td class="num">24.759</td><td class="num up" data-v="0.19">+0,19% <span class="bar up" style="width:4px"></span></td></tr>
-          <tr><td><span class="tk">CAC 40 🇫🇷</span></td><td>Fech. 05/06</td><td class="num nd">N/D</td><td class="num down" data-v="-0.32">−0,32%</td></tr>
-          <tr><td><span class="tk">FTSE 100 🇬🇧</span></td><td>Fech. 05/06</td><td class="num nd">N/D</td><td class="num up" data-v="0.07">+0,07%</td></tr>
-          <tr><td><span class="tk">Nikkei 225 🇯🇵</span></td><td>Fech. 05/06</td><td class="num">66.588</td><td class="num down" data-v="-1.31">−1,31%</td></tr>
-          <tr><td><span class="tk">Hang Seng 🇭🇰</span></td><td>Fech. 05/06</td><td class="num">24.962</td><td class="num down" data-v="-1.15">−1,15%</td></tr>
-          <tr><td><span class="tk">Shanghai 🇨🇳</span></td><td>Fech. 05/06</td><td class="num">3.959</td><td class="num down" data-v="-0.77">−0,77%</td></tr>
+          <tr>
+            <td class="tk">Hang Seng</td>
+            <td>🇭🇰 Hong Kong</td>
+            <td class="num">24.657</td>
+            <td class="num up">+1,22%<span class="bar up" style="width:18px"></span></td>
+          </tr>
+          <tr>
+            <td class="tk">KOSPI</td>
+            <td>🇰🇷 Coreia do Sul</td>
+            <td class="nd">N/D</td>
+            <td class="nd">volat. — circuit breaker segunda</td>
+          </tr>
+          <tr>
+            <td class="tk">Nikkei 225</td>
+            <td>🇯🇵 Japão</td>
+            <td class="nd">N/D</td>
+            <td class="nd">N/D</td>
+          </tr>
+          <tr>
+            <td class="tk">Shanghai</td>
+            <td>🇨🇳 China</td>
+            <td class="nd">N/D</td>
+            <td class="nd">N/D</td>
+          </tr>
+          <tr>
+            <td class="tk">Euro Stoxx 50</td>
+            <td>🇪🇺 Europa</td>
+            <td class="nd">N/D</td>
+            <td class="nd">N/D</td>
+          </tr>
+          <tr>
+            <td class="tk">DAX 40</td>
+            <td>🇩🇪 Alemanha</td>
+            <td class="nd">N/D</td>
+            <td class="nd">N/D</td>
+          </tr>
+          <tr>
+            <td class="tk">CAC 40</td>
+            <td>🇫🇷 França</td>
+            <td class="nd">N/D</td>
+            <td class="nd">N/D</td>
+          </tr>
+          <tr>
+            <td class="tk">FTSE 100</td>
+            <td>🇬🇧 Reino Unido</td>
+            <td class="nd">N/D</td>
+            <td class="nd">N/D</td>
+          </tr>
         </tbody>
       </table>
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════════════════ SEÇÃO 06 ═══ -->
   <section id="eua" class="reveal">
     <div class="sec-head"><span class="sec-num">06</span><h2>Estados Unidos</h2></div>
-    <p>Wall Street encerrou a sexta em forte queda. O Nasdaq sofreu sua pior sessão desde o tarifaço de abril de 2025 (-4,18%), com o S&amp;P 500 cedendo 2,64% e o Dow 1,35%. O gatilho foi o Payroll: 172 mil vagas criadas em maio, mais que o dobro do consenso de 80–85 mil, elevando a probabilidade de o Fed retomar altas para acima de 65%. Os Treasuries reagiram imediatamente: US 10Y subiu para 4,55%, US 2Y foi a 4,15% (+10 bps intraday).</p>
-    <p>No setor de tech, três catalisadores simultâneos amplificaram a queda: (1) Meta anunciou uma oferta secundária bilionária e caiu 7%; (2) Broadcom reportou crescimento de receita de IA de 143% no 2T, mas sem revisão de alvo pelo mercado; (3) análises céticas sobre o ROI de IA circularam durante o pregão. O SOX (semicondutores) despencou mais de 10%, apagando mais de US$ 1 trilhão em valor de mercado. Lululemon caiu 13% após revisão de guidance. O Russell 2000 recuou 3,47%, confirmando que a aversão ao risco se espalhou além do tech.</p>
-    <div class="tbl-wrap">
+
+    <p>Wall Street fechou com perfil misto na segunda, mas com sabor de recuperação técnica. O <strong>Nasdaq</strong> liderou os ganhos (+0,86%, fechando em 25.929), impulsionado pela virada nos semicondutores: o ETF VanEck SMH subiu +5%, recuperando parte do colapso de −10%+ de sexta. A <strong>Intel (INTC)</strong> protagonizou o maior movimento individual do dia: alta de 10%, após a revelação de que o <strong>Google (GOOGL)</strong> fez um pedido firme de mais de 3 milhões de TPUs para fabricação pela Intel em 2028 — o primeiro grande contrato de foundry de IA para a empresa. Nvidia e Tesla também estão avaliando o uso do processo 14A da Intel, segundo fontes do The Information.</p>
+
+    <p>A <strong>Marvell Technology (MRVL)</strong> subiu ~9% com o anúncio de inclusão no S&amp;P 500 em 22 de junho. <strong>Nvidia (NVDA)</strong> avançou 1% após o CEO Jensen Huang anunciar parceria com o LG Group (robótica, IA, mobilidade autônoma) no início de sua visita à Coreia do Sul. <strong>Tesla (TSLA)</strong> subiu ~2,8% com dados da CPCA mostrando vendas na China em maio +22,5% (47.281 unidades), encerrando dois meses de queda anual. <strong>Apple (AAPL)</strong> abriu o WWDC com foco em "IA agêntica" — Bank of America reiterou compra com PT US$380; ações fecharam ligeiramente positivas.</p>
+
+    <p>O <strong>S&amp;P 500</strong> avançou 0,30% para 7.405,73, mas o <strong>Dow Jones</strong> recuou 0,16% para 50.786 — 17 dos 30 componentes fecharam no vermelho, pesados por financeiras e energia. O <strong>Russell 2000</strong> avançou 0,85%. Os <strong>Treasuries</strong> pressionaram: o <strong>US 10 anos fechou em 4,564%</strong> (+2,8 bps), refletindo o repricing pós-Payroll de 172 mil vagas — mais que o dobro do esperado. Qualquer CPI acima do consenso na quarta pode empurrar o 10Y para o nível de 4,6%.</p>
+
+    <div class="tbl-wrap" style="margin-bottom:18px;">
       <table>
-        <caption>Índices e destaques EUA — fechamento 05/06/2026</caption>
-        <thead><tr><th>Ativo</th><th>Valor</th><th>Var.%</th></tr></thead>
+        <caption>Índices EUA — Fechamento 08/06/2026</caption>
+        <thead>
+          <tr>
+            <th class="sortable" style="text-align:left;">Índice<span class="arr">⇅</span></th>
+            <th class="sortable">Pontos<span class="arr">⇅</span></th>
+            <th class="sortable">Var.%<span class="arr">⇅</span></th>
+          </tr>
+        </thead>
         <tbody>
-          <tr><td><span class="tk">S&amp;P 500</span></td><td class="num">7.383,74</td><td class="num down">−2,64%</td></tr>
-          <tr><td><span class="tk">Nasdaq Composite</span></td><td class="num">25.709,43</td><td class="num down">−4,18%</td></tr>
-          <tr><td><span class="tk">Dow Jones</span></td><td class="num">50.866,78</td><td class="num down">−1,35%</td></tr>
-          <tr><td><span class="tk">Russell 2000</span></td><td class="num">~2.793</td><td class="num down">−3,47%</td></tr>
-          <tr><td><span class="tk">SOX (semicondutores)</span></td><td class="num nd">N/D</td><td class="num down">−10%+</td></tr>
-          <tr><td><span class="tk">Meta</span></td><td class="num nd">N/D</td><td class="num down">−7,00%</td></tr>
-          <tr><td><span class="tk">Lululemon</span></td><td class="num nd">N/D</td><td class="num down">−13,00%</td></tr>
-          <tr><td><span class="tk">US 10Y (yield)</span></td><td class="num">4,55%</td><td class="num down">↑ pós-Payroll</td></tr>
-          <tr><td><span class="tk">US 2Y (yield)</span></td><td class="num nd">N/D</td><td class="num down">~4,15% (+10 bps)</td></tr>
+          <tr><td class="tk">S&amp;P 500</td><td class="num">7.405,73</td><td class="num up">+0,30%<span class="bar up" style="width:12px"></span></td></tr>
+          <tr><td class="tk">Nasdaq Composite</td><td class="num">25.929,66</td><td class="num up">+0,86%<span class="bar up" style="width:22px"></span></td></tr>
+          <tr><td class="tk">Dow Jones</td><td class="num">50.786,01</td><td class="num down">−0,16%<span class="bar down" style="width:6px"></span></td></tr>
+          <tr><td class="tk">Russell 2000</td><td class="nd">N/D</td><td class="num up">+0,85%</td></tr>
+          <tr><td class="tk">VanEck Semi ETF (SMH)</td><td class="nd">N/D</td><td class="num up">+5,00%</td></tr>
         </tbody>
       </table>
     </div>
-    <p style="margin-top:14px">O próximo FOMC é em <strong>16–17 de junho</strong>. O <strong>CPI de maio (10/06)</strong> determinará o tom desta semana: acima do consenso (+4,2% a/a) e a probabilidade de alta do Fed pode ultrapassar 75%. O Fed é presidido por Kevin Warsh. A leitura atual é que o banco central americano não tem margem para flexibilizar em 2026.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption>Treasuries &amp; Big Techs — Referência 08/06/2026</caption>
+        <thead>
+          <tr>
+            <th class="sortable" style="text-align:left;">Ativo<span class="arr">⇅</span></th>
+            <th class="sortable">Valor / Yield<span class="arr">⇅</span></th>
+            <th class="sortable">Var.<span class="arr">⇅</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="tk">US 10Y Treasury</td><td class="num">4,564%</td><td class="num down">+2,8 bps</td></tr>
+          <tr><td class="tk">US 2Y Treasury</td><td class="nd">N/D</td><td class="nd">N/D</td></tr>
+          <tr><td class="tk">Intel (INTC)</td><td class="num">~US$ 109</td><td class="num up">+10,0%</td></tr>
+          <tr><td class="tk">Nvidia (NVDA)</td><td class="num">~US$ 207</td><td class="num up">+1,04%</td></tr>
+          <tr><td class="tk">Tesla (TSLA)</td><td class="nd">N/D</td><td class="num up">+2,80%</td></tr>
+          <tr><td class="tk">Apple (AAPL)</td><td class="num">~US$ 308</td><td class="num up">+0,36%</td></tr>
+          <tr><td class="tk">Corning (GLW)</td><td class="nd">N/D</td><td class="num up">+9,31%</td></tr>
+          <tr><td class="tk">Marvell (MRVL)</td><td class="nd">N/D</td><td class="num up">+8,80%</td></tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════════════════ SEÇÃO 07 ═══ -->
   <section id="brasil" class="reveal">
     <div class="sec-head"><span class="sec-num">07</span><h2>Brasil</h2></div>
-    <p>O Ibovespa encerrou a sexta com a oitava semana negativa consecutiva — recorde desde o Plano Real. Fechou a 169.019 pontos (-0,77%), com volume de R$ 26,4 bilhões. O ambiente externo adverso (Payroll, alta do dólar, aversão global) encontrou uma B3 que ainda processava o impacto do dado americano, revelado após o fechamento da quinta-feira. A pressão foi concentrada em siderurgia/mineração.</p>
-    <p><strong>CSN (CSNA3)</strong> foi o pior do índice com -10,18% (R$ 6,00), penalizada pela queda do minério e pela incerteza sobre a venda da divisão de cimentos. <strong>Vale (VALE3)</strong> cedeu 3,78% (R$ 78,70) com o minério em Dalian recuando 0,91%. <strong>Petrobras PN (PETR4)</strong> recuou 0,87% (R$ 40,89). Na ponta positiva, <strong>Embraer (EMBJ3)</strong> avançou 3,82% (R$ 72,33) com pedido firme de 15 jatos E195-E2 pela Azorra. O dólar comercial subiu 1,78%, a R$ 5,1572 — acumulando +2,27% na semana.</p>
-    <div class="panel" style="margin-bottom:16px">
-      <div class="cell"><div class="lbl">Ibovespa</div><div class="val num">169.019</div><div class="chg down num">−0,77% (05/06)</div></div>
-      <div class="cell"><div class="lbl">USD / BRL</div><div class="val num">5,1572</div><div class="chg down num">+1,78% (05/06)</div></div>
-      <div class="cell"><div class="lbl">EUR / BRL</div><div class="val num">5,9440</div><div class="chg down num">+1,14% (05/06)</div></div>
-    </div>
-    <div class="tbl-wrap">
+
+    <p>O <strong>Ibovespa</strong> fechou em <strong>168.668,72 pontos (−0,21%)</strong>, renovando a mínima desde 20 de janeiro de 2026. O volume ficou em R$ 20,75 bilhões — abaixo da média dos últimos pregões, refletindo certa cautela antes do CPI americano. É a oitava semana negativa consecutiva, sequência que não ocorria desde o período do Plano Real. O principal driver negativo foi a <strong>Vale (VALE3, −0,89%)</strong>, pressionada pelo minério de ferro que recuou −0,91% nas bolsas chinesas e pelas incertezas sobre a demanda chinesa. Petrobras nadou contra a maré: PETR4 +0,66% e PETR3 +0,72%, sustentadas pela manutenção do Brent em patamar elevado (~US$94) mesmo após o alívio geopolítico.</p>
+
+    <p>A grande surpresa positiva foi a <strong>WEG (WEGE3, +3,63%)</strong>, maior alta do dia, em movimento de recuperação técnica após quedas recentes — sem catalisador específico além da rotação setorial que beneficiou industriais e bens de capital no contexto de apetite moderado a risco. A <strong>MRV (MRVE3, −4,64%)</strong> liderou as baixas: a construtora sentiu o peso das taxas de juros elevadas do Tesouro Prefixado (14,72% no vencimento 2029), que encarecem o financiamento habitacional. <strong>Bradesco (BBDC4, −1,55%)</strong> e <strong>Itaú Unibanco (ITUB4, −0,80%)</strong> recuaram refletindo as preocupações com rentabilidade num cenário de Selic mais alta por mais tempo.</p>
+
+    <p>No câmbio, o <strong>dólar comercial fechou em R$ 5,1803 (+0,45%)</strong> e o <strong>euro em R$ 5,9750 (+0,52%)</strong>. A divisa brasileira segue pressionada pela combinação de Payroll americano forte (que favorece o dólar globalmente) e pelos fundamentos domésticos deteriorados: IPCA 2026 projetado em 5,11% pelo Focus, acima do teto de 4,5%, e Selic terminal elevada a 13,50% — paradoxalmente, juros altos não sustentam o real quando o fluxo externo é negativo por aversão a risco.</p>
+
+    <div class="tbl-wrap" style="margin-bottom:18px;">
       <table>
-        <caption>Top altas do Ibovespa — 05/06/2026</caption>
-        <thead><tr><th>Ação</th><th>Preço (R$)</th><th>Var.%</th></tr></thead>
+        <caption>Ibovespa — Altas e Baixas (08/06/2026)</caption>
+        <thead>
+          <tr>
+            <th class="sortable" style="text-align:left;">Ticker<span class="arr">⇅</span></th>
+            <th class="sortable" style="text-align:left;">Empresa<span class="arr">⇅</span></th>
+            <th class="sortable">Preço (R$)<span class="arr">⇅</span></th>
+            <th class="sortable">Var.%<span class="arr">⇅</span></th>
+          </tr>
+        </thead>
         <tbody>
-          <tr><td><span class="tk">EMBJ3 (Embraer)</span></td><td class="num">72,33</td><td class="num up">+3,82%</td></tr>
-          <tr><td><span class="tk">AMBEV3 (Ambev)</span></td><td class="num">16,17</td><td class="num up">+0,62%</td></tr>
-          <tr><td><span class="tk">BBDC4 (Bradesco PN)</span></td><td class="num">17,47</td><td class="num up">+0,58%</td></tr>
-          <tr><td><span class="tk">ITUB4 (Itaú Unibanco PN)</span></td><td class="num">38,83</td><td class="num up">+0,28%</td></tr>
+          <tr><td class="tk">WEGE3</td><td>WEG</td><td class="num">N/D</td><td class="num up">+3,63%<span class="bar up" style="width:22px"></span></td></tr>
+          <tr><td class="tk">PETR3</td><td>Petrobras ON</td><td class="num">R$ 45,90</td><td class="num up">+0,72%<span class="bar up" style="width:8px"></span></td></tr>
+          <tr><td class="tk">PETR4</td><td>Petrobras PN</td><td class="num">R$ 41,16</td><td class="num up">+0,66%<span class="bar up" style="width:7px"></span></td></tr>
+          <tr><td class="tk">ABEV3</td><td>Ambev ON</td><td class="num">R$ 16,08</td><td class="num down">−0,56%<span class="bar down" style="width:6px"></span></td></tr>
+          <tr><td class="tk">ITSA4</td><td>Itaúsa PN</td><td class="num">R$ 12,43</td><td class="num down">−0,88%<span class="bar down" style="width:8px"></span></td></tr>
+          <tr><td class="tk">VALE3</td><td>Vale ON</td><td class="num">R$ 78,00</td><td class="num down">−0,89%<span class="bar down" style="width:9px"></span></td></tr>
+          <tr><td class="tk">ITUB4</td><td>Itaú Unibanco PN</td><td class="num">R$ 38,52</td><td class="num down">−0,80%<span class="bar down" style="width:8px"></span></td></tr>
+          <tr><td class="tk">BBDC4</td><td>Bradesco PN</td><td class="num">R$ 17,20</td><td class="num down">−1,55%<span class="bar down" style="width:14px"></span></td></tr>
+          <tr><td class="tk">MRVE3</td><td>MRV Engenharia</td><td class="num">N/D</td><td class="num down">−4,64%<span class="bar down" style="width:32px"></span></td></tr>
         </tbody>
       </table>
     </div>
-    <br>
+
     <div class="tbl-wrap">
       <table>
-        <caption>Top baixas do Ibovespa — 05/06/2026</caption>
-        <thead><tr><th>Ação</th><th>Preço (R$)</th><th>Var.%</th></tr></thead>
+        <caption>Câmbio — 08/06/2026</caption>
+        <thead>
+          <tr>
+            <th style="text-align:left;">Par</th>
+            <th>Venda</th>
+            <th>Var.%</th>
+          </tr>
+        </thead>
         <tbody>
-          <tr><td><span class="tk">CSNA3 (CSN)</span></td><td class="num">6,00</td><td class="num down">−10,18%</td></tr>
-          <tr><td><span class="tk">VALE3 (Vale)</span></td><td class="num">78,70</td><td class="num down">−3,78%</td></tr>
-          <tr><td><span class="tk">PETR4 (Petrobras PN)</span></td><td class="num">40,89</td><td class="num down">−0,87%</td></tr>
-          <tr><td><span class="tk">PETR3 (Petrobras ON)</span></td><td class="num">45,71</td><td class="num down">−0,52%</td></tr>
-          <tr><td><span class="tk">ITSA4 (Itausa PN)</span></td><td class="num">12,54</td><td class="num down">−0,48%</td></tr>
+          <tr><td class="tk">USD / BRL</td><td class="num">R$ 5,1803</td><td class="num down">+0,45%</td></tr>
+          <tr><td class="tk">EUR / BRL</td><td class="num">R$ 5,9750</td><td class="num down">+0,52%</td></tr>
+          <tr><td class="tk">USD / BRL (Ptax)</td><td class="num">R$ 5,1695</td><td class="num down">+0,88%</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════════════════ SEÇÃO 08 ═══ -->
   <section id="rendafixa" class="reveal">
     <div class="sec-head"><span class="sec-num">08</span><h2>Renda fixa</h2></div>
-    <p>A curva de juros doméstica sofreu abertura expressiva na sexta. Os DI futuros saltaram mais de 40 pontos-base, atingindo os maiores níveis em mais de um ano. O driver é duplo: (1) o Payroll americano reabriu o debate sobre alta do Fed, que exporta prêmio de risco global; e (2) a reversão da expectativa para o Copom — o mercado passou a precificar 68% de probabilidade de manutenção da Selic em 14,50% na reunião de 17/06, abandonando a perspectiva de corte.</p>
-    <p>O <strong>Tesouro IPCA+ 2032</strong> voltou a pagar IPCA + 8,23% ao ano — um dos maiores spreads reais do mundo para um soberano de investment grade. Para o investidor com horizonte longo e tolerância à marcação a mercado, as taxas atuais são historicamente elevadas. No curto prazo, a abertura de curva pressiona os custos de carregamento da dívida pública.</p>
-    <div class="tbl-wrap">
+
+    <p><strong>DI Futuro (08/06/2026): N/D</strong> — a coleta automática via Selenium não estava disponível no ambiente de execução desta edição. O último dado confirmado é de 05/06/2026: DI1F27 em 14,415%, DI1F30 em 14,785% e DI1F35 em 14,725%. A tendência persistente, no entanto, é de abertura da curva: as taxas reais longas seguem sendo pressionadas pela combinação de inflação acima do teto da meta, Payroll americano forte (que retarda cortes no Fed) e geopolítica instável que mantém prêmio de risco elevado.</p>
+
+    <p>No <strong>Tesouro Direto</strong>, os dados de 08/06 confirmam o pior nível das taxas prefixadas desde 2022: o <strong>Tesouro Prefixado 2029 chegou a 14,72% a.a.</strong> e o <strong>Prefixado 2032 a 14,70% a.a.</strong> — reflexo da 13ª semana consecutiva de alta das expectativas de IPCA no Focus (5,11% para 2026, bem acima do teto de 4,5%). O <strong>Tesouro IPCA+ 2032 ultrapassou a marca psicológica de 8%</strong>, chegando a IPCA + 8,28% — o nível mais alto desde o início do ciclo de alta da Selic. Para o investidor, isso representa uma taxa real historicamente elevada: um título que entrega inflação mais 8,28% ao ano é atraente para quem tem horizonte longo, mas sinaliza o quanto o mercado exige de prêmio para financiar o governo.</p>
+
+    <p>A <strong>Selic</strong> está em 14,50% a.a. O próximo Copom é em 17/06 — o mercado precificava ~68% de manutenção antes dos dados do Focus. Com a inflação mais pressionada, o BCB enfrenta um dilema: a atividade mostra PIB 2026 em 1,91% (revisão leve para cima), mas a inflação persistente e as expectativas desancoradas limitam o espaço para cortes.</p>
+
+    <div class="tbl-wrap" style="margin-bottom:18px;">
       <table>
-        <caption>DI Futuro — fechamento 05/06/2026 (fonte: di_futuro.txt / Selenium)</caption>
-        <thead><tr><th>Vencimento</th><th>Taxa</th><th>Variação</th></tr></thead>
+        <caption>DI Futuro — Último dado confirmado (05/06/2026)</caption>
+        <thead>
+          <tr>
+            <th style="text-align:left;">Vencimento</th>
+            <th>Taxa</th>
+            <th>Variação (05/06)</th>
+            <th>Observação</th>
+          </tr>
+        </thead>
         <tbody>
-          <tr><td><span class="tk">DI1F27 (jan/27)</span></td><td class="num">14,415%</td><td class="num down">+0,98%</td></tr>
-          <tr><td><span class="tk">DI1F30 (jan/30)</span></td><td class="num">14,785%</td><td class="num down">+2,82%</td></tr>
-          <tr><td><span class="tk">DI1F35 (jan/35)</span></td><td class="num">14,725%</td><td class="num down">+2,54%</td></tr>
+          <tr><td class="tk">DI1F27 (jan/27)</td><td class="num">14,415%</td><td class="num down">+0,98%</td><td class="nd">Dado de 05/06 — N/D para 08/06</td></tr>
+          <tr><td class="tk">DI1F30 (jan/30)</td><td class="num">14,785%</td><td class="num down">+2,82%</td><td class="nd">Dado de 05/06 — N/D para 08/06</td></tr>
+          <tr><td class="tk">DI1F35 (jan/35)</td><td class="num">14,725%</td><td class="num down">+2,54%</td><td class="nd">Dado de 05/06 — N/D para 08/06</td></tr>
         </tbody>
       </table>
     </div>
-    <br>
+
     <div class="tbl-wrap">
       <table>
-        <caption>Tesouro Direto — ref. fechamento 05/06/2026</caption>
-        <thead><tr><th>Título</th><th>Vencimento</th><th>Taxa</th></tr></thead>
+        <caption>Tesouro Direto — Taxas de fechamento (08/06/2026)</caption>
+        <thead>
+          <tr>
+            <th style="text-align:left;">Título</th>
+            <th>Vencimento</th>
+            <th>Taxa a.a.</th>
+          </tr>
+        </thead>
         <tbody>
-          <tr><td><span class="tk">Tesouro Prefixado</span></td><td>01/01/2029</td><td class="num">14,56% a.a.</td></tr>
-          <tr><td><span class="tk">Tesouro Prefixado</span></td><td>01/01/2032</td><td class="num">14,61% a.a.</td></tr>
-          <tr><td><span class="tk">Tesouro IPCA+</span></td><td>15/08/2032</td><td class="num">IPCA + 8,23%</td></tr>
-          <tr><td><span class="tk">Tesouro IPCA+</span></td><td>15/08/2040</td><td class="num">IPCA + 7,54%</td></tr>
-          <tr><td><span class="tk">Tesouro IPCA+</span></td><td>15/08/2050</td><td class="num nd">N/D</td></tr>
+          <tr><td class="tk">Tesouro Prefixado</td><td>01/01/2029</td><td class="num down">14,72%</td></tr>
+          <tr><td class="tk">Tesouro Prefixado</td><td>01/01/2032</td><td class="num down">14,70%</td></tr>
+          <tr><td class="tk">Tesouro IPCA+</td><td>15/08/2032</td><td class="num down">IPCA + 8,28%</td></tr>
+          <tr><td class="tk">Tesouro IPCA+</td><td>15/08/2040</td><td class="nd">N/D</td></tr>
+          <tr><td class="tk">Tesouro IPCA+</td><td>15/08/2050</td><td class="nd">N/D</td></tr>
         </tbody>
       </table>
     </div>
+    <p class="small" style="margin-top:8px;">Selic vigente: 14,50% a.a. · CDI: 14,40% a.a. · Próximo Copom: 17/06/2026</p>
   </section>
 
+  <!-- ═══════════════════════════════════════════════════════ SEÇÃO 09 ═══ -->
   <section id="commodities" class="reveal">
-    <div class="sec-head"><span class="sec-num">09</span><h2>Commodities &amp; cripto</h2></div>
-    <p>O petróleo é o destaque desta segunda: o Brent subiu mais de 4%, para ~US$ 96/bbl, revertendo parte da queda semanal anterior. O motor é geopolítico — ataques de Israel e Irã, drones no Kuwait, cessar-fogo frágil. Para o Brasil, petróleo alto é ambíguo: beneficia Petrobras, mas pressiona a inflação de combustíveis e torna o trabalho do Copom mais difícil.</p>
-    <p>O <strong>ouro</strong> cedeu 3,1% na sexta (US$ 4.365,3/oz) apesar da escalada geopolítica — a alta do dólar pós-Payroll e a reprificação de yields americanos pesaram mais. O <strong>Bitcoin</strong> segue próximo de US$ 63.000, em sua quinta semana negativa consecutiva, com saída acumulada de ~US$ 3,45 bi dos ETFs americanos desde 15 de maio. O <strong>minério de ferro</strong> opera estável a US$ 102/t — sem catalisador de demanda da China.</p>
+    <div class="sec-head"><span class="sec-num">09</span><h2>Commodities &amp; Cripto</h2></div>
+
+    <p>O <strong>petróleo</strong> foi o ativo mais volátil do dia. O <strong>Brent</strong> abriu com alta de 4,1% em US$ 96,93 — reflexo dos ataques israelenses a instalações petroquímicas iranianas no sudoeste do Irã, e dos drones iranianos que atingiram o Kuwait no fim de semana. O temor era sobre o Estreito de Ormuz, por onde passa ~1/5 do petróleo e GNL mundial. Ao longo do dia, o Irã anunciou o fim das operações militares, e o Brent aliviou para aproximadamente <strong>US$ 94 no fechamento</strong>. O <strong>WTI</strong> fechou próximo de <strong>US$ 91,32</strong>. Para o Brasil, o patamar de petróleo ainda elevado pressiona combustíveis e o IPCA — é um dos drivers da revisão do Focus para 5,11%.</p>
+
+    <p>O <strong>ouro</strong> fechou em <strong>US$ 4.363,4 (−0,04%)</strong> — virtualmente estável. O metal havia caldo na abertura (−0,92% chegando a US$ 4.325), mas recuperou ao longo do dia. Permanece em patamar historicamente alto, sustentado pela aversão a risco global e pela incerteza sobre o Fed. A <strong>prata</strong> cedeu −2,3% para US$ 67,50 na abertura (fechamento exato N/D), em movimento de risk-off seletivo.</p>
+
+    <p>O <strong>minério de ferro</strong> recuou −0,91%, com o contrato CNY I2609 fechando em 759 yuan/ton (~US$ 101-102/ton). A queda reflete demanda chinesa enfraquecida: estoques em portos chineses permanecem elevados, e a produção industrial mostra sinais de moderação. Vale (VALE3 −0,89%) refletiu esse movimento no Ibovespa.</p>
+
+    <p>No campo cripto, o <strong>Bitcoin</strong> operou em torno de <strong>US$ 63.500</strong>, recuperando-se do fundo abaixo de US$ 60.000 tocado no fim de semana — queda inédita desde 2024. A recuperação (+4% vs domingo) acompanhou o apetite a risco moderado e o rebote dos semicondutores, mas a tendência de médio prazo ainda é baixista: o BTC acumula queda de ~21% no mês e ~40% vs um ano. O <strong>Ethereum</strong> abriu em ~US$ 1.690, sugerindo fechamento na mesma faixa (dado exato N/D).</p>
+
     <div class="tbl-wrap">
       <table>
-        <caption>Commodities &amp; cripto — ref. 05/06 (fech.) e 08/06 (abertura/fds)</caption>
-        <thead><tr><th>Ativo</th><th>Ref.</th><th>Valor</th><th>Var.%</th></tr></thead>
+        <caption>Commodities &amp; Cripto — Referência 08/06/2026</caption>
+        <thead>
+          <tr>
+            <th class="sortable" style="text-align:left;">Ativo<span class="arr">⇅</span></th>
+            <th class="sortable">Valor<span class="arr">⇅</span></th>
+            <th class="sortable">Var.%<span class="arr">⇅</span></th>
+            <th>Obs.</th>
+          </tr>
+        </thead>
         <tbody>
-          <tr><td><span class="tk">Brent (US$/bbl)</span></td><td>08/06 abertura</td><td class="num">~96,06</td><td class="num up">+4,32%</td></tr>
-          <tr><td><span class="tk">WTI (US$/bbl)</span></td><td>08/06 abertura</td><td class="num">~94,00</td><td class="num nd">N/D %</td></tr>
-          <tr><td><span class="tk">Brent (US$/bbl)</span></td><td>Fech. 05/06</td><td class="num">94,71</td><td class="num down">−0,34%</td></tr>
-          <tr><td><span class="tk">WTI (US$/bbl)</span></td><td>Fech. 05/06</td><td class="num">92,63</td><td class="num down">−0,44%</td></tr>
-          <tr><td><span class="tk">Ouro (US$/oz)</span></td><td>Fech. 05/06</td><td class="num">4.365,3</td><td class="num down">−3,10%</td></tr>
-          <tr><td><span class="tk">Prata (US$/oz)</span></td><td>Fech. 05/06</td><td class="num">72,93</td><td class="num down">−1,41%</td></tr>
-          <tr><td><span class="tk">Minério de ferro (US$/t)</span></td><td>Fech. 05/06</td><td class="num">102</td><td class="num up">+0,04%</td></tr>
-          <tr><td><span class="tk">Bitcoin (US$)</span></td><td>Fds 07/06</td><td class="num">~63.000</td><td class="num down">−5,5% na semana</td></tr>
-          <tr><td><span class="tk">Ethereum (US$)</span></td><td>Fds 07/06</td><td class="num">~1.604</td><td class="num nd">N/D</td></tr>
+          <tr><td class="tk">Brent Crude</td><td class="num">~US$ 94,00/bbl</td><td class="nd">aliviou de US$96,93</td><td class="small">fechamento estimado</td></tr>
+          <tr><td class="tk">WTI Crude</td><td class="num">US$ 91,32/bbl</td><td class="nd">N/D var. %</td><td class="small">intraday</td></tr>
+          <tr><td class="tk">Ouro (spot)</td><td class="num">US$ 4.363/oz</td><td class="num down">−0,04%</td><td class="small">fechamento</td></tr>
+          <tr><td class="tk">Prata (spot)</td><td class="num">US$ 67,50/oz</td><td class="num down">−2,30%</td><td class="small">dado da manhã</td></tr>
+          <tr><td class="tk">Minério de ferro (CNY)</td><td class="num">759 CNY/ton</td><td class="num down">−0,91%</td><td class="small">B3·DCE I2609</td></tr>
+          <tr><td class="tk">Bitcoin (BTC)</td><td class="num">~US$ 63.500</td><td class="num up">+4% vs domingo</td><td class="small">fechamento N/D</td></tr>
+          <tr><td class="tk">Ethereum (ETH)</td><td class="num">~US$ 1.690</td><td class="nd">N/D var. %</td><td class="small">abertura; fech. N/D</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════════════════ SEÇÃO 10 ═══ -->
   <section id="noticias" class="reveal">
     <div class="sec-head"><span class="sec-num">10</span><h2>Top notícias do dia</h2></div>
-    <p class="small">Cobertura: sexta 05/06 + sábado 06/06 + domingo 07/06/2026</p>
+    <p class="small" style="margin-bottom:14px;">Cobertura: segunda-feira 08/06/2026 e manhã de terça 09/06/2026</p>
+
     <div class="news">
 
-      <details class="n" open>
-        <summary><span class="nidx">01</span><span class="ntitle">Payroll de maio: 172 mil vagas — Fed pode retomar altas de juros</span><span class="plus">+</span></summary>
-        <div class="body">
-          <p class="nsum">O relatório de empregos americano de maio registrou 172 mil vagas criadas — mais que o dobro do consenso de 80–85 mil. Desemprego estável em 4,0%. A surpresa derrubou S&amp;P 500 em 2,64% e Nasdaq em 4,18%, pior sessão desde o tarifaço de abril de 2025.</p>
-          <div class="row"><span class="tag">Por que importa</span><span>O Fed conduzia uma pausa no ciclo; um mercado de trabalho tão aquecido resiste à desinflação e pode forçar novas altas. Probabilidade de alta antes do fim de 2026 subiu para mais de 65%.</span></div>
-          <div class="row"><span class="tag">Impacto</span><span>Pressão sobre toda a curva global; yields americanos subiram, dólar se fortaleceu, renda variável e commodities caíram.</span></div>
-          <div class="row"><span class="tag">O que monitorar</span><span>CPI de maio (10/06) e FOMC de 17/06.</span></div>
-        </div>
-      </details>
+      <div class="n">
+        <details>
+          <summary><span class="nidx">01</span><span class="ntitle">Irã anuncia fim das operações militares contra Israel — Brent recua de US$97 para ~US$94</span><span class="plus">+</span></summary>
+          <div class="body">
+            <p class="nsum">O Ministério das Relações Exteriores do Irã comunicou ao CNBC, na manhã de segunda, o encerramento das operações militares contra Israel. A declaração veio após dias de troca de mísseis e drones, incluindo ataques iranianos ao aeroporto do Kuwait. O Irã advertiu, porém, que retomará as ações caso Israel prossiga com ofensivas no Líbano. As Forças de Defesa de Israel (IDF) anunciaram ataques aéreos em instalações petroquímicas no sudoeste do Irã e em aldeias do sul do Líbano.</p>
+            <div class="row"><span class="tag">Por que importa</span><span>O petróleo havia subido 4% na abertura com o medo de restrição ao Estreito de Ormuz (por onde passa 20% do petróleo mundial). O alívio geopolítico é condição necessária para a desinflação global, mas o conflito permanece latente.</span></div>
+            <div class="row"><span class="tag">Impacto</span><span>Brent caiu de US$96,93 para ~US$94 no fechamento. Positivo para inflação global se sustentado, mas prêmio de risco geopolítico permanece no mercado.</span></div>
+            <div class="row"><span class="tag">Monitorar</span><span>Declarações do IDF sobre Líbano; nova troca de ataques no fim de semana pode reverter o alívio. Reunião de crise nos bastidores citada por fontes regionais.</span></div>
+          </div>
+        </details>
+      </div>
 
-      <details class="n">
-        <summary><span class="nidx">02</span><span class="ntitle">KOSPI aciona circuit breaker: −8,29% — Samsung derruba 10%</span><span class="plus">+</span></summary>
-        <div class="body">
-          <p class="nsum">A bolsa sul-coreana reagiu com intensidade ao colapso do setor de semicondutores americano. O KOSPI atingiu queda de 8,40% na abertura e teve as negociações suspensas por 20 minutos. Samsung Electronics fechou em -10,18% e SK Hynix em -7,68%.</p>
-          <div class="row"><span class="tag">Por que importa</span><span>A Coreia concentra mais de 15% da produção global de DRAM e NAND. Um colapso desse porte sinaliza risco de reversão do ciclo de IA ou excesso de valuation no setor.</span></div>
-          <div class="row"><span class="tag">Impacto</span><span>Contágio para Taiwan (TSMC), Japão (Tokyo Electron) e ETFs globais de semicondutores.</span></div>
-          <div class="row"><span class="tag">O que monitorar</span><span>Resultados de Nvidia (próximo trimestre) e dados de demanda por chips de IA da Microsoft e Google.</span></div>
-        </div>
-      </details>
+      <div class="n">
+        <details>
+          <summary><span class="nidx">02</span><span class="ntitle">Intel (INTC) +10%: Google faz pedido de 3 milhões de TPUs; Nvidia e Tesla avaliam chips Intel</span><span class="plus">+</span></summary>
+          <div class="body">
+            <p class="nsum">Segundo reportagem do The Information, o Google (GOOGL/GOOG) fez um pedido firme à Intel para fabricar mais de 3 milhões de TPUs (Tensor Processing Units) em 2028, usando o processo de fabricação Intel 18A/14A. A Nvidia está avaliando usar a tecnologia da Intel para produzir um processador que combina quatro GPUs numa única unidade. O CEO da Tesla, Elon Musk, confirmou que a empresa planeja usar o processo 14A da Intel para produzir chips do projeto "Terafab", uma fábrica avançada de chips de IA planejada para Austin.</p>
+            <div class="row"><span class="tag">Por que importa</span><span>É o primeiro grande contrato de foundry de IA para a Intel, que luta para retomar protagonismo frente à TSMC. Sinaliza que o mercado começa a diversificar a dependência da TSMC para fabricação de chips avançados de IA.</span></div>
+            <div class="row"><span class="tag">Impacto</span><span>INTC +10% no dia. Beneficia também a Corning (GLW), cujo acordo de fibra óptica com Amazon (+9,3% no dia) está dentro do mesmo ciclo de expansão de infraestrutura de IA.</span></div>
+            <div class="row"><span class="tag">Monitorar</span><span>Confirmação formal do contrato Google–Intel; resposta da TSMC e AMD. Pedidos similares de outras Big Techs podem transformar a Intel de "underdog" em protagonista do ciclo de IA.</span></div>
+          </div>
+        </details>
+      </div>
 
-      <details class="n">
-        <summary><span class="nidx">03</span><span class="ntitle">Israel–Irã trocam mísseis no fim de semana; Brent sobe +4,3%</span><span class="plus">+</span></summary>
-        <div class="body">
-          <p class="nsum">Israel e Irã trocaram ataques de mísseis e drones no sábado e domingo. Drones iranianos atingiram o terminal do Aeroporto Internacional do Kuwait (1 morto, 63 feridos). O cessar-fogo de 60 dias negociado por Trump mostrou-se frágil.</p>
-          <div class="row"><span class="tag">Por que importa</span><span>A escalada mantém o Estreito de Ormuz com fluxo restrito. Brent saltou +4,3% na abertura de segunda, para ~US$ 96/bbl, alimentando pressão inflacionária global.</span></div>
-          <div class="row"><span class="tag">Impacto</span><span>Para o Brasil: Petrobras se beneficia; mas combustíveis mais caros pressionam IPCA e dificultam o trabalho do Copom.</span></div>
-          <div class="row"><span class="tag">O que monitorar</span><span>Declarações de Teerã e Tel Aviv; possível reunião de emergência da OPEP+.</span></div>
-        </div>
-      </details>
+      <div class="n">
+        <details>
+          <summary><span class="nidx">03</span><span class="ntitle">Marvell Technology (MRVL) anunciada para o S&amp;P 500 a partir de 22 de junho</span><span class="plus">+</span></summary>
+          <div class="body">
+            <p class="nsum">A S&amp;P Global anunciou que a Marvell Technology (MRVL), fabricante de chips de IA negociada na Nasdaq, ingressará no S&amp;P 500 em 22 de junho de 2026. A Flex (FLEX) também foi incluída. MRVL abriu com alta de ~9% no pré-mercado. A empresa é uma das maiores fornecedoras de chips de processamento de dados para data centers de hiperescala, diretamente beneficiada pela explosão da IA generativa.</p>
+            <div class="row"><span class="tag">Por que importa</span><span>A inclusão no S&amp;P 500 força fundos indexados passivos (trilhões em AUM) a comprarem a ação, gerando demanda artificial mas real no curto prazo. É também um reconhecimento do peso crescente dos chips de IA no índice.</span></div>
+            <div class="row"><span class="tag">Impacto</span><span>Alta de ~8-9% no dia. Efeito "compra na notícia, vende no evento" é possível após a inclusão efetiva em 22/06.</span></div>
+            <div class="row"><span class="tag">Monitorar</span><span>Comportamento da ação entre agora e 22/06. Quem será removido do índice para abrir espaço (anúncio ainda pendente).</span></div>
+          </div>
+        </details>
+      </div>
 
-      <details class="n">
-        <summary><span class="nidx">04</span><span class="ntitle">Focus eleva Selic para 13,50% e IPCA 2026 para 5,11% — 13ª alta consecutiva</span><span class="plus">+</span></summary>
-        <div class="body">
-          <p class="nsum">O Boletim Focus desta segunda-feira elevou a Selic terminal de 13,25% para 13,50% ao ano e o IPCA 2026 de 5,09% para 5,11% — 13ª alta consecutiva, bem acima do teto da meta de 4,5%. Para 2027, o IPCA vai a 4,03%.</p>
-          <div class="row"><span class="tag">Por que importa</span><span>Projeções de IPCA acima de 5% indicam que o processo desinflacionário está estagnado, retirando espaço para cortes da Selic e mantendo pressão sobre crédito e dívida pública.</span></div>
-          <div class="row"><span class="tag">Impacto</span><span>Copom de 17/06 com maioria de mercado agora projetando manutenção (68% de chance), não corte.</span></div>
-          <div class="row"><span class="tag">O que monitorar</span><span>Comunicado do Copom (17/06) e novo Focus na semana seguinte.</span></div>
-        </div>
-      </details>
+      <div class="n">
+        <details>
+          <summary><span class="nidx">04</span><span class="ntitle">Corning (GLW) +9,3% com acordo multibilionário de fibra óptica com Amazon</span><span class="plus">+</span></summary>
+          <div class="body">
+            <p class="nsum">A Amazon anunciou acordo multimilionário com a Corning para fornecer cabos de fibra óptica para seus data centers nos EUA, previsto para se expandir ao longo de vários anos. O contrato deve criar 1.000 empregos nas fábricas da Corning na Carolina do Norte. A ação da Corning já havia mais que dobrado no ano e está ~6 vezes acima do final de 2023. Em janeiro, a Meta comprometeu até US$ 6 bilhões com a Corning para expansão fabril, e em maio a Nvidia fez um acordo de até US$ 3,2 bilhões.</p>
+            <div class="row"><span class="tag">Por que importa</span><span>Corning é um "pick-and-shovel" da IA — empresa que vende infraestrutura para todas as Big Techs independentemente de qual vencer a corrida de modelos. A sequência Meta-Nvidia-Amazon confirma que a fibra óptica é um bottleneck real do ciclo de IA.</span></div>
+            <div class="row"><span class="tag">Impacto</span><span>GLW +9,3% no dia. O setor de infraestrutura de rede está sendo positivamente reclassificado pelo mercado como um dos maiores beneficiários do ciclo de IA.</span></div>
+            <div class="row"><span class="tag">Monitorar</span><span>Novos contratos com Microsoft e Google, ainda não anunciados. Capacidade de entrega da Corning dado o ritmo de expansão.</span></div>
+          </div>
+        </details>
+      </div>
 
-      <details class="n">
-        <summary><span class="nidx">05</span><span class="ntitle">Raízen: maior recuperação extrajudicial do Brasil — R$ 64,7 bi aprovados</span><span class="plus">+</span></summary>
-        <div class="body">
-          <p class="nsum">A Raízen (RAIZ4) obteve apoio de 75,45% dos credores para seu plano de recuperação extrajudicial de R$ 64,7 bilhões. Shell aportará R$ 3,5 bi; a empresa venderá operações na Argentina por R$ 7,2 bi e se dividirá em duas empresas até 2027.</p>
-          <div class="row"><span class="tag">Por que importa</span><span>Maior processo de recuperação extrajudicial já realizado no Brasil, com mais de 80 credores e 100 mil pessoas físicas (detentores de CRAs). Evita default sistêmico no mercado de crédito privado.</span></div>
-          <div class="row"><span class="tag">Impacto</span><span>RAIZ4 pode recuperar parte do valor perdido. CRAs do agronegócio ganham referência para precificação de risco.</span></div>
-          <div class="row"><span class="tag">O que monitorar</span><span>Aprovação formal pelo juiz da 3ª Vara de Falências de SP; separação das duas empresas (prazo: 2027).</span></div>
-        </div>
-      </details>
+      <div class="n">
+        <details>
+          <summary><span class="nidx">05</span><span class="ntitle">Tesla China: vendas de maio +22,5% — encerra dois meses de queda anual</span><span class="plus">+</span></summary>
+          <div class="body">
+            <p class="nsum">A Associação de Carros de Passageiros da China (CPCA) divulgou que a Tesla vendeu 47.281 veículos no varejo chinês em maio, alta de 22,5% vs maio de 2025 — encerrando dois meses consecutivos de queda anual. Mês a mês, a alta foi de 82% (vs abril). No acumulado de janeiro a maio, as vendas ainda estão 8% abaixo do mesmo período de 2025 (186.035 unidades). TSLA subiu ~2,8% no dia.</p>
+            <div class="row"><span class="tag">Por que importa</span><span>A China é o maior mercado único de EVs do mundo. Uma recuperação sustentada em maio — após quedas em março e abril — reduz o risco de que a competição local (BYD, SAIC, Xpeng) tenha dominado definitivamente o mercado.</span></div>
+            <div class="row"><span class="tag">Impacto</span><span>Positivo para TSLA no curto prazo. Ainda é cedo para falar em reversão de tendência dado o acumulado anual negativo.</span></div>
+            <div class="row"><span class="tag">Monitorar</span><span>Dados de junho. Continuidade do rebound ou é apenas efeito base favorável de abril? Competição de preços com BYD.</span></div>
+          </div>
+        </details>
+      </div>
 
-      <details class="n">
-        <summary><span class="nidx">06</span><span class="ntitle">Embraer +3,82% com pedido firme de 15 jatos E195-E2 da Azorra</span><span class="plus">+</span></summary>
-        <div class="body">
-          <p class="nsum">A empresa de leasing Azorra realizou pedido firme de 15 jatos E195-E2, com direito de compra de mais 15. JP Morgan projeta backlog comercial da Embraer no 2T26 de US$ 15,6 bilhões.</p>
-          <div class="row"><span class="tag">Por que importa</span><span>EMBJ3 foi o único destaque positivo relevante do Ibovespa na sexta, resistindo ao ambiente de forte aversão ao risco.</span></div>
-          <div class="row"><span class="tag">Impacto</span><span>Fortalece o guidance de crescimento da Embraer para 2026 e justifica valuations mais elevados para EMBJ3.</span></div>
-          <div class="row"><span class="tag">O que monitorar</span><span>Resultados do 2T26 da Embraer (previstos para julho/agosto).</span></div>
-        </div>
-      </details>
+      <div class="n">
+        <details>
+          <summary><span class="nidx">06</span><span class="ntitle">Apple WWDC: foco em "IA agêntica" — Bank of America reitera compra com PT US$380</span><span class="plus">+</span></summary>
+          <div class="body">
+            <p class="nsum">A Apple (AAPL) deu início ao Worldwide Developers Conference (WWDC), que vai até sexta-feira, em Cupertino. O evento híbrido tem como tema central o avanço em "IA agêntica" — sistemas de IA que executam tarefas complexas de forma autônoma. O Bank of America espera que a Apple demonstre uma plataforma que converte sua base instalada (bilhões de dispositivos), sua arquitetura de silício e sua estrutura de privacidade em uma vantagem diferenciada frente a concorrentes de modelos. BofA reiterou compra e preço-alvo de US$380 — ação estava em ~US$308.</p>
+            <div class="row"><span class="tag">Por que importa</span><span>A Apple é o maior peso de uma série de índices. Qualquer sinal de que a empresa tem uma estratégia sólida de IA pode destravar um rerating significativo — o mercado ainda pune a Apple por perceber atraso em IA generativa vs Google e Microsoft.</span></div>
+            <div class="row"><span class="tag">Impacto</span><span>AAPL levemente positivo (+0,36%). Mercado aguardava mais demonstrações concretas antes de reclassificar o papel.</span></div>
+            <div class="row"><span class="tag">Monitorar</span><span>Anúncios específicos ao longo da semana de WWDC. Qualquer colaboração com OpenAI ou Anthropic pode mover a ação.</span></div>
+          </div>
+        </details>
+      </div>
 
-      <details class="n">
-        <summary><span class="nidx">07</span><span class="ntitle">Brasil planeja primeira emissão de títulos em iuanes durante missão à China</span><span class="plus">+</span></summary>
-        <div class="body">
-          <p class="nsum">O governo brasileiro planeja anunciar sua primeira emissão de títulos soberanos em iuanes (renminbi) durante visita de delegação oficial à China em junho. Estratégia de diversificação de fontes de financiamento da dívida.</p>
-          <div class="row"><span class="tag">Por que importa</span><span>Brasil se tornaria um dos poucos países ocidentais emergentes a emitir em iuanes, sinalizando alinhamento estratégico com Pequim e acesso a mercado de capitais alternativo ao dólar.</span></div>
-          <div class="row"><span class="tag">Impacto</span><span>Positivo para diversificação do Tesouro; pode gerar ruído diplomático com os EUA em plena era Trump.</span></div>
-          <div class="row"><span class="tag">O que monitorar</span><span>Anúncio formal do Ministério da Fazenda e data da viagem à China.</span></div>
-        </div>
-      </details>
+      <div class="n">
+        <details>
+          <summary><span class="nidx">07</span><span class="ntitle">Ibovespa na mínima desde janeiro: oito semanas negativas consecutivas</span><span class="plus">+</span></summary>
+          <div class="body">
+            <p class="nsum">O Ibovespa fechou em 168.668 pontos na segunda-feira, renovando a mínima desde 20 de janeiro de 2026 e acumulando a 8ª semana negativa consecutiva — sequência que não ocorria desde o período do Plano Real, no início dos anos 2000. O índice acumula queda de 2,95% em junho e +4,68% no ano. Volume de R$ 20,75 bilhões ficou abaixo da média histórica recente, refletindo cautela dos investidores.</p>
+            <div class="row"><span class="tag">Por que importa</span><span>A sequência de quedas é um indicador técnico e psicológico relevante. Fundamentos domésticos deteriorados (IPCA acima do teto, Selic alta por mais tempo, incerteza fiscal) somados ao contexto externo adverso (Payroll forte, conflito no Oriente Médio) drenam o apetite estrangeiro ao Brasil.</span></div>
+            <div class="row"><span class="tag">Impacto</span><span>Desvalorização de carteiras, fluxo de resgates em fundos de ações. O patamar de 168 mil pontos pode ser um suporte técnico relevante.</span></div>
+            <div class="row"><span class="tag">Monitorar</span><span>CPI americano (quarta) e IPCA brasileiro (sexta). Uma surpresa positiva em qualquer um deles pode deflagrar alívio técnico no Ibovespa.</span></div>
+          </div>
+        </details>
+      </div>
 
-      <details class="n">
-        <summary><span class="nidx">08</span><span class="ntitle">SpaceX fecha acordos de IA com Google (após Anthropic) antes do IPO</span><span class="plus">+</span></summary>
-        <div class="body">
-          <p class="nsum">A SpaceX firmou acordo de computação de IA com o Google, após pacto anterior com a Anthropic, posicionando-se como plataforma de IA antes de seu IPO, precificado a US$ 135/ação — o que poderia tornar Elon Musk o primeiro trilionário do mundo.</p>
-          <div class="row"><span class="tag">Por que importa</span><span>Um dos IPOs mais aguardados do mercado. A SpaceX combina foguetes, satélites (Starlink) e agora IA — perfil único que atrai múltiplos elevados.</span></div>
-          <div class="row"><span class="tag">Impacto</span><span>Possível rotação de portfólios de tech para SpaceX; impacto no NASD11 (ETF de Nasdaq na B3).</span></div>
-          <div class="row"><span class="tag">O que monitorar</span><span>Data de abertura de capital; precificação final; comentários da SEC.</span></div>
-        </div>
-      </details>
+      <div class="n">
+        <details>
+          <summary><span class="nidx">08</span><span class="ntitle">BCE deve elevar juros em +25 bps na quinta-feira (11/06)</span><span class="plus">+</span></summary>
+          <div class="body">
+            <p class="nsum">O Banco Central Europeu (BCE) decide sua taxa de juros na quinta-feira, 11 de junho. O mercado trabalha majoritariamente com uma alta de 25 pontos-base na taxa de depósito, em reação ao avanço da inflação no bloco europeu, puxada pela energia. O conflito Irã–Israel, que manteve o petróleo em patamar elevado, impôs um choque de custos sobre os países europeus importadores de energia — principalmente Alemanha e França. Será o primeiro movimento do BCE desde o início do conflito.</p>
+            <div class="row"><span class="tag">Por que importa</span><span>Uma alta do BCE reforça o ciclo global de juros mais altos por mais tempo, dificultando os cortes do Fed e do Copom. Impacta o custo de financiamento europeu (DAX, bonds alemães) e o EUR/BRL.</span></div>
+            <div class="row"><span class="tag">Impacto</span><span>Possível apreciação do euro frente ao real. Bonds europeus (Alemanha 10Y) tendem a subir em yield. Pressão adicional no carry trade.</span></div>
+            <div class="row"><span class="tag">Monitorar</span><span>Conferência de imprensa do BCE após a decisão: tom hawkish ou dovish no forward guidance importa mais do que a alta em si.</span></div>
+          </div>
+        </details>
+      </div>
 
-      <details class="n">
-        <summary><span class="nidx">09</span><span class="ntitle">EUA classificam Comando Vermelho e PCC como "organizações terroristas"</span><span class="plus">+</span></summary>
-        <div class="body">
-          <p class="nsum">O Departamento de Estado dos EUA publicou a classificação do Comando Vermelho (CV) e do PCC como organizações terroristas estrangeiras (assinatura: Marco Rubio). Cria implicações legais para transações com essas organizações em território americano.</p>
-          <div class="row"><span class="tag">Por que importa</span><span>Eleva o risco-país do Brasil no radar de compliance internacional e pode dificultar certas operações financeiras transnacionais.</span></div>
-          <div class="row"><span class="tag">Impacto</span><span>Pressão diplomática moderada sobre o governo Lula. Sem impacto imediato em câmbio ou bolsa.</span></div>
-          <div class="row"><span class="tag">O que monitorar</span><span>Resposta oficial do Itamaraty; eventuais sanções secundárias a empresas brasileiras.</span></div>
-        </div>
-      </details>
+      <div class="n">
+        <details>
+          <summary><span class="nidx">09</span><span class="ntitle">Focus IPCA 2026: 5,11% — 13ª alta consecutiva e acima do teto da meta</span><span class="plus">+</span></summary>
+          <div class="body">
+            <p class="nsum">O Boletim Focus de segunda-feira (08/06) elevou a expectativa do mercado para o IPCA 2026 para 5,11%, 13ª semana consecutiva de alta — a inflação projetada está acima do teto da meta do BCB de 4,5%. A estimativa para a Selic no fim de 2026 subiu de 13,25% para 13,50%. O PIB 2026 foi revisado marginalmente para cima, de 1,90% para 1,91%. As expectativas de câmbio apontam para R$ 5,15 por dólar ao fim do ano.</p>
+            <div class="row"><span class="tag">Por que importa</span><span>Expectativas de inflação desancoradas são o sinal mais preocupante para o BCB. Quando a inflação esperada fica acima da meta por muitas semanas seguidas, o Copom perde credibilidade e enfrenta pressão para manter juros altos — ou até subir.</span></div>
+            <div class="row"><span class="tag">Impacto</span><span>Curva de juros pressionada; Tesouro Prefixado 2029 em 14,72% (máxima desde 2022); IPCA+ 2032 acima de 8%. Negativo para renda variável doméstica.</span></div>
+            <div class="row"><span class="tag">Monitorar</span><span>Próximo Focus (15/06, antes do Copom de 17/06). Se ultrapassar 5,2%, aumenta a probabilidade de o Copom interromper o ciclo de cortes ou até subir o juro.</span></div>
+          </div>
+        </details>
+      </div>
 
-      <details class="n">
-        <summary><span class="nidx">10</span><span class="ntitle">Nubank anuncia recompra de ações de US$ 1 bilhão</span><span class="plus">+</span></summary>
-        <div class="body">
-          <p class="nsum">O Nubank (ROXO34) anunciou programa de recompra de ações no valor de US$ 1 bilhão — sinalização de confiança da gestão no nível atual de preços e na geração de caixa do banco digital.</p>
-          <div class="row"><span class="tag">Por que importa</span><span>Recompras em banco digital de crescimento são raras e indicam maturidade financeira. Reduz ações em circulação, potencialmente aumentando o EPS.</span></div>
-          <div class="row"><span class="tag">Impacto</span><span>Positivo para ROXO34. Pode ser contrabalançado pelo ambiente negativo para fintechs no curto prazo.</span></div>
-          <div class="row"><span class="tag">O que monitorar</span><span>Ritmo das recompras; resultados do 2T26.</span></div>
-        </div>
-      </details>
+      <div class="n">
+        <details>
+          <summary><span class="nidx">10</span><span class="ntitle">Trump abandona entrevista na NBC após troca de palavras sobre eleições e "fundo de weaponização"</span><span class="plus">+</span></summary>
+          <div class="body">
+            <p class="nsum">O presidente Trump interrompeu uma entrevista gravada com a NBC (programa "Meet the Press") após ser confrontado sobre um "fundo de weaponização" de US$ 1,776 bilhão — criado para compensar pessoas condenadas em conexão com o 6 de janeiro — e sobre alegações de fraude eleitoral que o entrevistador apontou como infundadas. Trump repetiu alegações não comprovadas sobre eleições na Califórnia e deixou o set, destruindo o microfone de lapela.</p>
+            <div class="row"><span class="tag">Por que importa</span><span>O episódio alimenta a narrativa de instabilidade política nos EUA, que já estava no radar do mercado. O "fundo de weaponização" levanta questões sobre uso de recursos federais para fins políticos, potencialmente gerando desgaste com o Congresso.</span></div>
+            <div class="row"><span class="tag">Impacto</span><span>Impacto de mercado imediato limitado. Mas contribui para a percepção de risco político americano elevado, que é um driver secundário de volatilidade.</span></div>
+            <div class="row"><span class="tag">Monitorar</span><span>Reação do Congresso ao fundo de compensação. Qualquer movimento em direção a investigações formais pode pesar nos ativos americanos.</span></div>
+          </div>
+        </details>
+      </div>
 
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════════════════ SEÇÃO 11 ═══ -->
   <section id="conclusao" class="reveal">
     <div class="sec-head"><span class="sec-num">11</span><h2>Conclusão do estrategista</h2></div>
-    <p>O cenário desta segunda-feira é de risk-off profundo e multifatorial: Payroll americano reacendeu a perspectiva de juros mais altos pelo Fed; escalada Irã–Israel joga o Brent de volta acima de US$ 96; colapso de semicondutores na Coreia (KOSPI -8,29%, circuit breaker) demonstra que o otimismo em torno da IA pode estar em processo de reprificação. Para o Brasil, o acúmulo é pesado: oitava semana negativa seguida no Ibovespa — recorde desde o Plano Real —, DI futuros no maior nível em mais de um ano e um Focus que elevou pela 13ª semana consecutiva as expectativas de inflação, agora em 5,11%, acima do teto da meta.</p>
-    <p>O principal risco de curtíssimo prazo é o <strong>CPI americano de quarta (10/06)</strong>: se vier acima do consenso, a probabilidade de alta do Fed pode ultrapassar 75%, forçando mais abertura de curva global e pressão adicional sobre o real. A <strong>principal oportunidade</strong> reside nas taxas históricas do Tesouro IPCA+ (IPCA + 8,23% no vencimento 2032) — para investidores com horizonte longo e tolerância à marcação a mercado. Na semana seguinte, Fed e Copom decidem juros no mesmo dia — a Super Quarta de 17/06. Até lá, cautela prevalece.</p>
+    <p>O mercado está num equilíbrio precário: a segunda-feira trouxe um alívio geopolítico genuíno — o Irã cessou as operações —, e Wall Street aproveitou para um repique técnico liderado pelos semicondutores e pela Intel, que ganhou credibilidade real como fornecedora de chips de IA após o pedido do Google. Mas o alívio convive com fundamentos que continuam adversos: o US 10Y em 4,564% sinaliza que o Payroll de 172 mil vagas está sendo precificado como um obstáculo estrutural aos cortes do Fed, e o IPCA brasileiro em 5,11% (13ª semana alta consecutiva) mantém o Copom numa armadilha — cortar implica arriscar mais desancoragem, manter implica aceitar juros reais cada vez mais restritivos sobre uma economia que cresce apenas 1,91%.</p>
+    <p>O principal risco de curto prazo é um CPI americano de maio acima do consenso nesta quarta-feira: isso encerraria definitivamente a narrativa de cortes do Fed em 2026 e poderia empurrar o US 10Y para 4,7%, pressionando emergentes globalmente — e o Brasil em particular, que já vê o dólar em R$ 5,18. A principal oportunidade, num horizonte de semanas, é uma estabilização do conflito no Oriente Médio combinada a um CPI benigno: o mercado está posicionado de forma muito pessimista em Brasil e Nasdaq, e um alívio de dados poderia deflagrar um rally técnico relevante. Até lá, o viés permanece de cautela e de monitoramento próximo ao nível de suporte de 168 mil no Ibovespa.</p>
   </section>
 
-  <section id="fontes" class="reveal sources">
+  <!-- ═══════════════════════════════════════════════════════ SEÇÃO 12 ═══ -->
+  <section id="fontes" class="reveal">
     <div class="sec-head"><span class="sec-num">12</span><h2>Fontes e referências</h2></div>
-    <h3>Mercado / Cotações Brasil</h3>
-    <ul>
-      <li><a href="https://www.dgabc.com.br/Noticia/4327397/fechamento-do-mercado-financeiro" target="_blank">Diário do Grande ABC — Fechamento do mercado financeiro 05/06/2026</a> — Ibovespa, câmbio, blue chips (acessado 08/06/2026)</li>
-      <li><a href="https://www.moneytimes.com.br" target="_blank">Money Times — Ibovespa cai com Payroll; dólar sobe a R$ 5,15</a> — altas/baixas do Ibovespa, Wall Street, Ásia 05/06 (acessado 08/06/2026)</li>
-      <li><a href="https://br.advfn.com" target="_blank">ADVFN — Mercado asiático 08/06/2026</a> — Nikkei, Hang Seng, Shanghai, KOSPI segunda-feira (acessado 08/06/2026)</li>
-    </ul>
-    <h3>Renda Fixa</h3>
-    <ul>
-      <li><a href="https://www.infomoney.com.br/ferramentas/juros-futuros-di/" target="_blank">InfoMoney — Juros Futuros DI</a> — DI1F27, DI1F30, DI1F35 (coleta via Selenium sexta 05/06 às 22h51; salvo em di_futuro.txt)</li>
-      <li><a href="https://www.tesourodireto.com.br/produtos/dados-sobre-titulos/rendimento-dos-titulos" target="_blank">Tesouro Direto — Rentabilidade dos Títulos</a> — Pré 2029/2032, IPCA+ 2032/2040 (ref. 05/06/2026)</li>
-    </ul>
-    <h3>Agenda / Macro</h3>
-    <ul>
-      <li><a href="https://www.bcb.gov.br/en" target="_blank">Banco Central do Brasil — Boletim Focus 08/06/2026</a> — Selic 13,50%; IPCA 5,11%</li>
-      <li><a href="https://www.investtech.com/main/market.php?MarketID=992&product=38" target="_blank">Investtech — Morning Report June 8, 2026</a> — índices globais, agenda</li>
-    </ul>
-    <h3>Notícias Brasil</h3>
-    <ul>
-      <li><a href="https://www.bloomberglinea.com.br" target="_blank">Bloomberg Línea — Raízen obtém apoio de 75% dos credores</a></li>
-      <li><a href="https://www.moneytimes.com.br" target="_blank">Money Times — Brasil planeja emissão de títulos em iuanes na China</a></li>
-      <li><a href="https://www.moneytimes.com.br" target="_blank">Money Times — SpaceX fecha acordo de IA com Google antes do IPO</a></li>
-    </ul>
-    <h3>Notícias Global / EUA</h3>
-    <ul>
-      <li><a href="https://www.thestreet.com" target="_blank">TheStreet — Stock Market Today June 5, 2026 (Nasdaq -4%)</a></li>
-      <li><a href="https://stocksdownunder.com/us-markets-overnight-5-june-2026/" target="_blank">Stocks Down Under — US Markets Overnight: Payroll Panic</a></li>
-    </ul>
+    <div class="sources">
+
+      <h3>Mercado / Cotações</h3>
+      <ul>
+        <li><a href="https://www.dgabc.com.br/Noticia/4327771/fechamento-do-mercado-financeiro" target="_blank">Diário do Grande ABC — Fechamento do mercado financeiro, 08/06/2026</a> — Ibovespa, câmbio, blue chips, ouro (confirmado)</li>
+        <li><a href="https://www.moneytimes.com.br/ibovespa-8-6-26-apsa/" target="_blank">Money Times — Ibovespa 08/06/2026</a> — contexto intraday e fechamento</li>
+        <li><a href="https://www.infomoney.com.br/mercados/ibovespa-hoje-bolsa-de-valores-ao-vivo-08062026/" target="_blank">InfoMoney — Ibovespa ao vivo, 08/06/2026</a> — altas e baixas</li>
+        <li><a href="https://br.investing.com/currencies/usd-brl" target="_blank">Investing.com — USD/BRL</a></li>
+        <li><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-08-2026" target="_blank">TheStreet — Stock Market Today, June 8, 2026</a> — S&amp;P 500, Nasdaq, Dow, Russell, Treasuries, commodities (ouro/prata manhã)</li>
+      </ul>
+
+      <h3>Renda Fixa</h3>
+      <ul>
+        <li><a href="https://www.infomoney.com.br/ferramentas/juros-futuros-di/" target="_blank">InfoMoney — Juros Futuros DI</a> — ferramenta JS (N/D para 08/06; acesso tentado)</li>
+        <li><a href="https://www.tesourodireto.com.br/produtos/dados-sobre-titulos/rendimento-dos-titulos" target="_blank">Tesouro Direto — Rendimento dos Títulos</a> — Pré 2029/2032, IPCA+ 2032 (08/06)</li>
+        <li><a href="https://investnews.com.br/investimentos/tesouro-direto-taxas-ipca-8-ano/" target="_blank">InvestNews — IPCA+ acima de 8% a.a.</a></li>
+      </ul>
+
+      <h3>Agenda Econômica</h3>
+      <ul>
+        <li><a href="https://www.infomoney.com.br/mercados/calendario-economico-da-semana-inflacao-sera-destaque-no-brasil-e-nos-eua/" target="_blank">InfoMoney — Calendário econômico da semana 09-13/06</a></li>
+        <li><a href="https://www.investing.com/economic-calendar" target="_blank">Investing.com — Economic Calendar</a></li>
+      </ul>
+
+      <h3>Notícias EUA / Global</h3>
+      <ul>
+        <li><a href="https://www.cnbc.com/2026/06/08/iran-end-military-operations-israel-lebanon-escalation.html" target="_blank">CNBC — Iran ends military operations against Israel, June 8, 2026</a></li>
+        <li><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-08-2026" target="_blank">TheStreet — Market Close + Intel, Apple WWDC, Corning, Tesla China (08/06)</a></li>
+        <li><a href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-monday-june-8-2026-moving-up-after-bitcoin-prices-fell-below-60000-131559331.html" target="_blank">Yahoo Finance — Bitcoin &amp; Ethereum prices, June 8, 2026</a></li>
+        <li><a href="https://tradingeconomics.com/commodity/brent-crude-oil" target="_blank">Trading Economics — Brent Oil histórico</a></li>
+        <li><a href="https://www.hellenicshippingnews.com/mmi-daily-iron-ore-index-report-june-8-2026/" target="_blank">Hellenic Shipping News — Iron Ore Index, June 8, 2026</a></li>
+      </ul>
+
+      <h3>Notícias Brasil</h3>
+      <ul>
+        <li><a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-06/mercado-financeiro-eleva-previsao-da-inflacao-para-511-este-ano" target="_blank">Agência Brasil — Focus IPCA 5,11%, 08/06/2026</a></li>
+        <li><a href="https://minhaseconomias.com.br/blog/planejamento-financeiro/ibovespa-em-queda-com-o-aumento-de-tensoes-no-exterior-e-deterioracao-do-focus" target="_blank">Minhas Economias — Ibovespa em queda com tensões e Focus</a></li>
+      </ul>
+
+      <h3>Macroeconomia / Oficiais</h3>
+      <ul>
+        <li><a href="https://www.bcb.gov.br/en" target="_blank">Banco Central do Brasil — Focus, Copom, Selic</a></li>
+        <li><a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank">Trading Economics — US 10Y Treasury Yield</a></li>
+      </ul>
+    </div>
   </section>
 
-  <section id="glossario" class="reveal glossary">
+  <!-- ═══════════════════════════════════════════════════════ SEÇÃO 13 ═══ -->
+  <section id="glossario" class="reveal">
     <div class="sec-head"><span class="sec-num">13</span><h2>Glossário</h2></div>
-    <p class="small">Termos técnicos desta edição, em linguagem simples.</p>
-    <dl>
-      <dt>Payroll (Non-Farm Payrolls)</dt>
-      <dd>Relatório mensal do governo americano que mede empregos criados fora do setor agrícola. Principal indicador do mercado de trabalho dos EUA — influencia diretamente as decisões de juros do Fed.</dd>
-      <dt>Fed (Federal Reserve)</dt>
-      <dd>Banco central dos Estados Unidos. Presidido por Kevin Warsh. Define a taxa de juros americana (Fed Funds Rate), cujas decisões afetam o custo global do capital.</dd>
-      <dt>FOMC</dt>
-      <dd>Comitê de Política Monetária do Federal Reserve. Próxima reunião: 16–17 de junho de 2026.</dd>
-      <dt>Circuit breaker</dt>
-      <dd>Mecanismo de segurança que interrompe as negociações em uma bolsa quando o índice cai além de um percentual predefinido (ex.: 8%), evitando pânico extremo.</dd>
-      <dt>Risk-off</dt>
-      <dd>Modo de aversão ao risco: investidores vendem ativos de maior risco (ações, cripto, emergentes) e compram ativos seguros (dólar, Treasuries, ouro).</dd>
-      <dt>Selic</dt>
-      <dd>Taxa básica de juros do Brasil, definida pelo Copom a cada 45 dias. Atualmente em 14,50% ao ano. Referência para todos os demais juros da economia brasileira.</dd>
-      <dt>Copom</dt>
-      <dd>Comitê de Política Monetária do Banco Central do Brasil. Próxima reunião: 17 de junho de 2026 — mesma data do FOMC.</dd>
-      <dt>IPCA</dt>
-      <dd>Índice Nacional de Preços ao Consumidor Amplo, medida oficial de inflação do Brasil. Meta: 3% ±1,5 p.p. (teto: 4,5%). Mercado projeta 5,11% para 2026.</dd>
-      <dt>DI Futuro</dt>
-      <dd>Contrato negociado na B3 que reflete expectativas do mercado para a taxa CDI em datas futuras. DI1F27 vence em jan/27; DI1F35 vence em jan/35.</dd>
-      <dt>Tesouro IPCA+</dt>
-      <dd>Título público que paga IPCA mais uma taxa real prefixada (ex.: IPCA + 8,23%). Garante superação da inflação, mas o preço oscila conforme os juros de mercado mudam.</dd>
-      <dt>SOX (Philadelphia Semiconductor Index)</dt>
-      <dd>Índice americano de semicondutores (Nvidia, AMD, Intel, Qualcomm etc.). Queda de mais de 10% na sexta foi a maior desde abril de 2025.</dd>
-      <dt>CPI (Consumer Price Index)</dt>
-      <dd>Índice de Preços ao Consumidor dos EUA, equivalente ao IPCA brasileiro. O dado de maio sai na quarta-feira (10/06) — principal evento da semana.</dd>
-      <dt>Boletim Focus</dt>
-      <dd>Pesquisa semanal do Banco Central com mais de 100 instituições financeiras sobre expectativas para inflação, PIB, câmbio e juros. Publicado toda segunda-feira às 8h25.</dd>
-    </dl>
+    <div class="glossary">
+      <dl>
+        <dt>Ibovespa</dt>
+        <dd>Principal índice da bolsa brasileira (B3), composto pelas ações de maior liquidez e representatividade do mercado. Serve de termômetro para o humor dos investidores com o Brasil.</dd>
+
+        <dt>Selic</dt>
+        <dd>Taxa básica de juros da economia brasileira, definida pelo Copom. Funciona como piso de referência para todos os outros juros do país — quanto mais alta, mais caro o crédito e menos atraente a bolsa.</dd>
+
+        <dt>Copom</dt>
+        <dd>Comitê de Política Monetária do Banco Central do Brasil. Reúne-se a cada ~45 dias para decidir a taxa Selic. Próxima reunião: 17/06/2026.</dd>
+
+        <dt>IPCA</dt>
+        <dd>Índice de Preços ao Consumidor Amplo — a inflação oficial do Brasil. O BCB persegue uma meta de 3,0% com teto de 4,5% para 2026. O Focus projeta 5,11%, acima do teto.</dd>
+
+        <dt>Focus</dt>
+        <dd>Relatório semanal do Banco Central com as projeções medias dos principais analistas de mercado para inflação, câmbio, PIB e Selic. É o termômetro das expectativas do mercado financeiro.</dd>
+
+        <dt>DI Futuro</dt>
+        <dd>Contrato financeiro negociado na B3 que reflete a expectativa do mercado para a taxa CDI (que acompanha a Selic) até o vencimento. DI1F27 = janeiro de 2027; DI1F35 = janeiro de 2035. Usado para hedge e para ler as expectativas de juros a longo prazo.</dd>
+
+        <dt>Tesouro IPCA+</dt>
+        <dd>Título público que paga a inflação (IPCA) mais uma taxa de juros real pré-definida. Uma taxa de IPCA+8,28% significa ganho real de 8,28% ao ano acima da inflação — nível historicamente muito elevado.</dd>
+
+        <dt>Tesouro Prefixado</dt>
+        <dd>Título público com taxa de retorno nominal fixa definida no momento da compra. Com o Pré 2029 em 14,72%, o investidor sabe que receberá essa rentabilidade bruta ao ano se carregar até o vencimento.</dd>
+
+        <dt>US 10Y (Treasury)</dt>
+        <dd>Yield (taxa de retorno) do título público americano de 10 anos. É a referência global de "taxa livre de risco". Quando sobe, encarece o financiamento global e pressiona emergentes como o Brasil.</dd>
+
+        <dt>Payroll</dt>
+        <dd>Relatório mensal do governo americano (BLS) que informa o número de empregos criados fora da agricultura. O de maio criou 172 mil vagas, mais que o dobro do esperado (80–85 mil), sinalizando economia aquecida e dificultando cortes do Fed.</dd>
+
+        <dt>BCE</dt>
+        <dd>Banco Central Europeu — equivalente europeu do Fed ou do BCB. Decide os juros da zona do euro. Reunião de 11/06: mercado espera alta de +25 bps.</dd>
+
+        <dt>TPU</dt>
+        <dd>Tensor Processing Unit — chip especializado em processamento de IA, desenvolvido inicialmente pelo Google. O pedido do Google à Intel por 3 milhões de TPUs é o ponto central da notícia sobre INTC.</dd>
+
+        <dt>Foundry</dt>
+        <dd>Fábrica de semicondutores que produz chips para terceiros. A Intel está tentando se tornar uma foundry relevante globalmente para competir com a TSMC (Taiwan).</dd>
+
+        <dt>Abertura da curva de juros</dt>
+        <dd>Quando as taxas dos títulos de prazo mais longo (ex.: IPCA+ 2050, DI1F35) sobem mais do que os curtos, diz-se que a curva "abriu" — sinaliza que o mercado exige mais prêmio pelo risco de carregar a dívida por mais tempo.</dd>
+      </dl>
+    </div>
   </section>
 
   <footer>
-    <p>Morning Call · Segunda-feira, 08 de junho de 2026 · Ref. fechamento 05/06/2026<br>
-    Documento informativo; não constitui recomendação de investimento.</p>
+    <p>Morning Call — Edição de terça-feira, 09 de junho de 2026 · Dados de mercado referentes ao fechamento de 08/06/2026</p>
+    <p>Este relatório tem caráter exclusivamente informativo e não constitui recomendação de investimento ou aconselhamento financeiro personalizado. Sempre consulte um assessor antes de tomar decisões de investimento.</p>
   </footer>
 
-</div>
+</div><!-- /wrap -->
 
 <button id="toTop" aria-label="Voltar ao topo">↑</button>
 
 <script>
-(function(){
-  const btn=document.getElementById('themeBtn'),root=document.documentElement;
-  btn.addEventListener('click',()=>{
-    const dark=root.getAttribute('data-theme')==='dark';
-    root.setAttribute('data-theme',dark?'light':'dark');
-    btn.textContent=dark?'🌙':'☀️';
+  // Barra de progresso de leitura
+  const prog = document.getElementById('progress');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    prog.style.width = Math.min(pct, 100) + '%';
+    document.getElementById('toTop').classList.toggle('show', h.scrollTop > 400);
+  }, { passive: true });
+
+  // Botão voltar ao topo
+  document.getElementById('toTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // Toggle de tema
+  const themeBtn = document.getElementById('themeBtn');
+  themeBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    themeBtn.textContent = isDark ? '🌙' : '☀️';
   });
-})();
-(function(){
-  const bar=document.getElementById('progress');
-  const onScroll=()=>{
-    const h=document.documentElement;
-    const s=h.scrollTop/(h.scrollHeight-h.clientHeight);
-    bar.style.width=(s*100)+'%';
-    document.getElementById('toTop').classList.toggle('show',h.scrollTop>600);
-  };
-  document.addEventListener('scroll',onScroll,{passive:true});
-  onScroll();
-})();
-document.getElementById('toTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-(function(){
-  const links=[...document.querySelectorAll('nav.sections a')];
-  const map=new Map(links.map(a=>[a.getAttribute('href').slice(1),a]));
-  const obs=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        links.forEach(l=>l.classList.remove('active'));
-        const a=map.get(e.target.id);
-        if(a){a.classList.add('active');a.scrollIntoView({inline:'center',block:'nearest'});}
+
+  // Navegação ativa
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('nav.sections a');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`nav.sections a[href="#${e.target.id}"]`);
+        if (active) { active.classList.add('active'); active.scrollIntoView({ inline: 'center', behavior: 'smooth' }); }
       }
     });
-  },{rootMargin:'-45% 0px -50% 0px'});
-  document.querySelectorAll('section[id]').forEach(s=>obs.observe(s));
-})();
-(function(){
-  const obs=new IntersectionObserver(entries=>{
-    entries.forEach((e,i)=>{
-      if(e.isIntersecting){
-        e.target.style.transitionDelay=(i*40)+'ms';
-        e.target.classList.add('in');
-        obs.unobserve(e.target);
-      }
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  sections.forEach(s => obs.observe(s));
+
+  // Animação de entrada (reveal)
+  const revObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revObs.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -80px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+
+  // Tabelas ordenáveis
+  document.querySelectorAll('thead th.sortable').forEach(th => {
+    th.addEventListener('click', () => {
+      const table = th.closest('table');
+      const tbody = table.querySelector('tbody');
+      const idx = Array.from(th.parentElement.children).indexOf(th);
+      const asc = th.dataset.dir !== 'asc';
+      th.dataset.dir = asc ? 'asc' : 'desc';
+      th.querySelector('.arr').textContent = asc ? '↑' : '↓';
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+      rows.sort((a, b) => {
+        const va = a.cells[idx]?.textContent.trim() || '';
+        const vb = b.cells[idx]?.textContent.trim() || '';
+        const na = parseFloat(va.replace(/[^0-9.,-]/g, '').replace(',', '.'));
+        const nb = parseFloat(vb.replace(/[^0-9.,-]/g, '').replace(',', '.'));
+        if (!isNaN(na) && !isNaN(nb)) return asc ? na - nb : nb - na;
+        return asc ? va.localeCompare(vb, 'pt-BR') : vb.localeCompare(va, 'pt-BR');
+      });
+      rows.forEach(r => tbody.appendChild(r));
     });
-  },{rootMargin:'0px 0px -8% 0px'});
-  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-})();
+  });
 </script>
 </body>
 </html>
+                                                                                                                                                                                                                                                                                     
