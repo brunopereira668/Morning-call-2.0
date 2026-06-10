@@ -936,7 +936,7 @@
       if (e.isIntersecting) {
         navLinks.forEach(l => l.classList.remove('active'));
         const active = document.querySelector(`nav.sections a[href="#${e.target.id}"]`);
-        if (active) { active.classList.add('active'); active.scrollIntoView({ inline: 'center', behavior: 'smooth' }); }
+        if (active) { active.classList.add('active'); active.scrollIntoView({ inline: 'center', block: 'nearest' }); }
       }
     });
   }, { rootMargin: '-30% 0px -60% 0px' });
@@ -972,4 +972,4 @@
 </script>
 </body>
 </html>
-                                                                                                                                                                                                                                                                                     
+  
