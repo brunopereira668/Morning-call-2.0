@@ -1,0 +1,863 @@
+<!-- Morning Call 17/06/2026 -->
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morning Call — 17/06/2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:   #FBF6EC;
+    --paper-2: #F3EADB;
+    --ink:     #1C1A17;
+    --ink-soft:#4A4339;
+    --muted:   #847A6A;
+    --rule:    #E4D8C4;
+    --accent:  #9A5B2E;
+    --accent-2:#C8893F;
+    --up:      #1E7A4D;
+    --down:    #BC3B2E;
+    --chip:    #EFE5D3;
+    --shadow:  0 1px 0 rgba(0,0,0,.04), 0 12px 30px -18px rgba(40,30,15,.35);
+  }
+  [data-theme="dark"] {
+    --paper:   #15120E;
+    --paper-2: #1E1A14;
+    --ink:     #EFE7D8;
+    --ink-soft:#C9BEAA;
+    --muted:   #948974;
+    --rule:    #2E281F;
+    --accent:  #E0A05A;
+    --accent-2:#C8893F;
+    --up:      #4FBF85;
+    --down:    #E2685A;
+    --chip:    #241F18;
+    --shadow:  0 1px 0 rgba(0,0,0,.3), 0 16px 40px -20px rgba(0,0,0,.7);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Newsreader", Charter, "Iowan Old Style", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.62;
+    font-variant-numeric: oldstyle-nums;
+    -webkit-font-smoothing: antialiased;
+    transition: background .35s ease, color .35s ease;
+  }
+  body::before {
+    content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background:
+      radial-gradient(1200px 600px at 80% -10%, color-mix(in srgb, var(--accent-2) 8%, transparent), transparent 60%),
+      radial-gradient(900px 500px at -10% 10%, color-mix(in srgb, var(--accent) 6%, transparent), transparent 60%);
+  }
+  .wrap { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; padding: 0 20px 80px; }
+  .num { font-family: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+         font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+  #progress { position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2)); z-index: 50; transition: width .1s linear; }
+  header.top { position: sticky; top: 0; z-index: 40;
+    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--rule); }
+  .top-inner { max-width: 760px; margin: 0 auto; padding: 10px 20px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .brand { font-family: "Fraunces", Georgia, serif; font-weight: 800; letter-spacing: -.01em;
+    font-size: clamp(15px, 4.5vw, 19px); text-transform: uppercase; }
+  .brand small { display:block; font-family:"Newsreader",serif; font-weight:400; text-transform:none;
+    color: var(--muted); font-size: 11px; letter-spacing: .04em; }
+  .theme-btn { border: 1px solid var(--rule); background: var(--paper-2); color: var(--ink);
+    width: 40px; height: 40px; border-radius: 999px; cursor: pointer; font-size: 18px;
+    display:grid; place-items:center; transition: transform .2s ease, background .2s; }
+  .theme-btn:active { transform: scale(.92); }
+  .masthead { text-align: center; padding: 34px 0 14px; border-bottom: 3px double var(--ink);
+    margin-bottom: 8px; }
+  .kicker { font-family:"IBM Plex Mono",monospace; font-size: 11px; letter-spacing: .32em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+  .masthead h1 { font-family:"Fraunces",Georgia,serif; font-weight: 900; font-size: clamp(40px, 12vw, 78px);
+    line-height: .92; margin: 0; letter-spacing: -.02em; }
+  .dateline { display:flex; flex-wrap:wrap; gap: 6px 16px; justify-content:center; align-items:center;
+    margin-top: 14px; font-size: 13px; color: var(--ink-soft); }
+  .dateline .num { font-size: 13px; }
+  nav.sections { position: sticky; top: 60px; z-index: 30; margin: 16px -20px 0;
+    background: color-mix(in srgb, var(--paper) 90%, transparent);
+    backdrop-filter: blur(8px); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  nav.sections ul { display:flex; gap: 4px; overflow-x: auto; list-style:none; margin:0; padding: 8px 16px;
+    -ms-overflow-style:none; scrollbar-width:none; }
+  nav.sections ul::-webkit-scrollbar { display:none; }
+  nav.sections a { white-space: nowrap; font-family:"IBM Plex Mono",monospace; font-size: 11px; letter-spacing:.06em;
+    text-transform: uppercase; text-decoration: none; color: var(--muted); padding: 5px 10px; border-radius: 7px;
+    transition: color .2s, background .2s; }
+  nav.sections a.active { color: var(--paper); background: var(--ink); }
+  section { padding-top: 34px; scroll-margin-top: 120px; }
+  .sec-head { display:flex; align-items:baseline; gap: 12px; margin-bottom: 14px; }
+  .sec-num { font-family:"IBM Plex Mono",monospace; font-size: 12px; color: var(--accent);
+    border:1px solid var(--accent); border-radius: 6px; padding: 2px 7px; flex: none; }
+  .sec-head h2 { font-family:"Fraunces",Georgia,serif; font-weight: 800; font-size: clamp(24px, 6.5vw, 34px);
+    margin: 0; line-height: 1.05; letter-spacing: -.015em; }
+  .lede { font-size: 20px; line-height: 1.6; }
+  .lede .drop { float:left; font-family:"Fraunces",serif; font-weight:900; font-size: 64px; line-height:.7;
+    padding: 8px 10px 0 0; color: var(--accent); }
+  .small { font-size: 13px; color: var(--muted); }
+  .tldr { display:grid; grid-template-columns: 1fr; gap: 10px; }
+  .tldr .item { display:flex; gap: 12px; align-items:flex-start; background: var(--paper-2);
+    border: 1px solid var(--rule); border-radius: 12px; padding: 12px 14px; box-shadow: var(--shadow); }
+  .tldr .ic { font-size: 22px; flex:none; line-height:1.2; }
+  .tldr .tx { font-size: 16px; line-height: 1.45; }
+  .tldr .tx b { font-family:"Fraunces",serif; }
+  .tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--rule); border-radius: 12px; background: var(--paper-2); box-shadow: var(--shadow); }
+  table { width: 100%; border-collapse: collapse; min-width: 320px; }
+  caption { caption-side: top; text-align:left; font-family:"IBM Plex Mono",monospace; font-size: 11px;
+    letter-spacing:.08em; text-transform:uppercase; color: var(--muted); padding: 12px 14px 0; }
+  th, td { padding: 11px 14px; text-align: right; border-bottom: 1px solid var(--rule); font-size: 15px; }
+  th:first-child, td:first-child { text-align: left; }
+  thead th { font-family:"IBM Plex Mono",monospace; font-size: 11px; letter-spacing:.05em; text-transform:uppercase;
+    color: var(--muted); font-weight: 600; cursor: pointer; user-select:none; position: relative; }
+  thead th:not([data-nosort]):hover { color: var(--ink); }
+  thead th .arr { opacity:.4; font-size: 9px; margin-left: 3px; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--ink) 3%, transparent); }
+  td .tk { font-weight: 600; }
+  .up   { color: var(--up); }
+  .down { color: var(--down); }
+  .nd   { color: var(--muted); font-style: italic; }
+  .bar { display:inline-block; height: 6px; border-radius: 3px; vertical-align: middle; margin-left: 8px; }
+  .bar.up   { background: var(--up); }
+  .bar.down { background: var(--down); }
+  .panel { display:grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .cell { background: var(--paper-2); border:1px solid var(--rule); border-radius: 12px; padding: 12px 14px;
+    box-shadow: var(--shadow); }
+  .cell .lbl { font-family:"IBM Plex Mono",monospace; font-size: 10px; letter-spacing:.08em; text-transform:uppercase;
+    color: var(--muted); }
+  .cell .val { font-size: 22px; font-weight: 600; margin-top: 4px; }
+  .cell .chg { font-size: 13px; margin-top: 2px; }
+  .news .n { border:1px solid var(--rule); border-radius: 12px; margin-bottom: 10px; overflow:hidden;
+    background: var(--paper-2); box-shadow: var(--shadow); }
+  .news summary { list-style:none; cursor:pointer; padding: 14px 16px; display:flex; gap: 12px; align-items:baseline; }
+  .news summary::-webkit-details-marker { display:none; }
+  .news .nidx { font-family:"IBM Plex Mono",monospace; color: var(--accent); font-size: 14px; flex:none; }
+  .news .ntitle { font-family:"Fraunces",serif; font-weight: 700; font-size: 18px; line-height:1.25; }
+  .news .plus { margin-left:auto; flex:none; color: var(--muted); transition: transform .25s ease; font-size: 18px; }
+  .news details[open] .plus { transform: rotate(45deg); }
+  .news .body { padding: 0 16px 16px; }
+  .news .row { display:flex; gap: 10px; padding: 7px 0; border-top: 1px solid var(--rule); font-size: 15px; }
+  .news .tag { font-family:"IBM Plex Mono",monospace; font-size: 10px; letter-spacing:.06em; text-transform:uppercase;
+    color: var(--accent); flex: none; width: 116px; padding-top: 3px; }
+  .news .nsum { font-size: 16px; line-height: 1.5; margin: 0 0 4px; color: var(--ink);
+    padding-bottom: 10px; }
+  .news .body p { font-size: 16px; line-height: 1.5; margin: 0 0 10px; color: var(--ink); }
+  p { margin: 0 0 14px; }
+  .sources { font-size: 14px; }
+  .sources h3 { font-family:"IBM Plex Mono",monospace; font-size: 11px; letter-spacing:.08em; text-transform:uppercase;
+    color: var(--accent); margin: 16px 0 6px; }
+  .sources ul { margin: 0 0 10px; padding-left: 18px; }
+  .sources li { margin: 4px 0; }
+  .sources a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px;
+    text-decoration-color: var(--accent); overflow-wrap: anywhere; word-break: break-word; }
+  .glossary dl { margin: 0; }
+  .glossary dt { font-family:"Fraunces",serif; font-weight: 700; font-size: 17px; margin-top: 14px; color: var(--ink); }
+  .glossary dd { margin: 3px 0 0; font-size: 15.5px; line-height: 1.55; color: var(--ink-soft); }
+  .glossary dt::before { content: "§ "; color: var(--accent); font-weight: 400; }
+  footer { margin-top: 50px; padding-top: 18px; border-top: 3px double var(--ink); text-align:center;
+    font-size: 12px; color: var(--muted); }
+  #toTop { position: fixed; right: 16px; bottom: 16px; z-index: 45; width: 46px; height: 46px; border-radius: 50%;
+    border:1px solid var(--rule); background: var(--ink); color: var(--paper); cursor:pointer; font-size: 18px;
+    opacity: 0; pointer-events:none; transition: opacity .3s; box-shadow: var(--shadow); }
+  #toTop.show { opacity: 1; pointer-events:auto; }
+  .reveal { opacity: 0; transform: translateY(14px); }
+  .reveal.in { opacity: 1; transform: none; transition: opacity .6s ease, transform .6s ease; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity:1; transform:none; } html { scroll-behavior:auto; } }
+  @media (min-width: 620px) { .panel { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 900px) { .panel { grid-template-columns: repeat(4, 1fr); } }
+  .panel-label {
+    grid-column: 1 / -1;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--accent); padding: 6px 2px 2px;
+    border-top: 1px solid var(--rule); margin-top: 2px;
+  }
+  .panel-label:first-child { border-top: none; margin-top: 0; padding-top: 0; }
+  .cell-sm .val { font-size: 17px; }
+  .cell-sm .lbl { font-size: 9px; }
+  nav.sections::after {
+    content: ""; pointer-events: none;
+    position: absolute; top: 0; right: 0; bottom: 0; width: 36px;
+    background: linear-gradient(to right, transparent, color-mix(in srgb, var(--paper) 92%, transparent));
+  }
+  @media print {
+    :root { --paper:#fff; --paper-2:#f8f8f8; --ink:#111; --ink-soft:#333;
+      --muted:#666; --rule:#ddd; --accent:#7a4020; --up:#1a6e44; --down:#a03025; }
+    body::before, #progress, .theme-btn, nav.sections,
+    #toTop, nav.sections::after { display: none !important; }
+    .wrap { max-width: 100%; padding: 0 16px; }
+    section { page-break-inside: avoid; padding-top: 20px; }
+    .reveal { opacity: 1 !important; transform: none !important; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">Morning Call<small>Mesa de Research · edição diária</small></div>
+    <button class="theme-btn" id="themeBtn" aria-label="Alternar tema">🌙</button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="masthead">
+    <div class="kicker">Antes da abertura · Brasil · EUA · Global</div>
+    <h1>Morning&nbsp;Call</h1>
+    <div class="dateline">
+      <span>Quarta-feira, 17 de junho de 2026</span>
+      <span>·</span>
+      <span class="num">Fechamento de terça-feira, 16/06/2026</span>
+    </div>
+  </div>
+
+  <nav class="sections" aria-label="Seções">
+    <ul>
+      <li><a href="#resumo">Resumo</a></li>
+      <li><a href="#destaques">Destaques</a></li>
+      <li><a href="#agenda">Agenda</a></li>
+      <li><a href="#painel">Painel</a></li>
+      <li><a href="#global">Global</a></li>
+      <li><a href="#eua">EUA</a></li>
+      <li><a href="#brasil">Brasil</a></li>
+      <li><a href="#rendafixa">Renda Fixa</a></li>
+      <li><a href="#commodities">Commodities</a></li>
+      <li><a href="#noticias">Notícias</a></li>
+      <li><a href="#conclusao">Conclusão</a></li>
+      <li><a href="#fontes">Fontes</a></li>
+      <li><a href="#glossario">Glossário</a></li>
+    </ul>
+  </nav>
+
+  <section id="resumo" class="reveal">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Resumo do estrategista</h2></div>
+    <p class="lede"><span class="drop">S</span>uper Quarta: Copom (20h30) e FOMC (15h&nbsp;ET) decidem juros hoje — e o mercado chegou ao dia D em modo de espera cauteloso. Na terça-feira, o Ibovespa cedeu <span class="num">−0,45%</span> a <span class="num">169.648</span> pontos, pressionado pela Petrobras (PETR4 <span class="num">−1,43%</span>) enquanto o Brent amargava a segunda queda seguida (−2,4%, para ~US$&nbsp;81). O real reverteu parte do rali de segunda, com o dólar voltando a R$&nbsp;5,08. Do lado externo, a narrativa foi de rotação clássica pré-Fed: o Dow Jones renovou seu recorde histórico em <span class="num">51.999</span> pontos (+0,64%), ao passo que o Nasdaq recuou <span class="num">−1,15%</span> com a saída de recursos de crescimento para valor.</p>
+    <p>A grande novidade da madrugada foi o Banco do Japão, que elevou os juros para <span class="num">1%</span> — nível mais alto em 31 anos — e provocou uma sessão dramática em Tóquio: o Nikkei chegou a superar 70.000 pontos pela primeira vez na história antes de encerrar em novo recorde a <span class="num">69.404</span> pontos (+0,13%). A decisão reforça o ciclo global de normalização monetária e pressiona o carry trade em ienes. Hoje, as atenções se voltam ao FOMC (manutenção esperada em 3,50%–3,75%; primeira reunião sob Kevin Warsh) e ao Copom, onde o mercado divide-se entre um corte de 25 pontos-base e a manutenção dos 14,50% diante de IPCA de maio em 4,72% — acima do teto da meta.</p>
+  </section>
+
+  <section id="destaques" class="reveal">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Destaques do dia</h2></div>
+    <div class="tldr">
+      <div class="item"><span class="ic">⚖️</span><span class="tx"><b>Super Quarta dupla.</b> Copom anuncia Selic às 20h30 (corte 25bps ou manutenção em 14,50%?). FOMC anuncia às 15h ET: manutenção esperada em 3,50%–3,75%; primeira reunião de Kevin Warsh com dot plot atualizado e press conference às 14h30 ET.</span></div>
+      <div class="item"><span class="ic">🏦</span><span class="tx"><b>BoJ sobe para 1% — maior em 31 anos.</b> Banco do Japão elevou 25bps em reunião, em resposta ao choque inflacionário do petróleo. Nikkei tocou 70.000 pts pela 1ª vez na história antes de fechar a 69.404 (+0,13%).</span></div>
+      <div class="item"><span class="ic">📉</span><span class="tx"><b>Rotação pré-Fed.</b> Dow Jones renova recorde histórico: 51.999 (+0,64%). Nasdaq cede −1,15% em movimento clássico de saída de crescimento para valor antes de decisão do Fed. S&amp;P 500 −0,57%.</span></div>
+      <div class="item"><span class="ic">🛢️</span><span class="tx"><b>Petróleo cai pela 2ª sessão seguida.</b> Brent −2,4% para ~US$&nbsp;81,15. Mercado aguarda detalhes concretos do acordo EUA–Irã sobre a reabertura do Estreito de Ormuz. Ibovespa sofre com PETR4 −1,43%.</span></div>
+      <div class="item"><span class="ic">💸</span><span class="tx"><b>Nvidia emite US$&nbsp;25 bilhões em dívida.</b> Demanda de US$&nbsp;85bi — mais de 3× o valor ofertado. Maior emissão de dívida corporativa de 2026, sinal de confiança do mercado na tese de IA da empresa.</span></div>
+      <div class="item"><span class="ic">🇧🇷</span><span class="tx"><b>Ibovespa 169.648 (−0,45%).</b> Dólar PTAX R$&nbsp;5,0780. Brava Energia (BRAV3): OPA da Ecopetrol suspensa por recurso à CVM. Raízen (RAIZ4): IG4 faz oferta a credores para assumir controle.</span></div>
+      <div class="item"><span class="ic">🗳️</span><span class="tx"><b>Eleições 2026.</b> Pesquisa Futura/Apex: Lula lidera com 41,6% de intenção de voto. Tarcísio à frente em SP, segundo Realtime Big Data.</span></div>
+    </div>
+  </section>
+
+  <section id="agenda" class="reveal">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Agenda econômica</h2></div>
+    <p>A semana é dominada pela Super Quarta de hoje, com Copom e FOMC decidindo juros em poucas horas de diferença. Além disso, saem dados de vendas no varejo brasileiro (abril) e percepção econômica ZEW na zona do euro. Na quinta-feira, atenção às solicitações de seguro-desemprego nos EUA. Sexta-feira é feriado de Juneteenth nos EUA — mercados fechados.</p>
+    <div class="tbl-wrap" style="margin-bottom:14px">
+      <table>
+        <caption>Semana — 16 a 20/06/2026</caption>
+        <thead><tr>
+          <th data-nosort>Dia</th>
+          <th data-nosort>País</th>
+          <th data-nosort>Evento</th>
+          <th data-nosort>Consenso</th>
+          <th data-nosort>Anterior</th>
+        </tr></thead>
+        <tbody>
+          <tr><td>Seg 16/06</td><td>BR</td><td>IGP-10 junho</td><td>N/D</td><td class="up">−0,30% (divulgado)</td></tr>
+          <tr><td>Ter 16/06</td><td>JP</td><td>Decisão BoJ</td><td>+25bps</td><td class="up">+25bps → 1% (confirmado)</td></tr>
+          <tr><td><b>Qua 17/06</b></td><td><b>BR</b></td><td><b>Vendas no Varejo abr (IBGE, 09h)</b></td><td>N/D</td><td>N/D</td></tr>
+          <tr><td><b>Qua 17/06</b></td><td><b>EUA</b></td><td><b>FOMC — Decisão de juros (16h BRT)</b></td><td>Manutenção 3,50–3,75%</td><td>3,50–3,75%</td></tr>
+          <tr><td><b>Qua 17/06</b></td><td><b>BR</b></td><td><b>Copom — Decisão Selic (20h30)</b></td><td>Dividido: −25bps ou manutenção</td><td>14,50%</td></tr>
+          <tr><td>Qui 18/06</td><td>EUA</td><td>Pedidos seguro-desemprego</td><td>N/D</td><td>N/D</td></tr>
+          <tr><td>Sex 19/06</td><td>EUA</td><td>Feriado Juneteenth (mercados fechados)</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <caption>Hoje — Quarta-feira, 17/06/2026</caption>
+        <thead><tr>
+          <th data-nosort>Horário (BRT)</th>
+          <th data-nosort>País</th>
+          <th data-nosort>Evento</th>
+          <th data-nosort>Consenso</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="num">09h00</td><td>BR</td><td>Vendas no Varejo — abr (IBGE)</td><td>N/D</td></tr>
+          <tr><td class="num">11h00</td><td>EU</td><td>ZEW — expectativas econômicas junho</td><td>N/D</td></tr>
+          <tr><td class="num">16h00</td><td>EUA</td><td>FOMC — Comunicado + dot plot + projeções</td><td>Manutenção 3,50–3,75%</td></tr>
+          <tr><td class="num">16h30</td><td>EUA</td><td>Press conference Kevin Warsh (1ª reunião)</td><td>—</td></tr>
+          <tr><td class="num">20h30</td><td>BR</td><td>Copom — Decisão Selic</td><td>Dividido: 14,25% ou 14,50%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="painel" class="reveal">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Painel consolidado</h2></div>
+    <div class="panel">
+      <div class="panel-label">Bolsas</div>
+      <div class="cell">
+        <div class="lbl">Ibovespa</div>
+        <div class="val num">169.648</div>
+        <div class="chg down num">−0,45%</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">Dow Jones</div>
+        <div class="val num">51.999</div>
+        <div class="chg up num">+0,64% ★ rec.</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">S&amp;P 500</div>
+        <div class="val num">7.511</div>
+        <div class="chg down num">−0,57%</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">Nasdaq</div>
+        <div class="val num">26.376</div>
+        <div class="chg down num">−1,15%</div>
+      </div>
+
+      <div class="panel-label">Moedas &amp; Cripto</div>
+      <div class="cell">
+        <div class="lbl">Dólar (PTAX)</div>
+        <div class="val num">R$ 5,0780</div>
+        <div class="chg down num">+0,37%</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">Euro / BRL</div>
+        <div class="val num">R$ 5,9040</div>
+        <div class="chg down num">+0,60%</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">Bitcoin</div>
+        <div class="val num">~US$ 66.433</div>
+        <div class="chg nd">intraday abert.</div>
+      </div>
+      <div class="cell">
+        <div class="lbl">Ouro (USD/oz)</div>
+        <div class="val num">4.354</div>
+        <div class="chg up num">+0,06%</div>
+      </div>
+
+      <div class="panel-label">DI Futuro (ref. 13/06)</div>
+      <div class="cell cell-sm">
+        <div class="lbl">DI Jan/27</div>
+        <div class="val num">14,37%</div>
+        <div class="chg nd">ref. 13/06</div>
+      </div>
+      <div class="cell cell-sm">
+        <div class="lbl">DI Jan/30</div>
+        <div class="val num">14,40%</div>
+        <div class="chg nd">ref. 13/06</div>
+      </div>
+      <div class="cell cell-sm">
+        <div class="lbl">DI Jan/35</div>
+        <div class="val num">14,26%</div>
+        <div class="chg nd">ref. 13/06</div>
+      </div>
+
+      <div class="panel-label">Treasuries EUA (ref. 15/06)</div>
+      <div class="cell cell-sm">
+        <div class="lbl">Treasury 2Y</div>
+        <div class="val num">4,07%</div>
+        <div class="chg nd">ref. 15/06</div>
+      </div>
+      <div class="cell cell-sm">
+        <div class="lbl">Treasury 5Y</div>
+        <div class="val num">4,18%</div>
+        <div class="chg nd">ref. 15/06</div>
+      </div>
+      <div class="cell cell-sm">
+        <div class="lbl">Treasury 10Y</div>
+        <div class="val num">4,47%</div>
+        <div class="chg nd">ref. 15/06</div>
+      </div>
+
+      <div class="panel-label">Petróleo</div>
+      <div class="cell">
+        <div class="lbl">Brent (USD/barril)</div>
+        <div class="val num">~81,15</div>
+        <div class="chg down num">−2,43%</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="global" class="reveal">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Panorama global</h2></div>
+    <p>O grande tema da madrugada de terça para quarta foi o Banco do Japão: a decisão de elevar os juros para <strong>1%</strong> — o patamar mais alto desde 1995 — foi tomada em resposta ao choque inflacionário gerado pelos altos preços do petróleo ao longo das últimas semanas. A medida colocou o BoJ em linha com outros grandes bancos centrais que mantêm política restritiva. O Nikkei reagiu positivamente no intraday ao tocar 70.000 pontos pela primeira vez na história — marco simbólico relevante — antes de fechar em <span class="num">69.404,50</span> pts (<span class="num">+0,13%</span>), novo recorde de fechamento.</p>
+    <p>Nos demais mercados asiáticos do dia 16, o Hang Seng de Hong Kong recuou <span class="num">−1,40%</span> para <span class="num">24.493</span> pontos, pressionado por ações de tecnologia e pelo aperto monetário global. O KOSPI coreano avançou <span class="num">+2,11%</span> para <span class="num">8.726</span> pontos, beneficiado por semicondutores. Para a Europa no dia 16, os dados de fechamento não foram confirmados (<span class="nd">N/D</span>).</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption>Ásia · fechamento 16/06/2026</caption>
+        <thead><tr>
+          <th>Índice</th>
+          <th>Valor</th>
+          <th>Var.%</th>
+        </tr></thead>
+        <tbody>
+          <tr><td>Nikkei 225 (Japão)</td><td class="num">69.404,50</td><td class="num" data-v="0.13">+0,13% ★ rec.</td></tr>
+          <tr><td>Hang Seng (HK)</td><td class="num">24.493,95</td><td class="num" data-v="-1.40">−1,40%</td></tr>
+          <tr><td>KOSPI (Coreia do Sul)</td><td class="num">8.726,60</td><td class="num" data-v="2.11">+2,11%</td></tr>
+          <tr><td>Taiex (Taiwan)</td><td class="num">45.809,19</td><td class="num" data-v="0.91">+0,91%</td></tr>
+          <tr><td>Europa (fechamento 16/06)</td><td class="nd">N/D</td><td class="nd">N/D</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="eua" class="reveal">
+    <div class="sec-head"><span class="sec-num">06</span><h2>Estados Unidos</h2></div>
+    <p>A sessão de terça-feira em Wall Street foi um livro-texto de rotação pré-Fed: dinheiro saiu de crescimento e foi para valor. O Dow Jones Industrial Average renovou seu recorde histórico a <span class="num">51.999,67</span> pontos (+0,64%), impulsionado por financeiras, industriais e saúde. O S&amp;P 500 cedeu <span class="num">−0,57%</span> para <span class="num">7.511,34</span>, e o Nasdaq apanhou mais intensamente, recuando <span class="num">−1,15%</span> para <span class="num">26.376,34</span> — a primeira correção relevante do índice de tecnologia após o rally pós-acordo EUA–Irã da semana anterior.</p>
+    <p>O destaque corporativo do dia foi a <strong>Nvidia</strong>, que precificou uma emissão de dívida de <strong>US$&nbsp;25 bilhões</strong> com demanda que chegou a <strong>US$&nbsp;85 bilhões</strong> — mais de 3× a oferta. A operação marca a maior emissão de dívida corporativa de 2026 e sinaliza confiança do mercado de crédito na capacidade de geração de caixa da empresa. Toda a atenção agora se volta ao FOMC de hoje: espera-se manutenção da taxa em 3,50%–3,75%, mas o mercado quer ver o dot plot (primeiras projeções de Warsh) e o tom do comunicado.</p>
+
+    <div class="tbl-wrap" style="margin-bottom:14px">
+      <table>
+        <caption>Índices EUA · fechamento 16/06/2026</caption>
+        <thead><tr>
+          <th>Índice</th>
+          <th>Valor</th>
+          <th>Var.%</th>
+        </tr></thead>
+        <tbody>
+          <tr><td><span class="tk">Dow Jones</span></td><td class="num">51.999,67</td><td class="num" data-v="0.64">+0,64%</td></tr>
+          <tr><td><span class="tk">S&amp;P 500</span></td><td class="num">7.511,34</td><td class="num" data-v="-0.57">−0,57%</td></tr>
+          <tr><td><span class="tk">Nasdaq</span></td><td class="num">26.376,34</td><td class="num" data-v="-1.15">−1,15%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tbl-wrap" style="margin-bottom:14px">
+      <table>
+        <caption>Top 5 altas e baixas EUA · 16/06/2026</caption>
+        <thead><tr>
+          <th>Ticker</th>
+          <th>Empresa</th>
+          <th>Preço</th>
+          <th>Var.%</th>
+        </tr></thead>
+        <tbody>
+          <tr><td colspan="4" class="nd" style="text-align:center">N/D — dados não confirmados para esta edição</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption>Big Techs · preços ref. 15/06/2026 (16/06 N/D)</caption>
+        <thead><tr>
+          <th>Empresa</th>
+          <th>Ticker</th>
+          <th>Preço (ref. 15/06)</th>
+          <th>Var.% 15/06</th>
+        </tr></thead>
+        <tbody>
+          <tr><td>Apple</td><td class="tk">AAPL</td><td class="num">US$ 296,80</td><td class="num" data-v="0.13">+0,13%</td></tr>
+          <tr><td>Tesla</td><td class="tk">TSLA</td><td class="num">US$ 405,03</td><td class="num" data-v="-1.49">−1,49%</td></tr>
+          <tr><td>Nvidia</td><td class="tk">NVDA</td><td class="num">US$ 205,19</td><td class="nd">N/D</td></tr>
+          <tr><td>Alphabet</td><td class="tk">GOOGL</td><td class="num">US$ 359,68</td><td class="nd">N/D</td></tr>
+          <tr><td>Microsoft</td><td class="tk">MSFT</td><td class="num">~US$ 399,50</td><td class="nd">N/D</td></tr>
+          <tr><td>Meta</td><td class="tk">META</td><td class="nd">N/D</td><td class="nd">N/D</td></tr>
+          <tr><td>Amazon</td><td class="tk">AMZN</td><td class="nd">N/D</td><td class="nd">N/D</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small" style="margin-top:8px">Nota: preços de fechamento do dia 16/06 das Big Techs não foram confirmados nesta edição. Valores referem-se a 15/06.</p>
+  </section>
+
+  <section id="brasil" class="reveal">
+    <div class="sec-head"><span class="sec-num">07</span><h2>Brasil</h2></div>
+    <p>O Ibovespa registrou sua segunda queda consecutiva em <span class="num">−0,45%</span>, encerrando a <span class="num">169.648,47</span> pontos, com volume de R$&nbsp;27,51 bilhões. O principal peso foi a Petrobras: com o Brent derretendo mais 2,4%, a PETR4 caiu <span class="num">−1,43%</span> para R$&nbsp;38,50 e a PETR3 recuou <span class="num">−0,87%</span>. A Vale ficou praticamente estável (<span class="num">+0,09%</span>), sem catalisador específico. Itaú fechou flat.</p>
+    <p>No câmbio, o real perdeu parte do fôlego do rali de segunda: o dólar (PTAX) subiu para R$&nbsp;5,0780 (+0,37%), refletindo tanto o aperto monetário global (BoJ) quanto a prudência antes da Super Quarta. O euro/BRL avançou para R$&nbsp;5,9040. O mercado também monitorou novas pesquisas eleitorais: a Futura/Apex mostrou Lula liderando com 41,6%. Duas notícias corporativas relevantes: a OPA da Ecopetrol sobre a Brava Energia (BRAV3) foi suspensa após recurso à CVM, e a IG4 fez oferta para assumir controle da Raízen (RAIZ4) via compra dos créditos dos debenturistas.</p>
+
+    <div class="tbl-wrap" style="margin-bottom:14px">
+      <table>
+        <caption>Top 5 altas e baixas B3 · 16/06/2026</caption>
+        <thead><tr>
+          <th>Ticker</th>
+          <th>Nome</th>
+          <th>Preço</th>
+          <th>Var.%</th>
+        </tr></thead>
+        <tbody>
+          <tr><td colspan="4" class="nd" style="text-align:center">N/D — dados não confirmados para esta edição</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption>Blue chips confirmadas · 16/06/2026</caption>
+        <thead><tr>
+          <th>Ticker</th>
+          <th>Preço (R$)</th>
+          <th>Var.%</th>
+        </tr></thead>
+        <tbody>
+          <tr><td><span class="tk">PETR4</span></td><td class="num">38,50</td><td class="num" data-v="-1.43">−1,43%</td></tr>
+          <tr><td><span class="tk">PETR3</span></td><td class="num">43,36</td><td class="num" data-v="-0.87">−0,87%</td></tr>
+          <tr><td><span class="tk">VALE3</span></td><td class="num">81,23</td><td class="num" data-v="0.09">+0,09%</td></tr>
+          <tr><td><span class="tk">ITUB4</span></td><td class="num">40,40</td><td class="num" data-v="0.00">Estável</td></tr>
+          <tr><td><span class="tk">BBDC4</span></td><td class="num">17,70</td><td class="num" data-v="0.28">+0,28%</td></tr>
+          <tr><td><span class="tk">AMBEV3</span></td><td class="num">16,39</td><td class="num" data-v="-1.09">−1,09%</td></tr>
+          <tr><td><span class="tk">MRFG3</span></td><td class="num">15,96</td><td class="num" data-v="1.14">+1,14%</td></tr>
+          <tr><td><span class="tk">ITSA4</span></td><td class="num">12,84</td><td class="num" data-v="0.39">+0,39%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="rendafixa" class="reveal">
+    <div class="sec-head"><span class="sec-num">08</span><h2>Renda fixa</h2></div>
+    <p>A curva de DI futuro não pôde ser atualizada nesta edição: os dados de fechamento de 16/06 não estavam disponíveis. A referência utilizada é o fechamento de <strong>13/06/2026</strong>: DI Jan/27 em 14,37%, DI Jan/30 em 14,40% e DI Jan/35 em 14,26%. O mercado aguarda a decisão do Copom hoje às 20h30 — um corte de 25bps (Selic para 14,25%) ou manutenção (14,50%) — e a leitura da curva curta estará fortemente condicionada ao resultado e ao comunicado. O Tesouro Direto é referenciado ao fechamento de <strong>12/06/2026</strong>.</p>
+    <p>Nos EUA, o yield do Treasury de 10 anos permaneceu estável em <span class="num">4,47%</span> (ref. 15/06), enquanto o 2Y ficou em <span class="num">4,07%</span> e o 5Y em <span class="num">4,18%</span>. O dot plot de hoje será o principal catalisador para yields americanos.</p>
+
+    <div class="tbl-wrap" style="margin-bottom:14px">
+      <table>
+        <caption>DI Futuro · fechamento 13/06/2026</caption>
+        <thead><tr>
+          <th>Vencimento</th>
+          <th>Taxa (%)</th>
+          <th>Referência</th>
+        </tr></thead>
+        <tbody>
+          <tr><td>DI Jan/27</td><td class="num">14,37%</td><td class="nd" style="text-align:right">ref. 13/06</td></tr>
+          <tr><td>DI Jan/30</td><td class="num">14,40%</td><td class="nd" style="text-align:right">ref. 13/06</td></tr>
+          <tr><td>DI Jan/35</td><td class="num">14,26%</td><td class="nd" style="text-align:right">ref. 13/06</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption>Tesouro Direto · referência 12/06/2026</caption>
+        <thead><tr>
+          <th>Título</th>
+          <th>Vencimento</th>
+          <th>Taxa</th>
+          <th>Var. (p.b.)</th>
+        </tr></thead>
+        <tbody>
+          <tr><td>Tesouro Prefixado</td><td>01/01/2029</td><td class="num">14,71% a.a.</td><td class="num down">−28 bps</td></tr>
+          <tr><td>Tesouro Prefixado</td><td>01/01/2032</td><td class="num">14,68% a.a.</td><td class="num down">−17 bps</td></tr>
+          <tr><td>Tesouro IPCA+</td><td>15/08/2032</td><td class="num">IPCA + 8,25%</td><td class="num down">−12 bps</td></tr>
+          <tr><td>Tesouro IPCA+</td><td>15/08/2040</td><td class="num">IPCA + 7,56%</td><td class="num down">−12 bps</td></tr>
+          <tr><td>Tesouro IPCA+</td><td>15/08/2050</td><td class="num">IPCA + 7,19%</td><td class="num down">−18 bps</td></tr>
+          <tr><td>Tesouro Selic</td><td>01/03/2031</td><td class="num">Selic + 0,07%</td><td class="nd" style="text-align:right">Estável</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small" style="margin-top:8px">Variações do Tesouro Direto referem-se à comparação com 11/06/2026 (dados de 12/06 foram os mais recentes disponíveis).</p>
+  </section>
+
+  <section id="commodities" class="reveal">
+    <div class="sec-head"><span class="sec-num">09</span><h2>Commodities &amp; cripto</h2></div>
+    <p>O petróleo acumulou a segunda queda consecutiva na terça-feira: o Brent recuou aproximadamente <strong>−2,4%</strong> para cerca de US$&nbsp;81,15 por barril, e o WTI ficou estimado em torno de US$&nbsp;78,53. A ausência de detalhes concretos sobre o acordo de paz EUA–Irã e as perspectivas de retomada de oferta pelo Estreito de Ormuz seguem pesando. O ouro ficou estável em US$&nbsp;4.354,40/oz (+0,06%), sem direção clara enquanto o mercado aguarda o Fed.</p>
+    <p>No mercado de cripto, o Bitcoin operava em torno de US$&nbsp;66.433 na abertura de Nova York, com alta intraday de cerca de +1,6%. O Ethereum estava próximo de US$&nbsp;1.792 (+4,5% intraday). Os preços de fechamento do dia 16 não foram confirmados.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption>Commodities &amp; cripto · 16/06/2026</caption>
+        <thead><tr>
+          <th>Ativo</th>
+          <th>Preço</th>
+          <th>Var.%</th>
+          <th>Obs.</th>
+        </tr></thead>
+        <tbody>
+          <tr><td>Brent (USD/barril)</td><td class="num">~81,15</td><td class="num" data-v="-2.43">−2,43%</td><td class="small">Estimado</td></tr>
+          <tr><td>WTI (USD/barril)</td><td class="nd">~78,53</td><td class="nd">N/D</td><td class="small">Estimado</td></tr>
+          <tr><td>Ouro (USD/oz)</td><td class="num">4.354,40</td><td class="num" data-v="0.06">+0,06%</td><td class="small">Confirmado</td></tr>
+          <tr><td>Prata (USD/oz)</td><td class="nd">N/D</td><td class="nd">N/D</td><td class="small">—</td></tr>
+          <tr><td>Minério de ferro</td><td class="nd">N/D</td><td class="nd">N/D</td><td class="small">—</td></tr>
+          <tr><td>VIX</td><td class="nd">N/D</td><td class="nd">N/D</td><td class="small">ref. 15/06: 16,20</td></tr>
+          <tr><td>Bitcoin (BTC)</td><td class="num">~66.433</td><td class="num" data-v="1.6">+1,6%</td><td class="small">Intraday abert. NY</td></tr>
+          <tr><td>Ethereum (ETH)</td><td class="num">~1.792</td><td class="num" data-v="4.5">+4,5%</td><td class="small">Intraday abert. NY</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="noticias" class="reveal">
+    <div class="sec-head"><span class="sec-num">10</span><h2>Top notícias do dia</h2></div>
+    <div class="news">
+
+      <details class="n" open>
+        <summary><span class="nidx">01</span><span class="ntitle">Super Quarta: Copom e FOMC decidem juros hoje</span><span class="plus">+</span></summary>
+        <div class="body">
+          <p class="nsum">Pela primeira vez em 2026, Copom (20h30 BRT) e FOMC (16h BRT) anunciam decisões de juros no mesmo dia. O Fed deve manter a taxa em 3,50%–3,75%, com ampla maioria do mercado sem esperar mudança. Já o Copom enfrenta dilema: IPCA de maio em 4,72% a/a (acima do teto) apoia manutenção, mas a desinflação do petróleo e o IGP-10 deflacionário de junho (−0,30%) favorecem um corte de 25bps.</p>
+          <div class="row"><span class="tag">Por que importa</span><span>Decisão dupla condensa o maior catalisador de curto prazo para juros futuros, câmbio e Ibovespa num único pregão.</span></div>
+          <div class="row"><span class="tag">Impacto</span><span>Um corte do Copom tende a aliviar a curva curta e apoiar ativos domésticos. Manutenção pode fortalecer o real. No Fed, o dot plot e o tom de Warsh definem o cenário para treasuries e dólar global.</span></div>
+          <div class="row"><span class="tag">O que monitorar</span><span>Comunicado do Copom (sinalização do próximo passo) e dot plot do FOMC (quantos cortes o Fed projeta para 2026).</span></div>
+        </div>
+      </details>
+
+      <details class="n">
+        <summary><span class="nidx">02</span><span class="ntitle">BoJ eleva juros para 1% — maior patamar em 31 anos; Nikkei toca 70.000</span><span class="plus">+</span></summary>
+        <div class="body">
+          <p class="nsum">O Banco do Japão elevou 25bps para 1%, o maior nível desde 1995, motivado pelo choque inflacionário do petróleo. O Nikkei chegou a superar 70.000 pontos pela primeira vez na história antes de fechar em 69.404 (+0,13%), novo recorde. O KOSPI sul-coreano saltou +2,11%.</p>
+          <div class="row"><span class="tag">Por que importa</span><span>A normalização do BoJ pressiona o carry trade em ienes — posições que tomam ienes baratos para comprar outros ativos. Unwind pode ser volátil para emergentes.</span></div>
+          <div class="row"><span class="tag">Impacto</span><span>Ienes tendem a se fortalecer, pressionando exportadoras japonesas. Para o Brasil, impacto indireto via fluxo global de capital e apetite a risco.</span></div>
+          <div class="row"><span class="tag">O que monitorar</span><span>Ritmo do carry trade unwind e reação do USD/JPY nas próximas sessões.</span></div>
+        </div>
+      </details>
+
+      <details class="n">
+        <summary><span class="nidx">03</span><span class="ntitle">Nvidia emite US$ 25 bilhões em dívida com demanda de US$ 85 bilhões</span><span class="plus">+</span></summary>
+        <div class="body">
+          <p class="nsum">A Nvidia precificou a maior emissão de dívida corporativa de 2026: US$ 25 bilhões, com demanda que chegou a US$ 85 bilhões — mais de 3× a oferta. A operação destaca a confiança do mercado de crédito na tese de IA da empresa mesmo em ambiente de taxas elevadas.</p>
+          <div class="row"><span class="tag">Por que importa</span><span>Emissão de dívida de US$ 25bi sinaliza que a empresa busca capital para expandir capacidade de produção de GPUs — não por necessidade de caixa, mas como alavancagem estratégica.</span></div>
+          <div class="row"><span class="tag">Impacto</span><span>Positivo para o setor de IA e semicondutores. O sinal de demanda excessiva é o dado mais relevante — demonstra apetite do mercado de crédito pela tese.</span></div>
+          <div class="row"><span class="tag">O que monitorar</span><span>Preço da ação NVDA na abertura de hoje e uso dos recursos captados.</span></div>
+        </div>
+      </details>
+
+      <details class="n">
+        <summary><span class="nidx">04</span><span class="ntitle">Petróleo cai pela 2ª sessão; Brent perto de US$ 81 com Ormuz incerto</span><span class="plus">+</span></summary>
+        <div class="body">
+          <p class="nsum">O Brent recuou aproximadamente 2,4% para cerca de US$ 81,15/barril na terça-feira, segunda queda seguida desde os US$ 83,17 de segunda. O mercado avalia que a reabertura do Estreito de Ormuz pode ocorrer, mas faltam detalhes concretos do acordo EUA–Irã.</p>
+          <div class="row"><span class="tag">Por que importa</span><span>Petróleo é o principal determinante do preço da PETR4, que representa ~7% do Ibovespa. Cada 1% de queda no Brent é sentida no índice.</span></div>
+          <div class="row"><span class="tag">Impacto</span><span>Positivo para inflação global (reduz pressão de combustíveis) e câmbio brasileiro. Negativo para Petrobras e empresas de E&amp;P.</span></div>
+          <div class="row"><span class="tag">O que monitorar</span><span>Comunicado oficial sobre reabertura do Estreito de Ormuz e posição dos futuros de petróleo na abertura de hoje.</span></div>
+        </div>
+      </details>
+
+      <details class="n">
+        <summary><span class="nidx">05</span><span class="ntitle">Brava Energia (BRAV3): OPA da Ecopetrol suspensa por recurso à CVM</span><span class="plus">+</span></summary>
+        <div class="body">
+          <p class="nsum">A Brava Energia informou que a OPA lançada pela Ecopetrol foi suspensa após a companhia colombiana recorrer da decisão da CVM, que exigia ajustes ao edital. A Ecopetrol prometeu recorrer ao colegiado com a máxima celeridade. A OPA fica suspensa até decisão final.</p>
+          <div class="row"><span class="tag">Por que importa</span><span>A BRAV3 vinha sendo negociada com prêmio de OPA. A suspensão gera incerteza sobre o fechamento do negócio e pode pressionar a cotação.</span></div>
+          <div class="row"><span class="tag">Impacto</span><span>Risco de queda para BRAV3 no curtíssimo prazo enquanto o recurso não é resolvido. Evento de risco arbitragem.</span></div>
+          <div class="row"><span class="tag">O que monitorar</span><span>Decisão do colegiado da CVM e possível revisão dos termos da OPA pela Ecopetrol.</span></div>
+        </div>
+      </details>
+
+      <details class="n">
+        <summary><span class="nidx">06</span><span class="ntitle">Raízen (RAIZ4): IG4 faz oferta para assumir controle via créditos</span><span class="plus">+</span></summary>
+        <div class="body">
+          <p class="nsum">A IG4, gestora que recentemente assumiu o controle da Braskem (BRKM5), fez oferta não vinculante pelos créditos da Raízen — detentores de debêntures e CRAs. A proposta prevê aquisição de 50% mais um dos créditos, tornando-se controladora após eventual reestruturação financeira.</p>
+          <div class="row"><span class="tag">Por que importa</span><span>Raízen é uma das maiores distribuidoras de combustíveis e produtoras de etanol do Brasil. Reestruturação com nova gestão pode mudar a dinâmica do setor.</span></div>
+          <div class="row"><span class="tag">Impacto</span><span>Potencial catalisador positivo para RAIZ4 se o mercado interpretar a oferta como estabilizadora. Risco de diluição de acionistas dependendo dos termos finais.</span></div>
+          <div class="row"><span class="tag">O que monitorar</span><span>Resposta dos credores e nova oferta formal (a atual é não vinculante).</span></div>
+        </div>
+      </details>
+
+      <details class="n">
+        <summary><span class="nidx">07</span><span class="ntitle">Eleições 2026: Lula lidera com 41,6%; Tarcísio na frente em SP</span><span class="plus">+</span></summary>
+        <div class="body">
+          <p class="nsum">Pesquisa Futura/Apex divulgada na terça mostrou Lula com 41,6% de intenção de voto nacional. Em São Paulo, pesquisa Realtime Big Data apontou Tarcísio de Freitas na liderança. O cenário eleitoral de outubro segue como variável de risco para ativos domésticos.</p>
+          <div class="row"><span class="tag">Por que importa</span><span>Incerteza eleitoral tende a manter o prêmio de risco sobre o câmbio e juros longos. Mudanças relevantes nas pesquisas podem mover ativos.</span></div>
+          <div class="row"><span class="tag">Impacto</span><span>Cenário dividido mantém volatilidade latente no câmbio e nos ativos de risco fiscal.</span></div>
+          <div class="row"><span class="tag">O que monitorar</span><span>Próximas pesquisas e posicionamento dos candidatos sobre temas fiscais e econômicos.</span></div>
+        </div>
+      </details>
+
+      <details class="n">
+        <summary><span class="nidx">08</span><span class="ntitle">Vale (VALE3) anuncia R$ 13 bilhões em descarbonização até 2030</span><span class="plus">+</span></summary>
+        <div class="body">
+          <p class="nsum">A Vale divulgou relatório de sustentabilidade prevendo até R$ 13 bilhões em investimentos de descarbonização: R$ 4bi em projetos operacionais, R$ 8bi em tecnologias de siderurgia verde e briquetes, e R$ 1bi em P&amp;D.</p>
+          <div class="row"><span class="tag">Por que importa</span><span>ESG e descarbonização são critérios crescentes para fundos institucionais globais. Comprometimento cria valor de longo prazo, mas pressão de capex pode impactar dividendos.</span></div>
+          <div class="row"><span class="tag">Impacto</span><span>Neutro a ligeiramente positivo no curto prazo. O mercado tende a premiar clareza nos targets de descarbonização.</span></div>
+          <div class="row"><span class="tag">O que monitorar</span><span>Desdobramentos do plano e impacto nos próximos planos de capex da Vale.</span></div>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <section id="conclusao" class="reveal">
+    <div class="sec-head"><span class="sec-num">11</span><h2>Conclusão</h2></div>
+    <p>A Super Quarta reúne as duas maiores decisões de juros do semestre num único pregão. O Ibovespa chegou ao dia D com duas quedas consecutivas (−0,45% ontem) e câmbio em compasso de espera (R$ 5,08). O tom global é de rotação — Dow em recorde, Nasdaq em queda, BoJ normalizando — e o petróleo em declínio suave gera um alívio inflacionário de médio prazo, mas pressiona Petrobras no curto.</p>
+    <p>A decisão do Copom de hoje às 20h30 será o principal catalisador doméstico: um corte tende a aliviar a curva curta e apoiar o Ibovespa amanhã; manutenção tende a fortalecer o real mas pressionar os ativos de maior duration. Os riscos imediatos são o tom hawkish do dot plot do FOMC (que pode elevar yields e fortalecer o dólar globalmente) e qualquer surpresa na comunicação do Copom. Vale lembrar que sexta-feira 19/06 é feriado de Juneteenth nos EUA — liquidez pode secar mais cedo que o usual.</p>
+  </section>
+
+  <section id="fontes" class="reveal sources">
+    <div class="sec-head"><span class="sec-num">12</span><h2>Fontes e referências</h2></div>
+    <h3>Mercado Brasileiro</h3>
+    <ul>
+      <li><a href="https://www.dgabc.com.br/Noticia/4329495/fechamento-do-mercado-financeiro" target="_blank">Diário do Grande ABC — Fechamento do mercado financeiro 16/06/2026</a></li>
+      <li><a href="https://www.moneytimes.com.br/tempo-real-ibovespa-hoje-mercado-ao-vivo-16-06-2026-jals-lils-apsa/" target="_blank">Money Times — Tempo Real Ibovespa 16/06/2026</a></li>
+    </ul>
+    <h3>Copom &amp; Selic</h3>
+    <ul>
+      <li><a href="https://soubrasilia.com/copom-selic-17-junho-2026/" target="_blank">Sou Brasília — Copom decide Selic nesta quarta</a></li>
+      <li><a href="https://istoedinheiro.com.br/mais-um-corte-de-025-ponto-ou-selic-inalterada-o-que-esperar-para-o-copom-desta-semana" target="_blank">ISTOÉ Dinheiro — Copom: corte ou pausa?</a></li>
+    </ul>
+    <h3>FOMC &amp; EUA</h3>
+    <ul>
+      <li><a href="https://www.stocktitan.net/articles/fed-rate-decision-june-17-2026" target="_blank">StockTitan — Fed Rate Decision June 17, 2026</a></li>
+      <li><a href="https://www.federalreserve.gov/releases/h15/" target="_blank">Federal Reserve — H.15 Selected Interest Rates</a></li>
+    </ul>
+    <h3>Notícias Corporativas</h3>
+    <ul>
+      <li><a href="https://www.moneytimes.com.br/brava-energia-brav3-diz-que-opa-da-ecopetrol-foi-suspensa-por-apresentacao-de-recurso-entenda-igdl/" target="_blank">Money Times — Brava Energia: OPA Ecopetrol suspensa</a></li>
+      <li><a href="https://www.moneytimes.com.br/controladora-da-braskem-brkm5-ig4-faz-oferta-a-credores-da-raizen-raiz4-diz-valor-fets/" target="_blank">Money Times — IG4 faz oferta a credores da Raízen</a></li>
+      <li><a href="https://www.moneytimes.com.br/valor-previsto-sobe-e-nvidia-nvda-deve-levantar-us-25-bilhoes-com-emissao-de-divida-nos-eua-fets/" target="_blank">Money Times — Nvidia: emissão de dívida de US$ 25bi</a></li>
+      <li><a href="https://www.moneytimes.com.br/vale-vale3-preve-r-13-bilhoes-em-descarbonizacao-e-alerta-para-custos-de-carbono-a-partir-de-2030-fets/" target="_blank">Money Times — Vale: R$ 13bi em descarbonização</a></li>
+    </ul>
+    <h3>Ásia &amp; BoJ</h3>
+    <ul>
+      <li><a href="https://www.moneytimes.com.br/bc-do-japao-eleva-taxa-de-juros-para-maior-nivel-em-31-anos/" target="_blank">Money Times — BC do Japão eleva taxa para maior nível em 31 anos</a></li>
+      <li><a href="https://www.moneytimes.com.br/bolsas-da-asia-fecham-mistas-nikkei-chega-a-superar-70-mil-pontos-antes-de-boj-elevar-juro-fets/" target="_blank">Money Times — Ásia fecha mista; Nikkei supera 70.000</a></li>
+    </ul>
+  </section>
+
+  <section id="glossario" class="reveal glossary">
+    <div class="sec-head"><span class="sec-num">13</span><h2>Glossário</h2></div>
+    <p class="small">Termos técnicos desta edição, em linguagem simples.</p>
+    <dl>
+      <dt>Super Quarta</dt>
+      <dd>Dia em que Copom (Brasil) e FOMC (EUA) anunciam decisões de juros na mesma sessão. Evento de alta volatilidade para câmbio, juros futuros e bolsas.</dd>
+
+      <dt>FOMC</dt>
+      <dd>Federal Open Market Committee — comitê do Federal Reserve (banco central americano) responsável pela política de juros dos EUA. Reúne-se 8 vezes por ano.</dd>
+
+      <dt>Copom</dt>
+      <dd>Comitê de Política Monetária do Banco Central do Brasil, responsável pela definição da taxa Selic. Reúne-se a cada 45 dias.</dd>
+
+      <dt>Dot plot</dt>
+      <dd>Gráfico publicado pelo Fed onde cada membro do FOMC indica sua projeção para onde os juros devem estar no futuro. Principal bússola para expectativas de política monetária americana.</dd>
+
+      <dt>BoJ</dt>
+      <dd>Bank of Japan — banco central do Japão. Passou anos com juros negativos ou zerados e está em processo de normalização desde 2024.</dd>
+
+      <dt>Carry trade</dt>
+      <dd>Estratégia que consiste em tomar recursos emprestados em moeda de juro baixo (ex: iene) para investir em ativos de maior rendimento. Quando o BoJ sobe juros, esse trade se desfaz, gerando volatilidade em mercados emergentes.</dd>
+
+      <dt>DI Futuro</dt>
+      <dd>Contrato negociado na B3 que reflete as expectativas do mercado para a taxa de juros interbancária (CDI) em datas futuras. Principal instrumento de precificação de juros no Brasil.</dd>
+
+      <dt>PTAX</dt>
+      <dd>Taxa de câmbio de referência divulgada diariamente pelo Banco Central do Brasil, calculada como média das cotações praticadas no mercado interbancário.</dd>
+
+      <dt>OPA</dt>
+      <dd>Oferta Pública de Aquisição — quando uma empresa ou investidor oferece comprar as ações de outra companhia. Exige aprovação e registro na CVM.</dd>
+    </dl>
+  </section>
+
+  <footer>
+    <p>Morning Call · Quarta-feira, 17 de junho de 2026<br>
+    Documento informativo; não constitui recomendação de investimento.</p>
+  </footer>
+
+</div>
+
+<button id="toTop" aria-label="Voltar ao topo">↑</button>
+
+<script>
+(function () {
+  const btn = document.getElementById('themeBtn');
+  const root = document.documentElement;
+  btn.addEventListener('click', () => {
+    const dark = root.getAttribute('data-theme') === 'dark';
+    root.setAttribute('data-theme', dark ? 'light' : 'dark');
+    btn.textContent = dark ? '🌙' : '☀️';
+  });
+})();
+
+(function () {
+  const bar = document.getElementById('progress');
+  const onScroll = () => {
+    const h = document.documentElement;
+    const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+    bar.style.width = (scrolled * 100) + '%';
+    document.getElementById('toTop').classList.toggle('show', h.scrollTop > 600);
+  };
+  document.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
+document.getElementById('toTop').addEventListener('click', () =>
+  window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+(function () {
+  const links = [...document.querySelectorAll('nav.sections a')];
+  const map = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const a = map.get(e.target.id);
+        if (a) {
+          a.classList.add('active');
+          a.scrollIntoView({ inline: 'center', block: 'nearest' });
+        }
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  document.querySelectorAll('section[id]').forEach(s => obs.observe(s));
+})();
+
+(function () {
+  const cells = [...document.querySelectorAll('td[data-v]')];
+  const vals = cells.map(c => Math.abs(parseFloat(c.dataset.v))).filter(v => v < 900);
+  const max = Math.max(1, ...vals);
+  cells.forEach(c => {
+    const v = parseFloat(c.dataset.v);
+    if (v <= -900) return;
+    c.classList.add(v >= 0 ? 'up' : 'down');
+    const bar = document.createElement('span');
+    bar.className = 'bar ' + (v >= 0 ? 'up' : 'down');
+    bar.style.width = (4 + (Math.abs(v) / max) * 34) + 'px';
+    c.appendChild(bar);
+  });
+})();
+
+(function () {
+  function parseCell(td) {
+    if (td.dataset.v !== undefined) return parseFloat(td.dataset.v);
+    const n = parseFloat(td.textContent.replace(/\./g, '').replace(',', '.').replace('%', ''));
+    return isNaN(n) ? td.textContent.trim().toLowerCase() : n;
+  }
+  document.querySelectorAll('table').forEach(table => {
+    const ths = [...table.tHead.rows[0].cells];
+    ths.forEach((th, idx) => {
+      if (th.hasAttribute('data-nosort')) return;
+      th.insertAdjacentHTML('beforeend', ' <span class="arr">▼</span>');
+      let asc = false;
+      th.addEventListener('click', () => {
+        asc = !asc;
+        const rows = [...table.tBodies[0].rows];
+        rows.sort((a, b) => {
+          const x = parseCell(a.cells[idx]), y = parseCell(b.cells[idx]);
+          if (typeof x === 'number' && typeof y === 'number') return asc ? x - y : y - x;
+          return asc ? String(x).localeCompare(y) : String(y).localeCompare(x);
+        });
+        rows.forEach(r => table.tBodies[0].appendChild(r));
+        ths.forEach(h => h.querySelector('.arr') && (h.querySelector('.arr').textContent = '▼'));
+        th.querySelector('.arr').textContent = asc ? '▲' : '▼';
+      });
+    });
+  });
+})();
+
+(function () {
+  const allReveals = [...document.querySelectorAll('.reveal')];
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        const idx = allReveals.indexOf(e.target);
+        e.target.style.transitionDelay = Math.min(idx * 40, 200) + 'ms';
+        e.target.classList.add('in');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  allReveals.forEach(el => obs.observe(el));
+})();
+</script>
+</body>
+</html>
